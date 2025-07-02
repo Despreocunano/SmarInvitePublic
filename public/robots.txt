@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (uncomment and update when you have a sitemap)
+Sitemap: https://tuparte.digital/sitemap-index.xml
+
+# Allow all crawlers to access the site
+# This is a public marketing website, so we want search engines to index everything 

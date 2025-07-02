@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+import Header from "../components/home/Header.astro"
+import MetaTags from "../components/shared/MetaTags.astro";
+import OpenGraph from "../components/shared/OpenGraph.astro";
+
+interface Props {
+	title: string;
+	description: string;
+	canonical?: string;
+	ogImage?: string;
+	ogType?: string;
+	ogLocale?: string;
+	ogSiteName?: string;
+}
+const { title, description, canonical, ogImage, ogType, ogLocale, ogSiteName } = Astro.props;
+const canonicalUrl = canonical || Astro.request.url;
+---
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<title>{title} | Tu Parte Digital</title>
+		<link rel="canonical" href={canonicalUrl} />
+		<MetaTags title={title + ' | Tu Parte Digital'} description={description} canonical={canonicalUrl} image={ogImage} />
+		<OpenGraph
+			title={title + ' | Tu Parte Digital'}
+			description={description}
+			url={canonicalUrl}
+			image={ogImage}
+			type={ogType}
+			locale={ogLocale}
+			site_name={ogSiteName}
+		/>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-94J5R3EG4C"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-94J5R3EG4C');
+    </script>
+</script>
+	</head>
+	<Header />
+	<body>
+		<slot />
+	</body>
+</html>
+

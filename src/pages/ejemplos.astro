@@ -1,0 +1,121 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Mouse } from '@lucide/astro';
+import ExampleCard from '../components/home/ExampleCard.astro';
+
+const ejemplos = [
+  {
+    nombre: 'Beso Infinito',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png',
+    enlace: '/ejemplo/beso-infinito',
+    color: 'rose',
+  },
+  {
+    nombre: 'Minimalista',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png',
+    enlace: '/ejemplos/minimalista',
+    color: 'rose',
+  },
+  {
+    nombre: 'Bosque',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png',
+    enlace: '/ejemplos/bosque',
+    color: 'rose',
+  },
+  {
+    nombre: 'Signature',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png',
+    enlace: '/ejemplos/signature',
+    color: 'rose',
+  },
+  {
+    nombre: 'Late',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png',
+    enlace: '/ejemplos/late',
+    color: 'rose',
+  },
+  {
+    nombre: 'Pasaporte',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png',
+    enlace: '/ejemplos/passport',
+    color: 'rose',
+  },
+  {
+    nombre: 'Boho',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png',
+    enlace: '/ejemplos/boho',
+    color: 'rose',
+  },
+  {
+    nombre: 'Beso Infinito Dark',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png',
+    enlace: '/ejemplos/beso-infinito-dark',
+    color: 'rose',
+  },
+  {
+    nombre: 'Late Petro',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png',
+    enlace: '/ejemplos/late-petro',
+    color: 'rose',
+  },
+  {
+    nombre: 'Late Pastel',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png',
+    enlace: '/ejemplos/late-pastel',
+    color: 'rose',
+  },
+  {
+    nombre: 'Natural Green',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png',
+    enlace: '/ejemplos/natural-green',
+    color: 'rose',
+  },
+  {
+    nombre: 'Acuarela',
+    imagen: 'https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png',
+    enlace: '/ejemplos/acuarela',
+    color: 'rose',
+  },
+];
+---
+
+<Layout title="Ejemplos de Invitaciones" description="Explora los ejemplos y Invitaciones disponibles para tu parte digital.">
+  <main class="pt-16 min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(244,63,94,0.08),transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]"></div>
+      <!-- Animated dots pattern -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+        <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
+        <div class="absolute bottom-20 right-20 w-1 h-1 bg-emerald-400 rounded-full animate-pulse delay-1500"></div>
+      </div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Explora nuestros <span class="text-fuchsia-400">ejemplos de invitaciones</span>
+          </h1>
+          <p class="text-xl text-fuchsia-200 mb-8">
+            Inspírate con los distintos estilos y diseños que puedes usar para tu parte digital.
+          </p>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
+        <Mouse class="h-10 w-10 text-white animate-bounce" />
+        <span class="text-xs text-white/70 mt-1">Desliza para ver más</span>
+      </div>
+    </section>
+    <!-- Ejemplos Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        {ejemplos.map((ejemplo) => (
+          <ExampleCard nombre={ejemplo.nombre} imagen={ejemplo.imagen} enlace={ejemplo.enlace} color={ejemplo.color} />
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout> 

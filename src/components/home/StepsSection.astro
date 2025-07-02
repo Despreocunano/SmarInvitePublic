@@ -1,0 +1,114 @@
+---
+import { User, LayoutDashboard, Globe, Heart } from '@lucide/astro';
+import TemplateExamples from './TemplateExamples';
+
+const steps = [
+  {
+    step: "01",
+    title: "Crea tu cuenta",
+    description: "Regístrate de forma gratuita y accede a todas los diseños disponibles. ¡Solo toma 30 segundos!",
+    icon: User,
+    color: "from-blue-500 via-blue-600 to-indigo-600",
+    bgColor: "from-blue-50 to-indigo-50",
+    accentColor: "blue"
+  },
+  {
+    step: "02",
+    title: "Elige el diseño y completa tu información",
+    description: "Elige entre más de 10 diseños únicos y personaliza cada detalle de tu invitación.",
+    icon: LayoutDashboard,
+    color: "from-purple-500 via-purple-600 to-violet-600",
+    bgColor: "from-purple-50 to-violet-50",
+    accentColor: "purple"
+  },
+  {
+    step: "03",
+    title: "Visualiza tu parte digital",
+    description: "Revisa cómo se ve tu invitación en tiempo real y ajusta los detalles que necesites.",
+    icon: Globe,
+    color: "from-emerald-500 via-emerald-600 to-teal-600",
+    bgColor: "from-emerald-50 to-teal-50",
+    accentColor: "emerald"
+  },
+  {
+    step: "04",
+    title: "Publícalo y comparte con tus invitados",
+    description: "Activa tu invitación con un clic y compártela con todos tus invitados de forma instantánea.",
+    icon: Heart,
+    color: "from-rose-500 via-rose-600 to-pink-600",
+    bgColor: "from-rose-50 to-pink-50",
+    accentColor: "rose"
+  }
+];
+
+// Crear variables para los iconos
+const step1Icon = steps[0].icon;
+const step2Icon = steps[1].icon;
+const step3Icon = steps[2].icon;
+const step4Icon = steps[3].icon;
+---
+
+<section class="py-32 bg-gradient-to-b from-white via-rose-50/20 to-white relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-8 leading-tight">
+        En solo 4 pasos
+        <br />
+        <span class="text-slate-600">tendrás tu invitación lista</span>
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Un proceso diseñado para ser simple, rápido y divertido. 
+        <span class="text-rose-600 font-semibold"> Sin complicaciones, solo resultados increíbles.</span>
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Paso 1 -->
+      <div class="relative group">
+        <div class={`relative bg-gradient-to-br ${steps[0].bgColor} rounded-3xl p-8 shadow-2xl border border-white/50 backdrop-blur-sm overflow-hidden`}>
+          <div class={`relative w-20 h-20 bg-gradient-to-r ${steps[0].color} rounded-3xl flex items-center justify-center mb-8 shadow-lg`}>
+            <span class="absolute text-2xl font-bold text-white drop-shadow-lg">{steps[0].step}</span>
+            <step1Icon class="h-10 w-10 text-white relative z-10" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-600 mb-6">{steps[0].title}</h3>
+          <p class="text-gray-600 leading-relaxed text-lg">{steps[0].description}</p>
+        </div>
+      </div>
+
+      <!-- Paso 2 -->
+      <div class="relative group">
+        <div class={`relative bg-gradient-to-br ${steps[1].bgColor} rounded-3xl p-8 shadow-2xl border border-white/50 backdrop-blur-sm overflow-hidden`}>
+          <div class={`relative w-20 h-20 bg-gradient-to-r ${steps[1].color} rounded-3xl flex items-center justify-center mb-8 shadow-lg`}>
+            <span class="absolute text-2xl font-bold text-white drop-shadow-lg">{steps[1].step}</span>
+            <step2Icon class="h-10 w-10 text-white relative z-10" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-600 mb-6">{steps[1].title}</h3>
+          <p class="text-gray-600 leading-relaxed text-lg">{steps[1].description}</p>
+        </div>
+      </div>
+
+      <!-- Paso 3 -->
+      <div class="relative group">
+        <div class={`relative bg-gradient-to-br ${steps[2].bgColor} rounded-3xl p-8 shadow-2xl border border-white/50 backdrop-blur-sm overflow-hidden`}>
+          <div class={`relative w-20 h-20 bg-gradient-to-r ${steps[2].color} rounded-3xl flex items-center justify-center mb-8 shadow-lg`}>
+            <span class="absolute text-2xl font-bold text-white drop-shadow-lg">{steps[2].step}</span>
+            <step3Icon class="h-10 w-10 text-white relative z-10" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-600 mb-6">{steps[2].title}</h3>
+          <p class="text-gray-600 leading-relaxed text-lg">{steps[2].description}</p>
+        </div>
+      </div>
+
+      <!-- Paso 4 -->
+      <div class="relative group">
+        <div class={`relative bg-gradient-to-br ${steps[3].bgColor} rounded-3xl p-8 shadow-2xl border border-white/50 backdrop-blur-sm overflow-hidden`}>
+          <div class={`relative w-20 h-20 bg-gradient-to-r ${steps[3].color} rounded-3xl flex items-center justify-center mb-8 shadow-lg`}>
+            <span class="absolute text-2xl font-bold text-white drop-shadow-lg">{steps[3].step}</span>
+            <step4Icon class="h-10 w-10 text-white relative z-10" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-600 mb-6">{steps[3].title}</h3>
+          <p class="text-gray-600 leading-relaxed text-lg">{steps[3].description}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

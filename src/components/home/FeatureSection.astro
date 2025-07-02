@@ -1,0 +1,74 @@
+---
+const { section, isEven } = Astro.props;
+import { Check, Link as LinkIcon, Gift, Table2, Users, LayoutDashboard } from '@lucide/astro';
+
+const colorVariants: Record<string, string> = {
+  emerald: "bg-emerald-50 text-emerald-600 shadow-emerald-100/50",
+  purple: "bg-purple-50 text-purple-600 shadow-purple-100/50",
+  blue: "bg-blue-50 text-blue-600 shadow-blue-100/50",
+  rose: "bg-rose-50 text-rose-600 shadow-rose-100/50",
+  pink: "bg-pink-50 text-pink-600 shadow-pink-100/50"
+};
+const colorBlurVariants: Record<string, string> = {
+  emerald: "bg-emerald-300",
+  purple: "bg-purple-300",
+  blue: "bg-blue-300",
+  rose: "bg-rose-300",
+  pink: "bg-pink-300"
+};
+const colorMap: Record<string, string> = {
+  emerald: 'bg-emerald-500',
+  purple: 'bg-purple-500',
+  blue: 'bg-blue-500',
+  rose: 'bg-rose-500',
+  pink: 'bg-pink-500',
+};
+const sectionIcon = section.icon;
+const iconColor = colorVariants[section.color as string] || "bg-rose-50 text-rose-600 shadow-rose-100/50";
+const blurBg = colorBlurVariants[section.color as string] || "bg-rose-300";
+---
+<section id={Astro.props.id} class={`py-24 px-4 feature-sections ${isEven ? 'bg-white' : 'bg-gradient-to-b from-rose-50/30 to-white'}`}>
+  <div class="max-w-7xl mx-auto">
+    <div class={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12`}>
+      <div class="flex-1">
+        <div class="flex items-center gap-4 mb-6">
+          <div class="relative">
+            <div class={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg ${iconColor}`}>
+              {section.title === "Confirmaciones en tiempo real" && <Check class="w-8 h-8" />}
+              {section.title === "Crea y comparte en minutos" && <LayoutDashboard class="w-8 h-8" />}
+              {section.title === "Gestión de invitados" && <Users class="w-8 h-8" />}
+              {section.title === "Organizador de mesas" && <Table2 class="w-8 h-8" />}
+              {section.title === "Lista de regalos" && <Gift class="w-8 h-8" />}
+            </div>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-600">
+            {section.title}
+          </h2>
+        </div>
+        <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+          {section.description}
+        </p>
+        <div class="relative">
+          <div class="absolute -inset-4 -z-10 rounded-2xl bg-gradient-to-br from-white/80 via-rose-50/60 to-rose-100/40 shadow-lg blur-sm"></div>
+          <ul class="space-y-3 py-4 px-2 md:px-6">
+            {section.features.map((feature: string, idx: number) => (
+              <li class="flex items-center group transition-all duration-300">
+                <div class={`w-2 h-2 rounded-full mr-2 ${colorMap[section.color] || 'bg-rose-500'}`}></div>
+                <span class="text-lg text-gray-600 leading-relaxed">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="relative">
+          <img
+            src={section.image}
+            alt={section.title}
+            class="relative w-full rounded-lg shadow-xl"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 

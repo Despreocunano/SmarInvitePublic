@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  url?: string;
+  site_name?: string;
+  type?: string;
+  locale?: string;
+}
+const {
+  title,
+  description,
+  image = '/logo-parte.svg',
+  url,
+  site_name = 'Tu Parte Digital',
+  type = 'website',
+  locale = 'es_ES',
+} = Astro.props;
+---
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+{url && <meta property="og:url" content={url} />}
+<meta property="og:site_name" content={site_name} />
+<meta property="og:locale" content={locale} /> 

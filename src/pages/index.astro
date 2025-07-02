@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/home/Hero.astro';
+import FeaturesGrid from '../components/home/FeaturesGrid.astro';
+import FeatureSection from '../components/home/FeatureSection.astro';
+import Cta from '../components/home/Cta.astro';
+import Footer from '../components/home/Footer.astro';
+
+// Importa los islands de React
+import TemplateExamples from '../components/home/TemplateExamples.tsx';
+
+// Importa los iconos de lucide-react (necesarios para los datos)
+import { Users, Check, Gift, Link as LinkIcon, LayoutDashboard, Table2 } from '@lucide/astro';
+
+// Importa las imágenes
+import app1 from '../assets/images/app_gestion.png';
+import app2 from '../assets/images/app_compartir.png';
+import app3 from '../assets/images/app_invitados.png';
+import app5 from '../assets/images/app_mesas.png';
+import app6 from '../assets/images/app_lista.png';
+import StepsSection from '../components/home/StepsSection.astro';
+
+const featureSections = [
+  { title: "Confirmaciones en tiempo real",
+    description: "Mantente al día con las confirmaciones de asistencia de forma automática. Nuestro sistema RSVP digital permite a tus invitados confirmar su asistencia de manera sencilla, mientras tú recibes actualizaciones instantáneas y mantienes un control total sobre la lista final de asistentes.",
+    image: app3.src, icon: Check, color: "emerald", features: ["Confirmaciones automáticas", "Estadísticas en tiempo real", "Gestión de acompañantes", "Seguimiento de respuestas"]
+  },
+  { title: "Crea y comparte en minutos",
+  description: "Selecciona el diseño que más te guste, completa la información necesaria, música de fondo, galería de fotos y compartela con tus invitados para que tengan una experiencia inolvidable desde el primer momento.",
+  image: app2.src, icon: LayoutDashboard, color: "purple", features: ["Comparte directamente en Whatsapp", "Música de fondo", "Galería de fotos", "Información interactiva"]
+  },
+  { title: "Gestión de invitados",
+  description: "Olvídate de las hojas de cálculo y las listas en papel. Nuestra gestión de invitados te permite mantener toda la información organizada, actualizada y accesible. Añade, edita y gestiona tu lista de invitados con facilidad, incluyendo detalles importantes como preferencias alimentarias y acompañantes.",
+  image: app1.src, icon: Users, color: "blue", features: ["Gestión completa de invitados", "Control de acompañantes", "Preferencias alimentarias", "Información de contacto centralizada"]
+  },
+  { title: "Organizador de mesas", 
+  description: "Diseña la distribución perfecta para tu boda con nuestro organizador de mesas digital. Agrega y elimina invitados, gestiona capacidades y visualiza la disposición completa de tu matrimonio. Una herramienta poderosa que hace que la organización de mesas sea un juego de niños.",
+  image: app5.src, icon: Table2, color: "rose", features: ["Distribución visual de mesas", "Gestión de capacidades", "Vista previa en tiempo real"]
+  },
+    { title: "Lista de regalos",
+    description: "Crea y comparte tu lista de regalos personalizada con tus invitados y recibe el dinero directamente en tu cuenta. Que la lista de regalos ya no te obligue a gastar tu saldo en una tienda específica.",
+    image: app6.src, icon: Gift, color: "pink", features: ["Lista personalizada", "Pagos integrados", "Seguimiento de regalos"]
+  }
+];
+---
+<Layout
+  title='Partes de Matrimonio Digital',
+  description='Partes digitales con RSPV, lista de deseos, recomendaciones e música y mucho más.'>
+  <main>
+    <Hero />
+    <StepsSection />
+    <TemplateExamples client:load />
+    <FeatureSection id="feature-section" section={featureSections[0]} isEven={true} />
+    <FeatureSection section={featureSections[1]} isEven={false} />
+    <FeatureSection section={featureSections[2]} isEven={true} />
+    <FeatureSection section={featureSections[3]} isEven={false} />
+    <FeatureSection section={featureSections[4]} isEven={true} />
+    <Cta />  
+    <FeaturesGrid />
+    <Footer />  
+  </main>
+</Layout>

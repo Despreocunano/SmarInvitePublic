@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Users, Mail, ClipboardCheck, Mouse } from '@lucide/astro';
+import appInvitados from '../assets/images/app_invitados.png';
+import Cta from '../components/home/Cta.astro';
+---
+
+<Layout
+  title="Gestión de Invitados"
+  description="Descubre cómo funciona la gestión de invitados: tradicional y por email, para confirmar asistencia de manera sencilla."
+>
+  <main class="pt-16 h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center snap-start overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.08),transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]"></div>
+      <!-- Animated dots pattern -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+        <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
+        <div class="absolute bottom-20 right-20 w-1 h-1 bg-rose-400 rounded-full animate-pulse delay-1500"></div>
+      </div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Gestiona tus invitados en <span class="text-emerald-400">2 formas realmente simples</span>
+          </h1>
+          <p class="text-xl text-blue-100 mb-8">
+            Elige la opción que más se adapte a tu evento y facilita la confirmación de asistencia de tus invitados
+          </p>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
+        <Mouse class="h-10 w-10 text-white animate-bounce" />
+        <span class="text-xs text-white/70 mt-1">Desliza para ver más</span>
+      </div>
+    </section>
+
+    <!-- Forma Tradicional Section -->
+    <section class="relative min-h-screen flex items-center snap-start overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+      <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-100/30 to-transparent"></div>
+      <div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-indigo-100/30 to-transparent"></div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-12 py-24">
+            <div class="lg:w-3/5">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl font-bold text-2xl mr-4">
+                  1
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Invitación general</h2>
+              </div>
+              <p class="text-lg text-gray-600 mb-6">
+                Crea tu invitación digital y compártela con tus invitados. Ellos podrán ingresar sus datos y confirmar (o no) su asistencia de manera sencilla desde cualquier dispositivo.
+              </p>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Enlace único para tu evento
+                </li>
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Confirmación de asistencia en segundos
+                </li>
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                  Sin necesidad de registro para los invitados
+                </li>
+              </ul>
+            </div>
+            <div class="lg:w-2/5">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100">
+                <div class="text-center">
+                  <ClipboardCheck class="h-16 w-16 text-blue-500 mx-auto mb-4" />
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">Confirmación fácil</h3>
+                  <p class="text-gray-600">Tus invitados confirman asistencia en segundos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forma por Email Section -->
+    <section class="relative min-h-screen flex items-center snap-start overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-teal-50"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.05),transparent_50%)]"></div>
+      <div class="absolute top-0 right-0 w-full h-32 bg-gradient-to-b from-emerald-100/30 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-teal-100/30 to-transparent"></div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-12 py-24">
+            <div class="lg:w-3/5">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center justify-center w-16 h-16 bg-emerald-500 text-white rounded-2xl font-bold text-2xl mr-4">
+                  2
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">Invitación personalizada</h2>
+              </div>
+              <p class="text-lg text-gray-600 mb-6">
+                Agrega los invitados manualmente en el apartado de invitaciones. Se enviará un email personalizado a cada invitado con un enlace único y sus datos precargados para que solo deba confirmar (o no) su asistencia.
+              </p>
+              <ul class="space-y-3 text-gray-600">
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                  Email personalizado para cada invitado
+                </li>
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                  Datos precargados para mayor comodidad
+                </li>
+                <li class="flex items-center">
+                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                  Seguimiento de confirmaciones en tiempo real
+                </li>
+              </ul>
+            </div>
+            <div class="lg:w-2/5">
+              <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl border border-emerald-100">
+                <div class="text-center">
+                  <Mail class="h-16 w-16 text-emerald-500 mx-auto mb-4" />
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">Invitación personalizada</h3>
+                  <p class="text-gray-600">Tus invitados reciben un email con sus datos listos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <Cta />
+  </main>
+</Layout> 

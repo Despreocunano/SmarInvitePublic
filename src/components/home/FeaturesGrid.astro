@@ -1,0 +1,251 @@
+---
+import { Globe, Music2, Clock, MapPin, Gift, CalendarDays, Image, Shirt, Lock, Link as LinkIcon, UtensilsCrossed } from '@lucide/astro';
+
+const features = [
+  { icon: Globe, title: "Envío ilimitado", description: "Comparte tu invitación a través de WhatsApp, Correo Electrónico, Redes Sociales y cualquier plataforma digital", color: "emerald" },
+  { icon: Music2, title: "Música de fondo", description: "El tema musical que desees sonará de fondo en tu invitación", color: "purple" },
+  { icon: Clock, title: "Cuenta Regresiva", description: "Emocionante cuenta regresiva en tiempo real directo a la fecha de tu boda", color: "amber" },
+  { icon: MapPin, title: "Ubicación e Indicaciones", description: "Mapa interactivo con la ubicación de tu boda, tus invitados llegarán sin complicaciones", color: "rose" },
+  { icon: Music2, title: "Lista de canciones", description: "Tus invitados podrán crear la lista de canciones que no pueden faltar en tu fiesta", color: "blue" },
+  { icon: Gift, title: "Regalos", description: "Tus invitados tendrán la posibilidad de hacerte llegar sus regalos", color: "pink" },
+  { icon: CalendarDays, title: "Agenda", description: "Tus invitados podrán agendar la fecha de tu boda con un solo clic en sus agendas", color: "indigo" },
+  { icon: Image, title: "Álbum de fotos", description: "Una historia única en un hermoso recorrido fotográfico", color: "violet" },
+  { icon: Shirt, title: "Dress Code", description: "Informa a tus invitados el código o estilo de vestimenta elegido para tu gran día", color: "blue" },
+  { icon: Lock, title: "Acceso VIP", description: "Configura tu invitación en modo privado, solo los invitados con acceso podrán verla", color: "gray" },
+  { icon: LinkIcon, title: "Link personalizable", description: "Personaliza el link de tu invitación como más te guste", color: "purple" },
+  { icon: UtensilsCrossed, title: "Menú", description: "Da a conocer las opciones de menú de tu fiesta", color: "rose" }
+];
+
+const colorVariants: { [key: string]: string } = {
+  emerald: "bg-emerald-50 text-emerald-600 shadow-emerald-100/50",
+  purple: "bg-purple-50 text-purple-600 shadow-purple-100/50",
+  amber: "bg-amber-50 text-amber-600 shadow-amber-100/50",
+  rose: "bg-rose-50 text-rose-600 shadow-rose-100/50",
+  blue: "bg-blue-50 text-blue-600 shadow-blue-100/50",
+  pink: "bg-pink-50 text-pink-600 shadow-pink-100/50",
+  indigo: "bg-indigo-50 text-indigo-600 shadow-indigo-100/50",
+  violet: "bg-violet-50 text-violet-600 shadow-violet-100/50",
+  fuchsia: "bg-fuchsia-50 text-fuchsia-600 shadow-fuchsia-100/50",
+  gray: "bg-gray-50 text-gray-600 shadow-gray-100/50"
+};
+
+---
+<section id="features" class="py-24 bg-gradient-to-b from-white to-rose-50/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-8 leading-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-rose-600">
+          Todo
+        </span> lo que necesitas en un solo lugar
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Crea tu invitación gratis y ajusta el diseño todas las veces que quieras
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      <!-- Feature 1 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[0].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[0].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Globe class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[0].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[0].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class='group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300'}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[1].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Music2 class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[1].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[1].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[2].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[2].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Clock class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[2].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[2].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[3].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[3].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <MapPin class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[3].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[3].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[4].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[4].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Music2 class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[4].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[4].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[5].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[5].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Gift class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[5].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[5].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 7 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[6].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[6].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <CalendarDays class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[6].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[6].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 8 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[7].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[7].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Image class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[7].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[7].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 9 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[8].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[8].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Shirt class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[8].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[8].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 10 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[9].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[9].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <Lock class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[9].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[9].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 11 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[10].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[10].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <LinkIcon class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[10].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[10].description}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature 12 -->
+      <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[features[11].color]}`}>
+        <div class="relative flex items-start gap-4">
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[features[11].color]} group-hover:scale-110 transition-transform duration-300`}>
+            <UtensilsCrossed class="h-6 w-6" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+              {features[11].title}
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              {features[11].description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
