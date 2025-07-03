@@ -5,7 +5,7 @@ export default {
     hero: {
       title: "Tu historia de amor merece una invitación única",
       subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
-      cta: "Crea tu invitación de matrimonio digital gratis",
+      cta: "Crea tu invitación de matrimonio digital",
       button: "Crear mi invitación",
       secondary: "Ver características",
       heroScroll: "Desliza para ver más",
