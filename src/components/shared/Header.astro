@@ -300,7 +300,15 @@ if (typeof window !== 'undefined') {
     }
   });
   document.querySelectorAll('.flag-link').forEach(link => {
-    link.addEventListener('click', closeMenu);
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (!href) return;
+      let country = 'us';
+      if (href.startsWith('/pa')) country = 'pa';
+      if (href.startsWith('/mx')) country = 'mx';
+      if (href.startsWith('/cl')) country = 'cl';
+      document.cookie = `countryPref=${country}; Path=/; Max-Age=31536000`;
+    });
   });
   document.addEventListener('click', (e) => {
     const target = e.target;

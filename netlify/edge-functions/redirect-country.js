@@ -1,19 +1,29 @@
 export default async (request, context) => {
   const country = context.geo?.country?.code;
+  const cookies = request.headers.get('cookie') || '';
+  const hasCountryPref = cookies.includes('countryPref=');
 
-  // Solo redirige si está en la home principal
-  if (new URL(request.url).pathname === '/') {
+  if (!hasCountryPref && new URL(request.url).pathname === '/') {
     if (country === 'PA') {
-      // Panamá
-      return Response.redirect(new URL('/pa', request.url), 302);
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: '/pa',
+          'Set-Cookie': 'countryPref=pa; Path=/; Max-Age=31536000'
+        }
+      });
     }
     if (country === 'CL') {
-      // Chile (redirige a dominio externo)
-      return Response.redirect('https://tuparte.digital', 302);
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: 'https://tuparte.digital',
+          'Set-Cookie': 'countryPref=cl; Path=/; Max-Age=31536000'
+        }
+      });
     }
     // Puedes agregar más países aquí si lo necesitas
   }
 
-  // Si no hay redirección, sigue con la petición normal
   return context.next();
 }; 
