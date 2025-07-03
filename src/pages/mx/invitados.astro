@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Mail, ClipboardCheck, Mouse } from '@lucide/astro';
+import texts from '../../i18n/mx';
+---
+
+<Layout
+  title={texts.guestPage.title}
+  description={texts.guestPage.description}
+  texts={texts}
+>
+  <main class="pt-16 h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center snap-start overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(16,185,129,0.08),transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]"></div>
+      <!-- Animated dots pattern -->
+      <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <div class="absolute top-20 left-20 w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+        <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
+        <div class="absolute bottom-20 right-20 w-1 h-1 bg-rose-400 rounded-full animate-pulse delay-1500"></div>
+      </div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6" set:html={texts.guestPage.heroTitle} />
+          <p class="text-xl text-blue-100 mb-8">{texts.guestPage.heroSubtitle}</p>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
+        <Mouse class="h-10 w-10 text-white animate-bounce" />
+        <span class="text-xs text-white/70 mt-1">{texts.guestPage.heroScroll}</span>
+      </div>
+    </section>
+
+    <!-- Forma Tradicional Section -->
+    <section class="relative min-h-screen flex items-center snap-start overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+      <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-blue-100/30 to-transparent"></div>
+      <div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-t from-indigo-100/30 to-transparent"></div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-12 py-24">
+            <div class="lg:w-3/5">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl font-bold text-2xl mr-4">
+                  1
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">{texts.guestPage.traditional.title}</h2>
+              </div>
+              <p class="text-lg text-gray-600 mb-6">{texts.guestPage.traditional.description}</p>
+              <ul class="space-y-3 text-gray-600">
+                {texts.guestPage.traditional.bullets.map(bullet => (
+                  <li class="flex items-center">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="lg:w-2/5">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100">
+                <div class="text-center">
+                  <ClipboardCheck class="h-16 w-16 text-blue-500 mx-auto mb-4" />
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{texts.guestPage.traditional.cardTitle}</h3>
+                  <p class="text-gray-600">{texts.guestPage.traditional.cardDescription}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Forma por Email Section -->
+    <section class="relative min-h-screen flex items-center snap-start overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-50 via-white to-teal-50"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.05),transparent_50%)]"></div>
+      <div class="absolute top-0 right-0 w-full h-32 bg-gradient-to-b from-emerald-100/30 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-teal-100/30 to-transparent"></div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-col lg:flex-row-reverse items-center gap-12 py-24">
+            <div class="lg:w-3/5">
+              <div class="flex items-center mb-6">
+                <div class="flex items-center justify-center w-16 h-16 bg-emerald-500 text-white rounded-2xl font-bold text-2xl mr-4">
+                  2
+                </div>
+                <h2 class="text-3xl font-bold text-gray-900">{texts.guestPage.email.title}</h2>
+              </div>
+              <p class="text-lg text-gray-600 mb-6">{texts.guestPage.email.description}</p>
+              <ul class="space-y-3 text-gray-600">
+                {texts.guestPage.email.bullets.map(bullet => (
+                  <li class="flex items-center">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div class="lg:w-2/5">
+              <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl border border-emerald-100">
+                <div class="text-center">
+                  <Mail class="h-16 w-16 text-emerald-500 mx-auto mb-4" />
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{texts.guestPage.email.cardTitle}</h3>
+                  <p class="text-gray-600">{texts.guestPage.email.cardDescription}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+  </main>
+</Layout> 

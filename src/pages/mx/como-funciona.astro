@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { UserPlus, FileText, Eye, Share2, User, Mouse } from '@lucide/astro';
+import texts from '../../i18n/mx';
+---
+<Layout
+  title={texts.howItWorksPage.title}
+  description={texts.howItWorksPage.description}
+  texts={texts}
+>
+  <main class="pt-16 h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center snap-start overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(244,63,94,0.1),transparent_50%)]"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+      <!-- Animated dots pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-20 w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
+        <div class="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+        <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
+        <div class="absolute bottom-20 right-20 w-1 h-1 bg-emerald-400 rounded-full animate-pulse delay-1500"></div>
+      </div>
+      <div class="relative z-10 w-full">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6" set:html={texts.howItWorksPage.heroTitle} />
+          <p class="text-xl text-gray-300 mb-8">{texts.howItWorksPage.heroSubtitle}</p>
+          <a
+            href="https://app.tuparte.digital/auth"
+            class="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 rounded-xl transition-all duration-300 shadow-lg shadow-rose-500/25"
+          >
+            <UserPlus class="h-6 w-6 mr-3" />
+            {texts.howItWorksPage.heroButton}
+          </a>
+        </div>
+      </div>
+      <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
+        <Mouse class="h-10 w-10 text-white animate-bounce" />
+        <span class="text-xs text-white/70 mt-1">{texts.howItWorksPage.heroScroll}</span>
+      </div>
+    </section>
+
+    <!-- Steps Section -->
+    {texts.howItWorksPage.steps.map((step, idx) => (
+      <section class={`relative min-h-screen flex items-center snap-start overflow-hidden`}>
+        {/* Backgrounds by step */}
+        <div class={`absolute inset-0 ${idx === 0 ? 'bg-gradient-to-br from-rose-50 via-white to-pink-50' : idx === 1 ? 'bg-gradient-to-br from-blue-50 via-white to-indigo-50' : idx === 2 ? 'bg-gradient-to-br from-emerald-50 via-white to-green-50' : 'bg-gradient-to-br from-purple-50 via-white to-violet-50'}`}></div>
+        <div class={`absolute inset-0 ${idx === 0 ? 'bg-[radial-gradient(circle_at_20%_80%,rgba(244,63,94,0.05),transparent_50%)]' : idx === 1 ? 'bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.05),transparent_50%)]' : idx === 2 ? 'bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.05),transparent_50%)]' : 'bg-[radial-gradient(circle_at_80%_80%,rgba(147,51,234,0.05),transparent_50%)]'}`}></div>
+        <div class={`absolute top-0 ${idx % 2 === 0 ? 'left-0' : 'right-0'} w-full h-32 ${idx === 0 ? 'bg-gradient-to-b from-rose-100/30 to-transparent' : idx === 1 ? 'bg-gradient-to-b from-blue-100/30 to-transparent' : idx === 2 ? 'bg-gradient-to-b from-emerald-100/30 to-transparent' : 'bg-gradient-to-b from-purple-100/30 to-transparent'}`}></div>
+        <div class={`absolute bottom-0 ${idx % 2 === 0 ? 'right-0' : 'left-0'} w-full h-32 ${idx === 0 ? 'bg-gradient-to-t from-pink-100/30 to-transparent' : idx === 1 ? 'bg-gradient-to-t from-indigo-100/30 to-transparent' : idx === 2 ? 'bg-gradient-to-t from-green-100/30 to-transparent' : 'bg-gradient-to-t from-violet-100/30 to-transparent'}`}></div>
+        <div class="relative z-10 w-full">
+          <div class={`max-w-6xl mx-auto px-4 sm:px-6 lg:px-8`}>
+            <div class={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 py-24`}>
+              <div class="lg:w-3/5">
+                <div class="flex items-center mb-6">
+                  <div class={`flex items-center justify-center w-16 h-16 ${idx === 0 ? 'bg-rose-500' : idx === 1 ? 'bg-blue-500' : idx === 2 ? 'bg-emerald-500' : 'bg-purple-500'} text-white rounded-2xl font-bold text-2xl mr-4`}>
+                    {step.number}
+                  </div>
+                  <h2 class="text-3xl font-bold text-gray-900">{step.title}</h2>
+                </div>
+                <p class="text-lg text-gray-600 mb-6">{step.description}</p>
+                <ul class="space-y-3 text-gray-600">
+                  {step.bullets.map(bullet => (
+                    <li class="flex items-center">
+                      <div class={`w-2 h-2 ${idx === 0 ? 'bg-rose-500' : idx === 1 ? 'bg-blue-500' : idx === 2 ? 'bg-emerald-500' : 'bg-purple-500'} rounded-full mr-3`}></div>
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="lg:w-2/5">
+                <div class={`bg-gradient-to-br ${idx === 0 ? 'from-rose-50 to-pink-50' : idx === 1 ? 'from-blue-50 to-indigo-50' : idx === 2 ? 'from-emerald-50 to-green-50' : 'from-purple-50 to-violet-50'} p-8 rounded-2xl border ${idx === 0 ? 'border-rose-100' : idx === 1 ? 'border-blue-100' : idx === 2 ? 'border-emerald-100' : 'border-purple-100'}`}>
+                  <div class="text-center">
+                    {idx === 0 && <UserPlus class="h-16 w-16 text-rose-500 mx-auto mb-4" />}
+                    {idx === 1 && <FileText class="h-16 w-16 text-blue-500 mx-auto mb-4" />}
+                    {idx === 2 && <Eye class="h-16 w-16 text-emerald-500 mx-auto mb-4" />}
+                    {idx === 3 && <Share2 class="h-16 w-16 text-purple-500 mx-auto mb-4" />}
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">{step.cardTitle}</h3>
+                    <p class="text-gray-600">{step.cardDescription}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+  </main>
+</Layout> 

@@ -113,26 +113,6 @@ if (typeof window !== 'undefined') {
         <div class="flex items-center justify-between h-16">
           <img src={Logo.src} alt="Parte Digital" class="h-8 w-auto" />
           <div class="flex items-center gap-2">
-            <div class="relative group ml-2">
-              <button class="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition" aria-haspopup="true" aria-expanded="false">
-                <img src="https://flagcdn.com/us.svg" alt={texts.home.header.flagAlt} class="h-4 w-6 object-cover rounded-sm shadow inline-block align-middle" />
-                <ChevronDown class="h-4 w-4 text-white" />
-              </button>
-              <div class="absolute right-0 mt-2 w-32 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50">
-                <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-t">
-                  <img src="https://flagcdn.com/us.svg" alt="USA" class="h-4 w-6 object-cover rounded-sm" />
-                </a>
-                <a href="/pa" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
-                  <img src="https://flagcdn.com/pa.svg" alt="Panama" class="h-4 w-6 object-cover rounded-sm" />
-                </a>
-                <a href="/mx" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
-                  <img src="https://flagcdn.com/mx.svg" alt="México" class="h-4 w-6 object-cover rounded-sm" />
-                </a>
-                <a href="/cl" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-b">
-                  <img src="https://flagcdn.com/cl.svg" alt="Chile" class="h-4 w-6 object-cover rounded-sm" />
-                </a>
-              </div>
-            </div>
             <button 
               id="close-panel-button"
               class="p-2 rounded-md text-white hover:text-white hover:bg-white/20 transition-colors duration-300"

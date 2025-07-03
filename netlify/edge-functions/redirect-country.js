@@ -21,7 +21,16 @@ export default async (request, context) => {
           'Set-Cookie': 'countryPref=cl; Path=/; Max-Age=31536000'
         }
       });
+    }    if (country === 'MX') {
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: '/mx',
+          'Set-Cookie': 'countryPref=mx; Path=/; Max-Age=31536000'
+        }
+      });
     }
+    
     // Puedes agregar más países aquí si lo necesitas
   }
 
