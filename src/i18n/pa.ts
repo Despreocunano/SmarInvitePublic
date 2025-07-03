@@ -134,6 +134,7 @@ export default {
         invitados: { label: "Gestión de invitados", href: "/pa/invitados" }
       },
       login: "Ingresar",
+      loginSecondary: "Ya tengo cuenta",
       register: "Crear mi invitación gratis",
       flagAlt: "Panamá"
     },

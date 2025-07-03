@@ -171,7 +171,7 @@ if (typeof window !== 'undefined') {
           class="flex items-center justify-center w-full px-6 py-3 text-white bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-white/20 group text-base"
         >
           <User class="h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-200" />
-          Ya tengo cuenta
+          {texts.home.header.loginSecondary ?? (texts.home.header.login === 'Login' ? 'I already have an account' : 'Ya tengo cuenta')}
         </a>
         
         <!-- Additional Info -->

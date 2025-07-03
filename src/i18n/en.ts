@@ -134,6 +134,7 @@ export default {
         invitados: { label: "Guest management", href: "/guests" }
       },
       login: "Login",
+      loginSecondary: "I already have an account",
       register: "Create my invitation for free",
       flagAlt: "United States"
     },
