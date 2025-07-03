@@ -1,13 +1,21 @@
 export default {
   home: {
-    title: "Bienvenido a SmarInvite Panamá",
-    description: "La mejor manera de gestionar tus invitaciones en Panamá.",
+    title: "Bienvenido a SmarInvite México",
+    description: "La mejor manera de gestionar tus invitaciones en México.",
     hero: {
       title: "Tu historia de amor merece una invitación única",
       subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
       cta: "Crea tu parte de matrimonio digital sin costo",
       button: "Crear mi invitación",
-      secondary: "Ver características"
+      secondary: "Ver características",
+      heroScroll: "Desliza para ver más",
+      invitationName: "Ana & Luis",
+      invitationDate: "20 de Noviembre, 2026",
+      invitationButtons: [
+        "AGENDAR",
+        "CONFIRMAR ASISTENCIA",
+        "¿CÓMO LLEGAR?"
+      ]
     },
     features: [
       {
@@ -117,7 +125,7 @@ export default {
       ]
     },
     footer: {
-      copyright: "© {year} Tu Parte Digital. Todos los derechos reservados. Un producto de Dreamco LLC."
+      copyright: "© {year} Smart Invite. Todos los derechos reservados. Un producto de Dreamco LLC."
     },
     header: {
       menu: {

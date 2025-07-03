@@ -8,7 +8,14 @@ export default {
       cta: "Create your digital wedding invite for free",
       button: "Create my invitation",
       secondary: "See features",
-      heroScroll: "Scroll to see more"
+      heroScroll: "Scroll to see more",
+      invitationName: "John & Mary",
+      invitationDate: "October 12, 2026",
+      invitationButtons: [
+        "ADD TO CALENDAR",
+        "RSVP",
+        "DIRECTIONS"
+      ]
     },
     features: [
       {
@@ -118,7 +125,7 @@ export default {
       ]
     },
     footer: {
-      copyright: "© {year} Tu Parte Digital. All rights reserved. A Dreamco LLC product."
+      copyright: "© {year} Smart Invite. All rights reserved. A Dreamco LLC product."
     },
     header: {
       menu: {

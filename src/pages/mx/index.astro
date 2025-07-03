@@ -7,7 +7,7 @@ import Cta from '../../components/shared/Cta.astro';
 import Footer from '../../components/shared/Footer.astro';
 import StepsSection from '../../components/shared/StepsSection.astro';
 import texts from '../../i18n/mx';
-import TemplateExamples from '../../components/home/TemplateExamples.tsx';
+import TemplateExamples from '../../components/home/TemplateExamples';
 import ExampleCard from '../../components/shared/ExampleCard.astro';
 import { Users, Check, Gift, Link as LinkIcon, LayoutDashboard, Table2 } from '@lucide/astro';
 import app1 from '../../assets/images/app_gestion.png';
@@ -82,6 +82,6 @@ const featureSections = texts.home.features.map((feature, idx) => ({
     title={texts.home.featuresGrid.title}
     subtitle={texts.home.featuresGrid.subtitle}
     features={texts.home.featuresGrid.features}
-  />    <Footer />  
+  />    <Footer texts={texts} />  
   </main>
 </Layout>

@@ -8,7 +8,14 @@ export default {
       cta: "Crea tu parte de matrimonio digital sin costo",
       button: "Crear mi invitación",
       secondary: "Ver características",
-      heroScroll: "Desliza para ver más"
+      heroScroll: "Desliza para ver más",
+      invitationName: "Juan & María",
+      invitationDate: "12 de Octubre, 2026",
+      invitationButtons: [
+        "AGENDAR",
+        "CONFIRMAR ASISTENCIA",
+        "¿CÓMO LLEGAR?"
+      ]
     },
     features: [
       {
@@ -118,7 +125,7 @@ export default {
       ]
     },
     footer: {
-      copyright: "© {year} Tu Parte Digital. Todos los derechos reservados. Un producto de Dreamco LLC."
+      copyright: "© {year} Smart Invite. Todos los derechos reservados. Un producto de Dreamco LLC."
     },
     header: {
       menu: {

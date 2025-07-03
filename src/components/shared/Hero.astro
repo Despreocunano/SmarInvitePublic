@@ -78,24 +78,24 @@ import HeroPrincipal from '../../assets/images/hero_principal.webp'
             <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 flex flex-col items-center justify-center text-white p-6">
               <div class="absolute top-0 left-0 right-0 h-6 bg-black/80"></div>
               <div>
-                <h3 class="text-2xl font-serif mb-4">Juan & María</h3>
-                <p class="text-sm mb-8">12 de Octubre, 2026</p>
+                <h3 class="text-2xl font-serif mb-4">{texts.home.hero.invitationName}</h3>
+                <p class="text-sm mb-8">{texts.home.hero.invitationDate}</p>
               </div>
               <div class="space-y-3 w-full">
                 <button
                   class="w-full bg-gradient-to-r from-rose-500 to-rose-600 text-white rounded-lg py-2 text-sm font-medium shadow-lg shadow-rose-500/25"
                 >
-                  AGENDAR
+                  {texts.home.hero.invitationButtons?.[0] ?? 'AGENDAR'}
                 </button>
                 <button
                   class="w-full bg-white/20 text-white rounded-lg py-2 text-sm font-medium backdrop-blur-sm"
                 >
-                  CONFIRMAR ASISTENCIA
+                  {texts.home.hero.invitationButtons?.[1] ?? 'CONFIRMAR ASISTENCIA'}
                 </button>
                 <button
                   class="w-full bg-white/20 text-white rounded-lg py-2 text-sm font-medium backdrop-blur-sm"
                 >
-                  ¿CÓMO LLEGAR?
+                  {texts.home.hero.invitationButtons?.[2] ?? '¿CÓMO LLEGAR?'}
                 </button>
               </div>
             </div>
