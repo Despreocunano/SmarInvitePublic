@@ -5,7 +5,7 @@ export default {
     hero: {
       title: "Tu historia de amor merece una invitación única",
       subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
-      cta: "Crea tu parte de matrimonio digital sin costo",
+      cta: "Crea tu invitación de matrimonio digital gratis",
       button: "Crear mi invitación",
       secondary: "Ver características",
       heroScroll: "Desliza para ver más",
@@ -110,7 +110,7 @@ export default {
         },
         {
           step: "03",
-          title: "Visualiza tu parte digital",
+          title: "Visualiza tu invitación digital",
           description: "Revisa cómo se ve tu invitación en tiempo real y ajusta los detalles que necesites.",
           color: "from-emerald-500 via-emerald-600 to-teal-600",
           bgColor: "from-emerald-50 to-teal-50"
@@ -196,7 +196,7 @@ export default {
   howItWorksPage: {
     title: "How SmarInvite works",
     description: "Discover how to create your digital invite in just 4 simple steps. Registration, creation, preview, and publishing.",
-    heroTitle: "Crea tu parte digital en <span class='text-rose-400'>4 simples pasos</span>",
+    heroTitle: "Crea tu invitación digital en <span class='text-rose-400'>4 simples pasos</span>",
     heroSubtitle: "Desde el registro hasta compartir con tus invitados, te guiamos en todo el proceso",
     heroButton: "Comenzar ahora",
     heroScroll: "Desliza para ver más",
@@ -216,7 +216,7 @@ export default {
       {
         number: "2",
         title: "Completa el formulario",
-        description: "Nuestro formulario intuitivo te guía paso a paso para crear tu parte digital perfecta. Incluye toda la información importante: fecha, lugar, horarios, y detalles especiales de tu celebración.",
+        description: "Nuestro formulario intuitivo te guía paso a paso para crear tu invitación digital perfecta. Incluye toda la información importante: fecha, lugar, horarios, y detalles especiales de tu celebración.",
         bullets: [
           "Formulario guiado paso a paso",
           "Plantillas profesionales predefinidas",
@@ -228,7 +228,7 @@ export default {
       {
         number: "3",
         title: "Visualiza y ajusta",
-        description: "Ve exactamente cómo se verá tu parte digital antes de publicarla. Nuestra plataforma te permite editar cada detalle de tu invitación hasta que quede perfecta.",
+        description: "Ve exactamente cómo se verá tu invitación digital antes de publicarla. Nuestra plataforma te permite editar cada detalle de tu invitación hasta que quede perfecta.",
         bullets: [
           "Vista previa en tiempo real",
           "Personalización completa de diseño",
@@ -240,7 +240,7 @@ export default {
       {
         number: "4",
         title: "Publícala y compártela",
-        description: "Una vez que estés satisfecho con tu parte digital, publícala con un solo clic. Compártela fácilmente por WhatsApp, redes sociales, email o genera un enlace directo para tus invitados.",
+        description: "Una vez que estés satisfecho con tu invitación digital, publícala con un solo clic. Compártela fácilmente por WhatsApp, redes sociales, email o genera un enlace directo para tus invitados.",
         bullets: [
           "Publicación instantánea",
           "Compartir por múltiples canales",
