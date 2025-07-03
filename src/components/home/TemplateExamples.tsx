@@ -1,37 +1,28 @@
 import { motion } from 'framer-motion';
-const templates = [
-  {
-    name: 'Beso Infinito',
-    preview: 'https://res.cloudinary.com/sorostica/image/upload/v1750976906/beso_infinito_t18nor.png',
-    link: '/ejemplos/beso-infinito',
-  },
-  {
-    name: 'Minimalista',
-    preview: 'https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png',
-    link: '/ejemplos/minimalista',
-  },
-  {
-    name: 'Bosque',
-    preview: 'https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png',
-    link: '/ejemplos/bosque',
-  },
-  {
-    name: 'Signature',
-    preview: 'https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png',
-    link: '/ejemplos/signature',
-  },
-];
 
-export default function TemplateExamples() {
+interface Template {
+  name: string;
+  preview: string;
+  link: string;
+}
+
+interface TemplateExamplesProps {
+  title: string;
+  description: string;
+  buttonText: string;
+  templates: Template[];
+}
+
+export default function TemplateExamples({ title, description, buttonText, templates }: TemplateExamplesProps) {
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <motion.h2 className="text-4xl md:text-5xl font-bold text-rose-600 mb-8 leading-tight">
-            Algunos ejemplos <span className='text-slate-600'>de invitaciones</span>
+            {title}
           </motion.h2>
           <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.
+            {description}
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -51,7 +42,7 @@ export default function TemplateExamples() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ver ejemplo
+                {buttonText}
               </a>
             </div>
           ))}

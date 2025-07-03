@@ -1,7 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import { Mouse } from '@lucide/astro';
-import ExampleCard from '../components/home/ExampleCard.astro';
+import ExampleCard from '../../components/shared/ExampleCard.astro';
+import texts from '../../i18n/pa';
 
 const ejemplos = [
   {
@@ -79,7 +80,7 @@ const ejemplos = [
 ];
 ---
 
-<Layout title="Ejemplos de Invitaciones" description="Explora los ejemplos y Invitaciones disponibles para tu parte digital.">
+<Layout title={texts.examplesPage.title} description={texts.examplesPage.description} texts={texts}>
   <main class="pt-16 min-h-screen">
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -96,24 +97,22 @@ const ejemplos = [
       </div>
       <div class="relative z-10 w-full">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-            Explora nuestros <span class="text-fuchsia-400">ejemplos de invitaciones</span>
-          </h1>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6" set:html={texts.examplesPage.heroTitle} />
           <p class="text-xl text-fuchsia-200 mb-8">
-            Inspírate con los distintos estilos y diseños que puedes usar para tu parte digital.
+            {texts.examplesPage.heroSubtitle}
           </p>
         </div>
       </div>
       <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
         <Mouse class="h-10 w-10 text-white animate-bounce" />
-        <span class="text-xs text-white/70 mt-1">Desliza para ver más</span>
+        <span class="text-xs text-white/70 mt-1">Scroll to see more</span>
       </div>
     </section>
     <!-- Ejemplos Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {ejemplos.map((ejemplo) => (
-          <ExampleCard nombre={ejemplo.nombre} imagen={ejemplo.imagen} enlace={ejemplo.enlace} color={ejemplo.color} />
+        {texts.examplesPage.examples.map((ejemplo) => (
+          <ExampleCard nombre={ejemplo.name} imagen={ejemplo.image} enlace={ejemplo.link} color={ejemplo.color} buttonText={texts.home.exampleCard.button} />
         ))}
       </div>
     </section>

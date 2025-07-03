@@ -1,0 +1,53 @@
+---
+const { title = '', subtitle = '', features = [] } = Astro.props;
+import { Globe, Music2, Clock, MapPin, Gift, CalendarDays, Image, Shirt, Lock, Link as LinkIcon, UtensilsCrossed } from '@lucide/astro';
+
+const iconMap: Record<string, any> = { Globe, Music2, Clock, MapPin, Gift, CalendarDays, Image, Shirt, Lock, LinkIcon, UtensilsCrossed };
+
+const colorVariants: Record<string, string> = {
+  emerald: "bg-emerald-50 text-emerald-600 shadow-emerald-100/50",
+  purple: "bg-purple-50 text-purple-600 shadow-purple-100/50",
+  amber: "bg-amber-50 text-amber-600 shadow-amber-100/50",
+  rose: "bg-rose-50 text-rose-600 shadow-rose-100/50",
+  blue: "bg-blue-50 text-blue-600 shadow-blue-100/50",
+  pink: "bg-pink-50 text-pink-600 shadow-pink-100/50",
+  indigo: "bg-indigo-50 text-indigo-600 shadow-indigo-100/50",
+  violet: "bg-violet-50 text-violet-600 shadow-violet-100/50",
+  fuchsia: "bg-fuchsia-50 text-fuchsia-600 shadow-fuchsia-100/50",
+  gray: "bg-gray-50 text-gray-600 shadow-gray-100/50"
+};
+---
+<section id="features" class="py-24 bg-gradient-to-b from-white to-rose-50/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-rose-600 mb-8 leading-tight">
+        {title}
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      {features.map((feature: { icon: string; title: string; description: string; color: string }, idx: number) => {
+        const Icon = iconMap[feature.icon];
+        return (
+          <div class={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100/50 overflow-hidden hover:border-rose-100/50 transition-all duration-300 ${colorVariants[feature.color]}`}> 
+            <div class="relative flex items-start gap-4">
+              <div class={`w-12 h-12 rounded-xl flex items-center justify-center shadow ${colorVariants[feature.color]} group-hover:scale-110 transition-transform duration-300`}>
+                {Icon && <Icon class="h-6 w-6" />}
+              </div>
+              <div class="flex-1">
+                <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-rose-600 transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p class="text-gray-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section> 

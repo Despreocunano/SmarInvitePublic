@@ -1,19 +1,20 @@
 ---
 import "../styles/global.css";
-import Header from "../components/home/Header.astro"
+import Header from "../components/shared/Header.astro"
 import MetaTags from "../components/shared/MetaTags.astro";
 import OpenGraph from "../components/shared/OpenGraph.astro";
 
 interface Props {
 	title: string;
 	description: string;
+	texts: any;
 	canonical?: string;
 	ogImage?: string;
 	ogType?: string;
 	ogLocale?: string;
 	ogSiteName?: string;
 }
-const { title, description, canonical, ogImage, ogType, ogLocale, ogSiteName } = Astro.props;
+const { title, description, texts, canonical, ogImage, ogType, ogLocale, ogSiteName } = Astro.props;
 const canonicalUrl = canonical || Astro.request.url;
 ---
 <!doctype html>
@@ -47,7 +48,7 @@ const canonicalUrl = canonical || Astro.request.url;
     </script>
 </script>
 	</head>
-	<Header />
+	<Header texts={texts} />
 	<body>
 		<slot />
 	</body>

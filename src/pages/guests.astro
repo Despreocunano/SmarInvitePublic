@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Users, Mail, ClipboardCheck, Mouse } from '@lucide/astro';
-import appInvitados from '../assets/images/app_invitados.png';
-import Cta from '../components/home/Cta.astro';
+import { Mail, ClipboardCheck, Mouse } from '@lucide/astro';
+import texts from '../i18n/en';
 ---
 
 <Layout
-  title="Gestión de Invitados"
-  description="Descubre cómo funciona la gestión de invitados: tradicional y por email, para confirmar asistencia de manera sencilla."
+  title={texts.guestPage.title}
+  description={texts.guestPage.description}
+  texts={texts}
 >
   <main class="pt-16 h-screen overflow-y-scroll scroll-smooth snap-y snap-mandatory">
     <!-- Hero Section -->
@@ -25,17 +25,13 @@ import Cta from '../components/home/Cta.astro';
       </div>
       <div class="relative z-10 w-full">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
-            Gestiona tus invitados en <span class="text-emerald-400">2 formas realmente simples</span>
-          </h1>
-          <p class="text-xl text-blue-100 mb-8">
-            Elige la opción que más se adapte a tu evento y facilita la confirmación de asistencia de tus invitados
-          </p>
+          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6" set:html={texts.guestPage.heroTitle} />
+          <p class="text-xl text-blue-100 mb-8">{texts.guestPage.heroSubtitle}</p>
         </div>
       </div>
       <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
         <Mouse class="h-10 w-10 text-white animate-bounce" />
-        <span class="text-xs text-white/70 mt-1">Desliza para ver más</span>
+        <span class="text-xs text-white/70 mt-1">{texts.guestPage.heroScroll}</span>
       </div>
     </section>
 
@@ -53,32 +49,24 @@ import Cta from '../components/home/Cta.astro';
                 <div class="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-2xl font-bold text-2xl mr-4">
                   1
                 </div>
-                <h2 class="text-3xl font-bold text-gray-900">Invitación general</h2>
+                <h2 class="text-3xl font-bold text-gray-900">{texts.guestPage.traditional.title}</h2>
               </div>
-              <p class="text-lg text-gray-600 mb-6">
-                Crea tu invitación digital y compártela con tus invitados. Ellos podrán ingresar sus datos y confirmar (o no) su asistencia de manera sencilla desde cualquier dispositivo.
-              </p>
+              <p class="text-lg text-gray-600 mb-6">{texts.guestPage.traditional.description}</p>
               <ul class="space-y-3 text-gray-600">
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Enlace único para tu evento
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Confirmación de asistencia en segundos
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                  Sin necesidad de registro para los invitados
-                </li>
+                {texts.guestPage.traditional.bullets.map(bullet => (
+                  <li class="flex items-center">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                    {bullet}
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="lg:w-2/5">
               <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100">
                 <div class="text-center">
                   <ClipboardCheck class="h-16 w-16 text-blue-500 mx-auto mb-4" />
-                  <h3 class="text-xl font-semibold text-gray-900 mb-2">Confirmación fácil</h3>
-                  <p class="text-gray-600">Tus invitados confirman asistencia en segundos</p>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{texts.guestPage.traditional.cardTitle}</h3>
+                  <p class="text-gray-600">{texts.guestPage.traditional.cardDescription}</p>
                 </div>
               </div>
             </div>
@@ -101,32 +89,24 @@ import Cta from '../components/home/Cta.astro';
                 <div class="flex items-center justify-center w-16 h-16 bg-emerald-500 text-white rounded-2xl font-bold text-2xl mr-4">
                   2
                 </div>
-                <h2 class="text-3xl font-bold text-gray-900">Invitación personalizada</h2>
+                <h2 class="text-3xl font-bold text-gray-900">{texts.guestPage.email.title}</h2>
               </div>
-              <p class="text-lg text-gray-600 mb-6">
-                Agrega los invitados manualmente en el apartado de invitaciones. Se enviará un email personalizado a cada invitado con un enlace único y sus datos precargados para que solo deba confirmar (o no) su asistencia.
-              </p>
+              <p class="text-lg text-gray-600 mb-6">{texts.guestPage.email.description}</p>
               <ul class="space-y-3 text-gray-600">
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                  Email personalizado para cada invitado
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                  Datos precargados para mayor comodidad
-                </li>
-                <li class="flex items-center">
-                  <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
-                  Seguimiento de confirmaciones en tiempo real
-                </li>
+                {texts.guestPage.email.bullets.map(bullet => (
+                  <li class="flex items-center">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full mr-3"></div>
+                    {bullet}
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="lg:w-2/5">
               <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-2xl border border-emerald-100">
                 <div class="text-center">
                   <Mail class="h-16 w-16 text-emerald-500 mx-auto mb-4" />
-                  <h3 class="text-xl font-semibold text-gray-900 mb-2">Invitación personalizada</h3>
-                  <p class="text-gray-600">Tus invitados reciben un email con sus datos listos</p>
+                  <h3 class="text-xl font-semibold text-gray-900 mb-2">{texts.guestPage.email.cardTitle}</h3>
+                  <p class="text-gray-600">{texts.guestPage.email.cardDescription}</p>
                 </div>
               </div>
             </div>
@@ -134,7 +114,5 @@ import Cta from '../components/home/Cta.astro';
         </div>
       </div>
     </section>
-    <!-- CTA Section -->
-    <Cta />
   </main>
 </Layout> 

@@ -1,4 +1,5 @@
 ---
+const { texts } = Astro.props;
 import { Heart, Mouse } from '@lucide/astro' 
 import HeroImg from '../../assets/images/hero_public.webp'
 ---
@@ -26,16 +27,14 @@ import HeroImg from '../../assets/images/hero_public.webp'
       </div>
       <p class="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
         <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-200 to-rose-400">
-          Tu historia de amor
+          {texts.home.hero.title}
         </span>
-        <br />
-        merece una invitación única
       </p>
       <p class="text-lg md:text-2xl text-white/90 mb-6 md:mb-8 font-light">
-        Una experiencia interactiva, original y ecológica para tu boda
+        {texts.home.hero.subtitle}
       </p>
       <h1 class="text-xl md:text-3xl text-white font-light mb-8 md:mb-12">
-      Crea tu parte de matrimonio digital sin costo
+        {texts.home.hero.cta}
       </h1>
       <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
         <div
@@ -47,7 +46,7 @@ import HeroImg from '../../assets/images/hero_public.webp'
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center w-full px-8 py-4 text-lg rounded-md bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white transition-all duration-300 group shadow-lg shadow-rose-500/25"
           >
-            <span>Crear mi invitación</span>
+            <span>{texts.home.hero.button}</span>
             <Heart class="ml-2 h-5 w-5 group-hover:text-white transition-transform group-hover:scale-125" />
           </a>
         </div>
@@ -56,7 +55,7 @@ import HeroImg from '../../assets/images/hero_public.webp'
             href="#feature-section"
             class="inline-flex items-center justify-center w-full px-8 py-4 text-lg rounded-md bg-white/10 text-white border-white/20 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm shadow-lg shadow-rose-500/10"
           >
-            Ver características
+            {texts.home.hero.secondary}
           </a>
         </div>
       </div>

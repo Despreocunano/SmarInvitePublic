@@ -34,11 +34,7 @@ const blurBg = colorBlurVariants[section.color as string] || "bg-rose-300";
         <div class="flex items-center gap-4 mb-6">
           <div class="relative">
             <div class={`w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg ${iconColor}`}>
-              {section.title === "Confirmaciones en tiempo real" && <Check class="w-8 h-8" />}
-              {section.title === "Crea y comparte en minutos" && <LayoutDashboard class="w-8 h-8" />}
-              {section.title === "Gestión de invitados" && <Users class="w-8 h-8" />}
-              {section.title === "Organizador de mesas" && <Table2 class="w-8 h-8" />}
-              {section.title === "Lista de regalos" && <Gift class="w-8 h-8" />}
+              {section.icon && <section.icon class="w-8 h-8" />}
             </div>
           </div>
           <h2 class="text-3xl md:text-4xl font-bold text-slate-600">
