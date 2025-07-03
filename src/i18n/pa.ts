@@ -7,7 +7,8 @@ export default {
       subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
       cta: "Crea tu parte de matrimonio digital sin costo",
       button: "Crear mi invitación",
-      secondary: "Ver características"
+      secondary: "Ver características",
+      heroScroll: "Desliza para ver más"
     },
     features: [
       {

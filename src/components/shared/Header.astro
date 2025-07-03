@@ -12,6 +12,7 @@ function isActive(path: string) {
 let currentFlag = 'us';
 let urlPrefix = '';
 if (currentPath.startsWith('/pa')) { currentFlag = 'pa'; urlPrefix = '/pa'; }
+else if (currentPath.startsWith('/mx')) { currentFlag = 'mx'; urlPrefix = '/mx'; }
 else if (currentPath.startsWith('/cl')) { currentFlag = 'cl'; urlPrefix = ''; }
 
 const flagOptions = [

@@ -7,7 +7,8 @@ export default {
       subtitle: "An interactive, original and eco-friendly experience for your wedding",
       cta: "Create your digital wedding invite for free",
       button: "Create my invitation",
-      secondary: "See features"
+      secondary: "See features",
+      heroScroll: "Scroll to see more"
     },
     features: [
       {
