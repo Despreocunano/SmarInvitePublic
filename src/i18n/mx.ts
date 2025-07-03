@@ -1,6 +1,6 @@
 export default {
   home: {
-    title: "Bienvenido a SmarInvite México",
+    title: "Bienvenido a SmartInvite México",
     description: "La mejor manera de gestionar tus invitaciones en México.",
     hero: {
       title: "Tu historia de amor merece una invitación única",
@@ -195,7 +195,7 @@ export default {
     }
   },
   howItWorksPage: {
-    title: "How SmarInvite works",
+    title: "How SmartInvite works",
     description: "Discover how to create your digital invite in just 4 simple steps. Registration, creation, preview, and publishing.",
     heroTitle: "Crea tu invitación digital en <span class='text-rose-400'>4 simples pasos</span>",
     heroSubtitle: "Desde el registro hasta compartir con tus invitados, te guiamos en todo el proceso",

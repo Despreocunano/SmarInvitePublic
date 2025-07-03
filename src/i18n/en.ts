@@ -1,13 +1,13 @@
 export default {
   home: {
-    title: "Welcome to SmarInvite",
+    title: "Welcome to SmartInvite",
     description: "The best way to manage your event invitations.",
     hero: {
       title: "Your love story deserves a unique invitation",
-      subtitle: "An interactive, original and eco-friendly experience for your wedding",
-      cta: "Create your digital wedding invite for free",
+      subtitle: "An interactive, original, and eco-friendly experience for your wedding",
+      cta: "Create your digital wedding invitation for free",
       button: "Create my invitation",
-      secondary: "See features",
+      secondary: "View features",
       heroScroll: "Scroll down",
       invitationName: "John & Mary",
       invitationDate: "October 12, 2026",
@@ -19,38 +19,38 @@ export default {
     },
     features: [
       {
-        title: "Real-time confirmations",
-        description: "Stay up to date with automatic RSVP confirmations. Our digital RSVP system allows your guests to confirm their attendance easily, while you receive instant updates and keep full control over the final guest list.",
+        title: "Real-Time Confirmations",
+        description: "Stay up to date with automatic RSVP confirmations. Our digital RSVP system allows your guests to confirm their attendance easily while you receive instant updates and maintain full control over the final guest list.",
         features: [
           "Automatic confirmations",
           "Real-time statistics",
-          "Companion management",
+          "Plus-one management",
           "Response tracking"
         ]
       },
       {
-        title: "Create and share in minutes",
-        description: "Choose your favorite design, fill in the necessary information, background music, photo gallery, and share it with your guests for an unforgettable experience from the very first moment.",
+        title: "Create and Share in Minutes",
+        description: "Choose your favorite design, enter your details, add background music and photo galleries, then share it with your guests for an unforgettable experience from the first moment.",
         features: [
-          "Share directly on Whatsapp",
+          "Share directly via WhatsApp",
           "Background music",
           "Photo gallery",
-          "Interactive information"
+          "Interactive details"
         ]
       },
       {
-        title: "Guest management",
-        description: "Forget about spreadsheets and paper lists. Our guest management lets you keep all information organized, updated, and accessible. Add, edit, and manage your guest list easily, including important details like dietary preferences and companions.",
+        title: "Guest Management",
+        description: "Forget about spreadsheets and paper lists. Our guest management system helps you keep all information organized, updated, and accessible. Easily add, edit, and manage guests, including important details like dietary preferences and plus-ones.",
         features: [
-          "Complete guest management",
-          "Companion control",
+          "Comprehensive guest management",
+          "Plus-one tracking",
           "Dietary preferences",
           "Centralized contact information"
         ]
       },
       {
-        title: "Table organizer",
-        description: "Design the perfect layout for your wedding with our digital table organizer. Add and remove guests, manage capacities, and visualize the complete arrangement of your event. A powerful tool that makes table organization a breeze.",
+        title: "Table Organizer",
+        description: "Design the perfect layout for your wedding with our digital table organizer. Add or remove guests, manage table capacities, and visualize your complete event arrangement. A powerful tool that makes seating planning effortless.",
         features: [
           "Visual table layout",
           "Capacity management",
@@ -58,41 +58,41 @@ export default {
         ]
       },
       {
-        title: "Gift list",
-        description: "Create and share your personalized gift list with your guests and receive the money directly into your account. No more being forced to spend your balance at a specific store.",
+        title: "Gift Registry",
+        description: "Create and share your personalized gift registry with guests and receive funds directly to your account. No restrictions on where you can spend your balance.",
         features: [
-          "Personalized list",
+          "Personalized registry",
           "Integrated payments",
           "Gift tracking"
         ]
       }
     ],
     cta: {
-      title: "Create your invitation in less than 5 minutes",
-      description: "Register now, enter your wedding details and preview your digital invitation.",
+      title: "Create your invitation in under 5 minutes",
+      description: "Register now, enter your wedding details, and preview your digital invitation.",
       button: "Create my invitation"
     },
     featuresGrid: {
       title: "Everything you need in one place",
-      subtitle: "Create your invitation for free and adjust the design as many times as you want.",
+      subtitle: "Create your invitation for free and adjust the design as often as you like.",
       features: [
-        { icon: "Globe", title: "Unlimited sending", description: "Share your invitation via WhatsApp, Email, Social Media, and any digital platform", color: "emerald" },
-        { icon: "Music2", title: "Background music", description: "The musical theme you want will play in the background of your invitation", color: "purple" },
-        { icon: "Clock", title: "Countdown", description: "Exciting real-time countdown straight to your wedding date", color: "amber" },
-        { icon: "MapPin", title: "Location & Directions", description: "Interactive map with your wedding location, your guests will arrive without complications", color: "rose" },
-        { icon: "Music2", title: "Song list", description: "Your guests can create the list of songs that can't be missed at your party", color: "blue" },
-        { icon: "Gift", title: "Gifts", description: "Your guests will be able to send you their gifts", color: "pink" },
-        { icon: "CalendarDays", title: "Agenda", description: "Your guests can schedule your wedding date with a single click in their calendars", color: "indigo" },
-        { icon: "Image", title: "Photo album", description: "A unique story in a beautiful photographic journey", color: "violet" },
-        { icon: "Shirt", title: "Dress Code", description: "Let your guests know the dress code or style chosen for your big day", color: "blue" },
-        { icon: "Lock", title: "VIP Access", description: "Set your invitation to private mode, only guests with access can see it", color: "gray" },
-        { icon: "LinkIcon", title: "Customizable link", description: "Customize your invitation link as you like", color: "purple" },
-        { icon: "UtensilsCrossed", title: "Menu", description: "Show the menu options for your party", color: "rose" }
+        { icon: "Globe", title: "Unlimited sharing", description: "Share your invitation via WhatsApp, email, social media, or any digital platform", color: "emerald" },
+        { icon: "Music2", title: "Background music", description: "Your chosen music theme plays in the background of your invitation", color: "purple" },
+        { icon: "Clock", title: "Countdown", description: "Live countdown to your wedding date", color: "amber" },
+        { icon: "MapPin", title: "Location & Directions", description: "Interactive maps ensure guests arrive without issues", color: "rose" },
+        { icon: "Music2", title: "Song requests", description: "Guests can suggest must-play songs for your reception", color: "blue" },
+        { icon: "Gift", title: "Gifts", description: "Guests can send gifts directly through the platform", color: "pink" },
+        { icon: "CalendarDays", title: "Calendar Integration", description: "Guests can save your wedding date with one click", color: "indigo" },
+        { icon: "Image", title: "Photo album", description: "Tell your unique story through a photographic journey", color: "violet" },
+        { icon: "Shirt", title: "Dress code", description: "Share the preferred attire for your special day", color: "blue" },
+        { icon: "Lock", title: "Private Access", description: "Restrict access to invited guests only", color: "gray" },
+        { icon: "LinkIcon", title: "Customizable link", description: "Personalize your invitation URL", color: "purple" },
+        { icon: "UtensilsCrossed", title: "Menu", description: "Display meal options for your event", color: "rose" }
       ]
     },
     stepsSection: {
-      title: "In just 4 steps your invitation will be ready",
-      subtitle: "A process designed to be simple, fast and fun. No complications, just amazing results.",
+      title: "Your invitation ready in just 4 steps",
+      subtitle: "A process designed to be simple, fast, and fun. No complications—just amazing results.",
       steps: [
         {
           step: "01",
@@ -110,7 +110,7 @@ export default {
         },
         {
           step: "03",
-          title: "Preview your digital invite",
+          title: "Preview your digital invitation",
           description: "See how your invitation looks in real time and adjust any details you need.",
           color: "from-emerald-500 via-emerald-600 to-teal-600",
           bgColor: "from-emerald-50 to-teal-50"
@@ -125,26 +125,26 @@ export default {
       ]
     },
     footer: {
-      copyright: "© {year} Smart Invite. All rights reserved. A Dreamco LLC product."
+      copyright: "© {year} SmartInvite. All rights reserved. A Dreamco LLC product."
     },
     header: {
       menu: {
-        comoFunciona: { label: "How it works?", href: "/how-it-works" },
+        comoFunciona: { label: "How it works", href: "/how-it-works" },
         ejemplos: { label: "Examples", href: "/examples" },
-        invitados: { label: "Guest management", href: "/guests" }
+        invitados: { label: "Guest Management", href: "/guests" }
       },
-      login: "Login",
+      login: "Log in",
       loginSecondary: "I already have an account",
-      register: "Create my invitation for free",
+      register: "Create my free invitation",
       flagAlt: "United States"
     },
     exampleCard: {
-      button: "See example"
+      button: "View example"
     },
     examplesSection: {
-      title: "Some invitation examples",
-      description: "Choose the design that inspires you the most and preview how your digital invitation will look before deciding. Each design is crafted to make your event unique, elegant, and memorable.",
-      cta: "See all examples",
+      title: "Invitation examples",
+      description: "Choose the design that inspires you most and preview your digital invitation before finalizing. Each template is crafted to make your event unique, elegant, and memorable.",
+      cta: "View all examples",
       examples: [
         {
           name: "Infinite Kiss",
@@ -167,9 +167,9 @@ export default {
       ]
     },
     templateExamples: {
-      title: "Some invitation examples",
-      description: "Choose the design that inspires you the most and preview how your digital invitation will look before deciding. Each design is crafted to make your event unique, elegant, and memorable.",
-      buttonText: "See example",
+      title: "Invitation templates",
+      description: "Browse designs that inspire you and preview how your digital invitation will appear. Each template creates a unique, elegant experience for your event.",
+      buttonText: "Preview template",
       templates: [
         {
           name: "Infinite Kiss",
@@ -196,9 +196,9 @@ export default {
   },
   examplesPage: {
     title: "Invitation Examples",
-    description: "Explore the available invitation examples for your digital invite.",
-    heroTitle: "Explore our <span class='text-fuchsia-400'>invitation examples</span>",
-    heroSubtitle: "Get inspired by the different styles and designs you can use for your digital invite.",
+    description: "Explore available templates for your digital invitation.",
+    heroTitle: "Discover our <span class='text-fuchsia-400'>invitation templates</span>",
+    heroSubtitle: "Find inspiration in different styles and designs for your digital invitation.",
     examples: [
       {
         name: "Infinite Kiss",
@@ -276,57 +276,57 @@ export default {
   },
   guestPage: {
     title: "Guest Management",
-    description: "Discover how guest management works: traditional and by email, to confirm attendance easily.",
-    heroTitle: "Manage your guests in <span class='text-emerald-400'>2 really simple ways</span>",
-    heroSubtitle: "Choose the option that best fits your event and make it easy for your guests to confirm their attendance.",
+    description: "Learn how to manage guests: traditional RSVPs or email invitations for easy attendance confirmation.",
+    heroTitle: "Manage guests in <span class='text-emerald-400'>two simple ways</span>",
+    heroSubtitle: "Choose the option that best fits your event and simplify attendance confirmations.",
     heroScroll: "Scroll down",
     traditional: {
-      title: "General invitation",
-      description: "Create your digital invitation and share it with your guests. They can enter their details and confirm (or not) their attendance easily from any device.",
+      title: "Open Invitation",
+      description: "Share your digital invitation link with guests. They can submit their details and RSVP directly from any device.",
       bullets: [
-        "Unique link for your event",
-        "Attendance confirmation in seconds",
-        "No registration required for guests"
+        "Single link for your event",
+        "RSVP confirmation in seconds",
+        "No guest registration required"
       ],
-      cardTitle: "Easy confirmation",
-      cardDescription: "Your guests confirm attendance in seconds"
+      cardTitle: "Easy RSVPs",
+      cardDescription: "Guests confirm attendance in seconds"
     },
     email: {
-      title: "Personalized invitation",
-      description: "Add guests manually in the invitations section. A personalized email will be sent to each guest with a unique link and their pre-filled data so they only need to confirm (or not) their attendance.",
+      title: "Personalized Invitations",
+      description: "Add guests manually to send personalized emails with pre-filled details. Each guest receives a unique link for quick RSVP confirmation.",
       bullets: [
-        "Personalized email for each guest",
-        "Pre-filled data for convenience",
-        "Real-time confirmation tracking"
+        "Custom emails for each guest",
+        "Pre-filled details for convenience",
+        "Real-time RSVP tracking"
       ],
-      cardTitle: "Personalized invitation",
-      cardDescription: "Your guests receive an email with their data ready"
+      cardTitle: "Personalized Invitations",
+      cardDescription: "Guests receive emails with their information pre-loaded"
     }
   },
   howItWorksPage: {
-    title: "How SmarInvite works",
-    description: "Discover how to create your digital invite in just 4 simple steps. Registration, creation, preview, and publishing.",
-    heroTitle: "Create your digital invite in <span class='text-rose-400'>4 simple steps</span>",
-    heroSubtitle: "From registration to sharing with your guests, we guide you through the whole process.",
+    title: "How SmartInvite Works",
+    description: "Learn how to create your digital invitation in 4 simple steps: registration, creation, preview, and sharing.",
+    heroTitle: "Create your digital invitation in <span class='text-rose-400'>4 simple steps</span>",
+    heroSubtitle: "From registration to guest sharing—we guide you through the entire process.",
     heroButton: "Get started now",
     heroScroll: "Scroll down",
     steps: [
       {
         number: "1",
-        title: "Register for free",
-        description: "Start your journey by creating a free account on our platform. You only need your email and some basic information. No credit card or sensitive personal data required.",
+        title: "Free registration",
+        description: "Start by creating a free account. You'll only need your email and basic information—no credit card or sensitive data required.",
         bullets: [
-          "Free registration with no commitments",
+          "Free with no commitments",
           "Instant email verification",
-          "Immediate access to all features"
+          "Immediate feature access"
         ],
         cardTitle: "Quick Registration",
-        cardDescription: "Less than 2 minutes to create your account"
+        cardDescription: "Account setup in under 2 minutes"
       },
       {
         number: "2",
         title: "Complete the form",
-        description: "Our intuitive form guides you step by step to create your perfect digital invite. Include all the important information: date, location, times, and special details of your celebration.",
+        description: "Our intuitive form guides you step by step to create your perfect digital invitation. Include all important details: date, location, times, and special celebration notes.",
         bullets: [
           "Step-by-step guided form",
           "Professional pre-designed templates",
@@ -338,7 +338,7 @@ export default {
       {
         number: "3",
         title: "Preview and adjust",
-        description: "See exactly how your digital invite will look before publishing. Our platform lets you edit every detail of your invitation until it's perfect.",
+        description: "See exactly how your digital invitation will appear before publishing. Edit every detail until it's perfect.",
         bullets: [
           "Real-time preview",
           "Full design customization",
@@ -350,15 +350,15 @@ export default {
       {
         number: "4",
         title: "Publish and share",
-        description: "Once you're happy with your invite, publish it and share it instantly with your guests. Enjoy a unique, interactive, and eco-friendly experience.",
+        description: "Once satisfied with your invitation, publish it and share instantly with guests. Enjoy a unique, interactive, and eco-friendly experience.",
         bullets: [
           "Instant publishing",
-          "Share via WhatsApp, Email, and more",
+          "Share via WhatsApp, email, and more",
           "Eco-friendly and paperless"
         ],
         cardTitle: "Share Instantly",
-        cardDescription: "Your invite ready to send in seconds"
+        cardDescription: "Your invitation ready to send in seconds"
       }
     ]
   }
-}; 
+};
