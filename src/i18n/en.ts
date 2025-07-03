@@ -8,7 +8,7 @@ export default {
       cta: "Create your digital wedding invite for free",
       button: "Create my invitation",
       secondary: "See features",
-      heroScroll: "Scroll to see more",
+      heroScroll: "Scroll down",
       invitationName: "John & Mary",
       invitationDate: "October 12, 2026",
       invitationButtons: [
@@ -278,7 +278,7 @@ export default {
     description: "Discover how guest management works: traditional and by email, to confirm attendance easily.",
     heroTitle: "Manage your guests in <span class='text-emerald-400'>2 really simple ways</span>",
     heroSubtitle: "Choose the option that best fits your event and make it easy for your guests to confirm their attendance.",
-    heroScroll: "Scroll to see more",
+    heroScroll: "Scroll down",
     traditional: {
       title: "General invitation",
       description: "Create your digital invitation and share it with your guests. They can enter their details and confirm (or not) their attendance easily from any device.",
@@ -308,7 +308,7 @@ export default {
     heroTitle: "Create your digital invite in <span class='text-rose-400'>4 simple steps</span>",
     heroSubtitle: "From registration to sharing with your guests, we guide you through the whole process.",
     heroButton: "Get started now",
-    heroScroll: "Scroll to see more",
+    heroScroll: "Scroll down",
     steps: [
       {
         number: "1",
