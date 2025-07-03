@@ -43,7 +43,7 @@ if (typeof window !== 'undefined') {
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href="/" class="flex items-center">
+        <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : '/'} class="flex items-center">
           <img src={Logo.src} alt="Parte Digital" class="h-8 md:h-12 w-auto" />
         </a>
       </div>
