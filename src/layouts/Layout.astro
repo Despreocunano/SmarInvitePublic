@@ -37,16 +37,29 @@ const canonicalUrl = canonical || Astro.request.url;
 			locale={ogLocale}
 			site_name={ogSiteName}
 		/>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-94J5R3EG4C"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-94J5R3EG4C');
-    </script>
-</script>
+		<!-- Hreflang alternates -->
+		{(() => {
+			// Obtener la ruta actual sin prefijo de país
+			let path = Astro.url.pathname;
+			path = path.replace(/^\/(pa|mx)/, '');
+			if (path === '') path = '/';
+			return (
+				<>
+					<link rel="alternate" href={`https://smartinvite.me${path}`} hreflang="en" />
+					<link rel="alternate" href={`https://smartinvite.me/pa${path}`} hreflang="es-PA" />
+					<link rel="alternate" href={`https://smartinvite.me/mx${path}`} hreflang="es-MX" />
+					<link rel="alternate" href={`https://smartinvite.me${path}`} hreflang="x-default" />
+				</>
+			);
+		})()}
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-94J5R3EG4C"></script>
+		<script is:inline>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-94J5R3EG4C');
+		</script>
 	</head>
 	<Header texts={texts} />
 	<body>
