@@ -17,6 +17,7 @@ else if (currentPath.startsWith('/cl')) { currentFlag = 'cl'; urlPrefix = ''; }
 const flagOptions = [
   { code: 'us', href: '/', label: 'USA', img: 'https://flagcdn.com/us.svg' },
   { code: 'pa', href: '/pa', label: 'Panama', img: 'https://flagcdn.com/pa.svg' },
+  { code: 'mx', href: '/mx', label: 'México', img: 'https://flagcdn.com/mx.svg' },
   { code: 'cl', href: 'https://tuparte.digital', label: 'Chile', img: 'https://flagcdn.com/cl.svg' },
 ];
 
@@ -71,14 +72,18 @@ if (typeof window !== 'undefined') {
         <!-- Flag Dropdown -->
         <div class="relative flag-dropdown ml-2">
           <button id="flag-menu-btn" class="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition" aria-haspopup="true" aria-expanded="false" type="button">
-            <img src={(flagOptions.find(f => f.code === currentFlag) ?? flagOptions[0]).img} alt={texts.home.header.flagAlt} class="h-4 w-6 object-cover rounded-sm shadow inline-block align-middle" />
+            <img src={(flagOptions.find(f => f.code === currentFlag) ?? flagOptions[0]).img} alt={texts.home.header.flagAlt} class="h-5 w-8 object-cover rounded shadow inline-block align-middle" />
             <ChevronDown class="h-4 w-4 text-white" />
           </button>
-          <div id="flag-menu" class="absolute right-0 mt-2 w-32 bg-white rounded shadow-lg z-50 hidden">
+          <div id="flag-menu" class="absolute left-0 top-full mt-5 w-16 bg-[#101828] rounded-xl shadow-lg z-50 hidden border border-gray-700 p-2 flex flex-col gap-2 transition-all duration-200">
             {flagOptions.filter(f => f.code !== currentFlag).map(f => (
-              <a href={f.href} class={`flex items-center gap-2 px-4 py-2 hover:bg-gray-100 flag-link ${f.code === 'us' ? 'rounded-t' : ''} ${f.code === 'cl' ? 'rounded-b' : ''}`.trim()}>
-                <img src={f.img} alt={f.label} class="h-4 w-6 object-cover rounded-sm" />
-                <span class="text-gray-800 text-sm">{f.label}</span>
+              <a
+                href={f.href}
+                class={`flex items-center justify-center p-1 rounded-lg transition-transform duration-150 hover:scale-110 hover:bg-[#232e47] focus:bg-[#232e47] outline-none flag-link ${f.code === 'us' ? 'rounded-t-xl' : ''} ${f.code === 'cl' ? 'rounded-b-xl' : ''}`.trim()}
+                tabindex="0"
+                aria-label={f.label}
+              >
+                <img src={f.img} alt={f.label} class="h-5 w-8 object-cover rounded shadow border border-gray-600 transition-all duration-150" />
               </a>
             ))}
           </div>
@@ -116,15 +121,15 @@ if (typeof window !== 'undefined') {
               <div class="absolute right-0 mt-2 w-32 bg-white rounded shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-opacity duration-200 z-50">
                 <a href="/" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-t">
                   <img src="https://flagcdn.com/us.svg" alt="USA" class="h-4 w-6 object-cover rounded-sm" />
-                  <span class="text-gray-800 text-sm">USA</span>
                 </a>
                 <a href="/pa" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
                   <img src="https://flagcdn.com/pa.svg" alt="Panama" class="h-4 w-6 object-cover rounded-sm" />
-                  <span class="text-gray-800 text-sm">Panama</span>
+                </a>
+                <a href="/mx" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100">
+                  <img src="https://flagcdn.com/mx.svg" alt="México" class="h-4 w-6 object-cover rounded-sm" />
                 </a>
                 <a href="/cl" class="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-b">
                   <img src="https://flagcdn.com/cl.svg" alt="Chile" class="h-4 w-6 object-cover rounded-sm" />
-                  <span class="text-gray-800 text-sm">Chile</span>
                 </a>
               </div>
             </div>
@@ -145,25 +150,25 @@ if (typeof window !== 'undefined') {
       <nav class="flex-1 px-6 py-8 bg-gray-900 overflow-y-auto">
         <div class="space-y-4">
           <a 
-            href={currentFlag === 'cl' ? 'https://tuparte.digital/como-funciona' : `${urlPrefix}/como-funciona`} 
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(urlPrefix + '/como-funciona') ? 'bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            href={texts.home.header.menu.comoFunciona.href}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(urlPrefix + '/como-funciona') ? 'bg-rose-500 opacity-100' : 'bg-rose-500 opacity-30 group-hover:opacity-100'}`}></span>
-            {texts.home.header.menu.comoFunciona}
+            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-rose-500 opacity-100' : 'bg-rose-500 opacity-30 group-hover:opacity-100'}`}></span>
+            {texts.home.header.menu.comoFunciona.label}
           </a>
           <a 
-            href={currentFlag === 'cl' ? 'https://tuparte.digital/ejemplos' : `${urlPrefix}/ejemplos`} 
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(urlPrefix + '/ejemplos') ? 'bg-gradient-to-r from-fuchsia-500/30 to-violet-500/30 text-fuchsia-200 shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            href={texts.home.header.menu.ejemplos.href}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-gradient-to-r from-fuchsia-500/30 to-violet-500/30 text-fuchsia-200 shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(urlPrefix + '/ejemplos') ? 'bg-fuchsia-500 opacity-100' : 'bg-fuchsia-500 opacity-30 group-hover:opacity-100'}`}></span>
-            {texts.home.header.menu.ejemplos}
+            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-fuchsia-500 opacity-100' : 'bg-fuchsia-500 opacity-30 group-hover:opacity-100'}`}></span>
+            {texts.home.header.menu.ejemplos.label}
           </a>
           <a 
-            href={currentFlag === 'cl' ? 'https://tuparte.digital/invitados' : `${urlPrefix}/invitados`} 
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(urlPrefix + '/invitados') ? 'bg-gradient-to-r from-emerald-500/30 to-blue-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            href={texts.home.header.menu.invitados.href}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.invitados.href) ? 'bg-gradient-to-r from-emerald-500/30 to-blue-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(urlPrefix + '/invitados') ? 'bg-emerald-500 opacity-100' : 'bg-emerald-500 opacity-30 group-hover:opacity-100'}`}></span>
-            {texts.home.header.menu.invitados}
+            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.invitados.href) ? 'bg-emerald-500 opacity-100' : 'bg-emerald-500 opacity-30 group-hover:opacity-100'}`}></span>
+            {texts.home.header.menu.invitados.label}
           </a>
         </div>
       </nav>
