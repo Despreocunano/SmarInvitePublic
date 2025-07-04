@@ -1,11 +1,11 @@
 # Rewrite para las invitaciones públicas
-/invitacion/* https://app.tuparte.digital/invitacion/:splat 200
+/invitacion/* https://app.smartinvite.me/invitacion/:splat 200
 
 # Rewrite para los ejemplos de templates
-/ejemplos/* https://app.tuparte.digital/ejemplos/:splat 200
+/ejemplos/* https://app.smartinvite.me/ejemplos/:splat 200
 
 # Rewrite para los archivos estáticos
-/assets/* https://app.tuparte.digital/assets/:splat 200
+/assets/* https://app.smartinvite.me/assets/:splat 200
 
 # Otras reglas de redirección para tu sitio Astro
 # (si las necesitas)
