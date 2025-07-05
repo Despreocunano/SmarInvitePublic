@@ -149,22 +149,22 @@ export default {
         {
           name: "Beso Infinito",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/pa/ejemplos/beso-infinito"
+          link: "/ejemplos/beso-infinito"
         },
         {
           name: "Minimalista",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/pa/ejemplos/minimalista"
+          link: "/ejemplos/minimalista"
         },
         {
           name: "Bosque",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/pa/ejemplos/bosque"
+          link: "/ejemplos/bosque"
         },
         {
           name: "Signature",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-          link: "/pa/ejemplos/signature"
+          link: "/ejemplos/signature"
         }
       ]
     },
@@ -176,19 +176,19 @@ export default {
         {
           name: "Beso Infinito",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/pa/ejemplos/beso-infinito",
+          link: "/ejemplos/beso-infinito",
           color: "rose"
         },
         {
           name: "Minimalista",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/pa/ejemplos/minimalista",
+          link: "/ejemplos/minimalista",
           color: "rose"
         },
         {
           name: "Bosque",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/pa/ejemplos/bosque",
+          link: "/ejemplos/bosque",
           color: "rose"
         }
       ]
