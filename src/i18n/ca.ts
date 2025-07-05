@@ -129,14 +129,14 @@ export default {
     },
     header: {
       menu: {
-        comoFunciona: { label: "How it works", href: "/how-it-works" },
-        ejemplos: { label: "Examples", href: "/examples" },
-        invitados: { label: "Guest Management", href: "/guests" }
+        comoFunciona: { label: "How it works", href: "/ca/how-it-works" },
+        ejemplos: { label: "Examples", href: "/ca/examples" },
+        invitados: { label: "Guest Management", href: "/ca/guests" }
       },
       login: "Log in",
       loginSecondary: "I already have an account",
       register: "Create my free invitation",
-      flagAlt: "United States"
+      flagAlt: "Canada"
     },
     exampleCard: {
       button: "View example"
@@ -149,19 +149,19 @@ export default {
         {
           name: "Infinite Kiss",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos-beso-infinito-en",
+          link: "https://app.smartinvite.me/ejemplos/beso-infinito",
           color: "rose"
         },
         {
           name: "Minimalist",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/ejemplos/minimalista-en",
+          link: "https://app.smartinvite.me/ejemplos/minimalista",
           color: "rose"
         },
         {
           name: "Forest",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/ejemplos/bosque-en",
+          link: "https://app.smartinvite.me/ejemplos/bosque",
           color: "rose"
         }
       ]
@@ -174,22 +174,22 @@ export default {
         {
           name: "Infinite Kiss",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos/beso-infinito-en"
+          link: "https://app.smartinvite.me/ejemplos/beso-infinito"
         },
         {
           name: "Minimalist",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/ejemplos/minimalista-en"
+          link: "https://app.smartinvite.me/ejemplos/minimalista"
         },
         {
           name: "Forest",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/ejemplos/bosque-en"
+          link: "https://app.smartinvite.me/ejemplos/bosque"
         },
         {
           name: "Signature",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-          link: "/ejemplo/signature-en"
+          link: "https://app.smartinvite.me/ejemplos/signature"
         }
       ]
     }
@@ -203,73 +203,73 @@ export default {
       {
         name: "Infinite Kiss",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-        link: "/ejemplos/beso-infinito-en",
+        link: "https://app.smartinvite.me/ejemplos/beso-infinito",
         color: "rose"
       },
       {
         name: "Minimalist",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-        link: "/ejemplos/minimalista-en",
+        link: "https://app.smartinvite.me/ejemplos/minimalista",
         color: "rose"
       },
       {
         name: "Forest",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-        link: "/ejemplos/bosque-en",
+        link: "https://app.smartinvite.me/ejemplos/bosque",
         color: "rose"
       },
       {
         name: "Signature",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-        link: "/ejemplos/signature-en",
+        link: "https://app.smartinvite.me/ejemplos/signature",
         color: "rose"
       },
       {
         name: "Late",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/ejemplos/late-en",
+        link: "https://app.smartinvite.me/ejemplos/late",
         color: "rose"
       },
       {
         name: "Passport",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png",
-        link: "/ejemplos/passport-en",
+        link: "https://app.smartinvite.me/ejemplos/passport",
         color: "rose"
       },
       {
         name: "Boho",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png",
-        link: "/ejemplos/boho-en",
+        link: "https://app.smartinvite.me/ejemplos/boho",
         color: "rose"
       },
       {
         name: "Infinite Kiss Dark",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png",
-        link: "/ejemplos/beso-infinito-dark-en",
+        link: "https://app.smartinvite.me/ejemplos/beso-infinito-dark",
         color: "rose"
       },
       {
         name: "Late Petro",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/ejemplos/late-petro-en",
+        link: "https://app.smartinvite.me/ejemplos/late-petro",
         color: "rose"
       },
       {
         name: "Late Pastel",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png",
-        link: "/ejemplos/late-pastel-en",
+        link: "https://app.smartinvite.me/ejemplos/late-pastel",
         color: "rose"
       },
       {
         name: "Natural Green",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png",
-        link: "/ejemplos/natural-green-en",
+        link: "https://app.smartinvite.me/ejemplos/natural-green",
         color: "rose"
       },
       {
         name: "Watercolor",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png",
-        link: "/ejemplos/acuarela-en",
+        link: "https://app.smartinvite.me/ejemplos/acuarela",
         color: "rose"
       }
     ]
