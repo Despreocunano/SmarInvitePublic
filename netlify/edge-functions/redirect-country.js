@@ -30,7 +30,8 @@ export default async (request, context) => {
           'Set-Cookie': 'countryPref=cl; Path=/; Max-Age=31536000'
         }
       });
-    }    if (country === 'MX') {
+    }
+    if (country === 'MX') {
       return new Response(null, {
         status: 302,
         headers: {
