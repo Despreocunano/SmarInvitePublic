@@ -155,13 +155,13 @@ export default {
         {
           name: "Minimalist",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/examples/minimalist",
+          link: "/ejemplos/minimalista",
           color: "rose"
         },
         {
           name: "Forest",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/examples/forest",
+          link: "/ejemplos/bosque",
           color: "rose"
         }
       ]
@@ -174,7 +174,7 @@ export default {
         {
           name: "Infinite Kiss",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/example/infinite-kiss"
+          link: "/ejemplos/beso-infinito"
         },
         {
           name: "Minimalist",
@@ -203,73 +203,73 @@ export default {
       {
         name: "Infinite Kiss",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-        link: "/example/infinite-kiss",
+        link: "/example/beso-infinito",
         color: "rose"
       },
       {
         name: "Minimalist",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-        link: "/examples/minimalist",
+        link: "/ejemplos/minimalista",
         color: "rose"
       },
       {
         name: "Forest",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-        link: "/examples/forest",
+        link: "/ejemplos/bosque",
         color: "rose"
       },
       {
         name: "Signature",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-        link: "/examples/signature",
+        link: "/ejemplos/signature",
         color: "rose"
       },
       {
         name: "Late",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/examples/late",
+        link: "/ejemplos/late",
         color: "rose"
       },
       {
         name: "Passport",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png",
-        link: "/examples/passport",
+        link: "/ejemplos/passport",
         color: "rose"
       },
       {
         name: "Boho",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png",
-        link: "/examples/boho",
+        link: "/ejemplos/boho",
         color: "rose"
       },
       {
         name: "Infinite Kiss Dark",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png",
-        link: "/examples/infinite-kiss-dark",
+        link: "/ejemplos/beso-infinito-dark",
         color: "rose"
       },
       {
         name: "Late Petro",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/examples/late-petro",
+        link: "/ejemplos/late-petro",
         color: "rose"
       },
       {
         name: "Late Pastel",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png",
-        link: "/examples/late-pastel",
+        link: "/ejemplos/late-pastel",
         color: "rose"
       },
       {
         name: "Natural Green",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png",
-        link: "/examples/natural-green",
+        link: "/ejemplos/natural-green",
         color: "rose"
       },
       {
         name: "Watercolor",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png",
-        link: "/examples/watercolor",
+        link: "/ejemplos/acuarela",
         color: "rose"
       }
     ]
