@@ -4,6 +4,15 @@ export default async (request, context) => {
   const hasCountryPref = cookies.includes('countryPref=');
 
   if (!hasCountryPref && new URL(request.url).pathname === '/') {
+    if (country === 'CA') {
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: '/ca',
+          'Set-Cookie': 'countryPref=ca; Path=/; Max-Age=31536000'
+        }
+      });
+    }
     if (country === 'PA') {
       return new Response(null, {
         status: 302,

@@ -13,10 +13,12 @@ let currentFlag = 'us';
 let urlPrefix = '';
 if (currentPath.startsWith('/pa')) { currentFlag = 'pa'; urlPrefix = '/pa'; }
 else if (currentPath.startsWith('/mx')) { currentFlag = 'mx'; urlPrefix = '/mx'; }
+else if (currentPath.startsWith('/ca')) { currentFlag = 'ca'; urlPrefix = '/ca'; }
 else if (currentPath.startsWith('/cl')) { currentFlag = 'cl'; urlPrefix = ''; }
 
 const flagOptions = [
   { code: 'us', href: '/', label: 'USA', img: 'https://flagcdn.com/us.svg' },
+  { code: 'ca', href: '/ca', label: 'Canada', img: 'https://flagcdn.com/ca.svg' },
   { code: 'pa', href: '/pa', label: 'Panama', img: 'https://flagcdn.com/pa.svg' },
   { code: 'mx', href: '/mx', label: 'México', img: 'https://flagcdn.com/mx.svg' },
   { code: 'cl', href: 'https://tuparte.digital', label: 'Chile', img: 'https://flagcdn.com/cl.svg' },
@@ -44,7 +46,7 @@ if (typeof window !== 'undefined') {
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : '/'} class="flex items-center">
+        <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : currentFlag === 'ca' ? '/ca' : '/'} class="flex items-center">
           <img src={Logo.src} alt="Parte Digital" class="h-8 md:h-12 w-auto" />
         </a>
       </div>
@@ -287,6 +289,7 @@ if (typeof window !== 'undefined') {
       let country = 'us';
       if (href.startsWith('/pa')) country = 'pa';
       if (href.startsWith('/mx')) country = 'mx';
+      if (href.startsWith('/ca')) country = 'ca';
       if (href.startsWith('/cl')) country = 'cl';
       document.cookie = `countryPref=${country}; Path=/; Max-Age=31536000`;
     });
