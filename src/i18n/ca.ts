@@ -138,34 +138,6 @@ export default {
       register: "Create my free invitation",
       flagAlt: "United States"
     },
-    exampleCard: {
-      button: "View example"
-    },
-    examplesSection: {
-      title: "Invitation examples",
-      description: "Choose the design that inspires you most and preview your digital invitation before finalizing. Each template is crafted to make your event unique, elegant, and memorable.",
-      cta: "View all examples",
-      examples: [
-        {
-          name: "Infinite Kiss",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos-beso-infinito-en",
-          color: "rose"
-        },
-        {
-          name: "Minimalist",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/ejemplos/minimalista-en",
-          color: "rose"
-        },
-        {
-          name: "Forest",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/ejemplos/bosque-en",
-          color: "rose"
-        }
-      ]
-    },
     templateExamples: {
       title: "Invitation templates",
       description: "Browse designs that inspire you and preview how your digital invitation will appear. Each template creates a unique, elegant experience for your event.",
@@ -174,7 +146,7 @@ export default {
         {
           name: "Infinite Kiss",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos/beso-infinito-en"
+          link: "/ejemplos/beso-infinito-dark-en"
         },
         {
           name: "Minimalist",

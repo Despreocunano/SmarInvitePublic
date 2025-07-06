@@ -168,31 +168,6 @@ export default {
         }
       ]
     },
-    examplesSection: {
-      title: "Algunos ejemplos de invitaciones",
-      description: "Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.",
-      cta: "Ver todos los ejemplos",
-      examples: [
-        {
-          name: "Beso Infinito",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos/beso-infinito",
-          color: "rose"
-        },
-        {
-          name: "Minimalista",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/ejemplos/minimalista",
-          color: "rose"
-        },
-        {
-          name: "Bosque",
-          image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/ejemplos/bosque",
-          color: "rose"
-        }
-      ]
-    }
   },
   howItWorksPage: {
     title: "Descubre Cómo funciona",

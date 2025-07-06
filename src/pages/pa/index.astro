@@ -8,7 +8,6 @@ import Footer from '../../components/shared/Footer.astro';
 import StepsSection from '../../components/shared/StepsSection.astro';
 import texts from '../../i18n/pa';
 import TemplateExamples from '../../components/home/TemplateExamples.tsx';
-import ExampleCard from '../../components/shared/ExampleCard.astro';
 import { Users, Check, Gift, Link as LinkIcon, LayoutDashboard, Table2 } from '@lucide/astro';
 import app1 from '../../assets/images/app_gestion.png';
 import app2 from '../../assets/images/app_compartir.png';
@@ -47,32 +46,7 @@ const featureSections = texts.home.features.map((feature, idx) => ({
     <FeatureSection section={featureSections[2]} isEven={true} />
     <FeatureSection section={featureSections[3]} isEven={false} />
     <FeatureSection section={featureSections[4]} isEven={true} />
-    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-      <div class="text-center mb-10">
-        <h2 class="text-3xl md:text-4xl font-bold text-rose-600 mb-4">
-          {texts.home.examplesSection.title}
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          {texts.home.examplesSection.description}
-        </p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {texts.home.examplesSection.examples.map((ejemplo) => (
-          <ExampleCard
-            nombre={ejemplo.name}
-            imagen={ejemplo.image}
-            enlace={ejemplo.link}
-            color={ejemplo.color}
-            buttonText={texts.home.exampleCard?.button ?? 'See example'}
-          />
-        ))}
-      </div>
-      <div class="text-center mt-8">
-        <a href="/ejemplos" class="inline-block px-8 py-3 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white font-semibold shadow hover:from-rose-600 hover:to-rose-700 transition">
-          {texts.home.examplesSection.cta}
-        </a>
-      </div>
-    </section>
+
     <Cta
       title={texts.home.cta.title}
       description={texts.home.cta.description}
