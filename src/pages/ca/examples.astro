@@ -111,8 +111,8 @@ const ejemplos = [
     <!-- Ejemplos Section -->
     <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {texts.examplesPage.examples.map((ejemplo) => (
-          <ExampleCard nombre={ejemplo.name} imagen={ejemplo.image} enlace={ejemplo.link} color={ejemplo.color} buttonText={texts.home.exampleCard.button} />
+        {texts.examplesPage.examples.map((ejemplo: any) => (
+          <ExampleCard nombre={ejemplo.name} imagen={ejemplo.image} enlace={ejemplo.link} color={ejemplo.color} buttonText={texts.exampleCard.button} />
         ))}
       </div>
     </section>
