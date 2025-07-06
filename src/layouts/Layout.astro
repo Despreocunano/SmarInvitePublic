@@ -57,14 +57,14 @@ else if (Astro.url.pathname.startsWith('/ca')) lang = 'en-CA';
 				</>
 			);
 		})()}
-		<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYTVB1G7XQ"></script>
-		<script is:inline>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 			gtag('config', 'G-QYTVB1G7XQ');
-		</script>
+</script>
 	</head>
 	<Header texts={texts} />
 	<body>

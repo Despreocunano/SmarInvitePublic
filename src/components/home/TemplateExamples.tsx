@@ -4,6 +4,7 @@ interface Template {
   name: string;
   preview: string;
   link: string;
+  color?: string;
 }
 
 interface TemplateExamplesProps {
@@ -11,9 +12,17 @@ interface TemplateExamplesProps {
   description: string;
   buttonText: string;
   templates: Template[];
+  maxItems?: number;
 }
 
-export default function TemplateExamples({ title, description, buttonText, templates }: TemplateExamplesProps) {
+function getRandomItems<T>(arr: T[], n: number): T[] {
+  if (n >= arr.length) return arr;
+  const shuffled = arr.slice().map(t => ({ t, sort: Math.random() })).sort((a, b) => a.sort - b.sort).map(({ t }) => t);
+  return shuffled.slice(0, n);
+}
+
+export default function TemplateExamples({ title, description, buttonText, templates, maxItems }: TemplateExamplesProps) {
+  const displayTemplates = maxItems ? getRandomItems(templates, maxItems) : templates;
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
@@ -26,7 +35,7 @@ export default function TemplateExamples({ title, description, buttonText, templ
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {templates.map((tpl) => (
+          {displayTemplates.map((tpl) => (
             <div key={tpl.name} className="flex flex-col items-center">
               <img
                 src={tpl.preview}
@@ -38,7 +47,7 @@ export default function TemplateExamples({ title, description, buttonText, templ
               </span>
               <a
                 href={tpl.link}
-                className="inline-block mt-1 px-6 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-md hover:from-rose-600 hover:to-rose-700 transition-colors duration-300"
+                className={`inline-block mt-1 px-6 py-2 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 text-white text-sm font-semibold shadow-md hover:from-rose-600 hover:to-rose-700 transition-colors duration-300${tpl.color ? ` from-${tpl.color}-500 to-${tpl.color}-600 hover:from-${tpl.color}-600 hover:to-${tpl.color}-700` : ''}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

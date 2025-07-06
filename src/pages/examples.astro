@@ -1,8 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Mouse } from '@lucide/astro';
-import ExampleCard from '../components/shared/ExampleCard.astro';
-import texts from '../i18n/en';
+import type { I18n } from '../i18n/types';
+import TemplateExamples from '../components/home/TemplateExamples.tsx';
+import textsImport from '../i18n/en';
+const texts = textsImport as I18n;
 
 const ejemplos = [
   {
@@ -78,6 +80,13 @@ const ejemplos = [
     color: 'rose',
   },
 ];
+
+const templates = (texts.examplesPage.examples as any[]).map((ejemplo: any) => ({
+  name: ejemplo.name,
+  preview: ejemplo.image,
+  link: ejemplo.link,
+  color: ejemplo.color,
+}));
 ---
 
 <Layout title={texts.examplesPage.title} description={texts.examplesPage.description} texts={texts}>
@@ -108,13 +117,11 @@ const ejemplos = [
         <span class="text-xs text-white/70 mt-1">Scroll to see more</span>
       </div>
     </section>
-    <!-- Ejemplos Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {texts.examplesPage.examples.map((ejemplo) => (
-          <ExampleCard nombre={ejemplo.name} imagen={ejemplo.image} enlace={ejemplo.link} color={ejemplo.color} buttonText={texts.home.exampleCard.button} />
-        ))}
-      </div>
-    </section>
+    <TemplateExamples
+      title=""
+      description=""
+      buttonText={texts.exampleCard?.button || 'Ver ejemplo'}
+      templates={templates}
+    />
   </main>
 </Layout> 

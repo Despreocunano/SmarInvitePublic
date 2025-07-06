@@ -1,4 +1,6 @@
-export default {
+import type { I18n } from './types';
+
+const i18n: I18n = {
   home: {
     title: "Welcome to SmartInvite Canada",
     description: "The best way to manage your event invitations in Canads.",
@@ -143,26 +145,20 @@ export default {
       description: "Browse designs that inspire you and preview how your digital invitation will appear. Each template creates a unique, elegant experience for your event.",
       buttonText: "Preview template",
       templates: [
-        {
-          name: "Infinite Kiss",
-          preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "/ejemplos/beso-infinito-dark-en"
-        },
-        {
-          name: "Minimalist",
-          preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "/ejemplos/minimalista-en"
-        },
-        {
-          name: "Forest",
-          preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "/ejemplos/bosque-en"
-        },
-        {
-          name: "Signature",
-          preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-          link: "/ejemplo/signature-en"
-        }
+        { name: "Minimalist", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista-en" },
+        { name: "Passport", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport-en" },
+        { name: "Boho", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-en" },
+        { name: "Boho Botanic", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico-en" },
+        { name: "Forest", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque-en" },
+        { name: "Infinite Kiss", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito-en" },
+        { name: "Infinite Kiss Dark", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark-en" },
+        { name: "Late Petro", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro-en" },
+        { name: "Late Pastel", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel-en" },
+        { name: "Natural Green", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green-en" },
+        { name: "Watercolor", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela-en" },
+        { name: "Signature Azure", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure-en" },
+        { name: "Signature Copper", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre-en" },
+        { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black-en" }
       ]
     }
   },
@@ -172,78 +168,20 @@ export default {
     heroTitle: "Discover our <span class='text-fuchsia-400'>invitation templates</span>",
     heroSubtitle: "Find inspiration in different styles and designs for your digital invitation.",
     examples: [
-      {
-        name: "Infinite Kiss",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-        link: "/ejemplos/beso-infinito-en",
-        color: "rose"
-      },
-      {
-        name: "Minimalist",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-        link: "/ejemplos/minimalista-en",
-        color: "rose"
-      },
-      {
-        name: "Forest",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-        link: "/ejemplos/bosque-en",
-        color: "rose"
-      },
-      {
-        name: "Signature",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-        link: "/ejemplos/signature-en",
-        color: "rose"
-      },
-      {
-        name: "Late",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/ejemplos/late-en",
-        color: "rose"
-      },
-      {
-        name: "Passport",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png",
-        link: "/ejemplos/passport-en",
-        color: "rose"
-      },
-      {
-        name: "Boho",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png",
-        link: "/ejemplos/boho-en",
-        color: "rose"
-      },
-      {
-        name: "Infinite Kiss Dark",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png",
-        link: "/ejemplos/beso-infinito-dark-en",
-        color: "rose"
-      },
-      {
-        name: "Late Petro",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "/ejemplos/late-petro-en",
-        color: "rose"
-      },
-      {
-        name: "Late Pastel",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png",
-        link: "/ejemplos/late-pastel-en",
-        color: "rose"
-      },
-      {
-        name: "Natural Green",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png",
-        link: "/ejemplos/natural-green-en",
-        color: "rose"
-      },
-      {
-        name: "Watercolor",
-        image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png",
-        link: "/ejemplos/acuarela-en",
-        color: "rose"
-      }
+      { name: "Minimalist", image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista-en", color: "rose" },
+      { name: "Passport", image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport-en", color: "rose" },
+      { name: "Boho", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-en", color: "rose" },
+      { name: "Boho Botanic", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico-en", color: "rose" },
+      { name: "Forest", image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque-en", color: "rose" },
+      { name: "Infinite Kiss", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito-en", color: "rose" },
+      { name: "Infinite Kiss Dark", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark-en", color: "rose" },
+      { name: "Late Petro", image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro-en", color: "rose" },
+      { name: "Late Pastel", image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel-en", color: "rose" },
+      { name: "Natural Green", image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green-en", color: "rose" },
+      { name: "Watercolor", image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela-en", color: "rose" },
+      { name: "Signature Azure", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure-en", color: "rose" },
+      { name: "Signature Copper", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre-en", color: "rose" },
+      { name: "Signature Black", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black-en", color: "rose" }
     ]
   },
   guestPage: {
@@ -332,5 +270,10 @@ export default {
         cardDescription: "Your invitation ready to send in seconds"
       }
     ]
+  },
+  exampleCard: {
+    button: "View example"
   }
 };
+
+export default i18n;

@@ -40,6 +40,23 @@ if (typeof window !== 'undefined') {
     }
   });
 }
+
+function getCountryPath(targetCountry: string) {
+  let path = currentPath
+    .replace(/^\/(mx|pa|ca|cl)/, '')
+    .replace(/^\/examples$/, '/ejemplos')
+    .replace(/^\/ejemplos$/, '/examples')
+    .replace(/^\/guests$/, '/invitados')
+    .replace(/^\/invitados$/, '/guests')
+    .replace(/^\/how-it-works$/, '/como-funciona')
+    .replace(/^\/como-funciona$/, '/how-it-works');
+  if (targetCountry === 'mx') return '/mx' + (path === '/' ? '' : path);
+  if (targetCountry === 'pa') return '/pa' + (path === '/' ? '' : path);
+  if (targetCountry === 'ca') return '/ca' + (path === '/' ? '' : path);
+  if (targetCountry === 'us') return path === '/ejemplos' ? '/examples' : path || '/';
+  if (targetCountry === 'cl') return 'https://tuparte.digital' + (path === '/' ? '' : path);
+  return '/';
+}
 ---
 <header class="fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-gray-900 backdrop-blur-md shadow-lg border-b border-white/10">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,7 +98,7 @@ if (typeof window !== 'undefined') {
           <div id="flag-menu" class="absolute left-0 top-full mt-5 w-16 bg-[#101828] rounded-xl shadow-lg z-50 hidden border border-gray-700 p-2 flex flex-col gap-2 transition-all duration-200">
             {flagOptions.filter(f => f.code !== currentFlag).map(f => (
               <a
-                href={f.href}
+                href={getCountryPath(f.code)}
                 target={f.code === 'cl' ? '_self' : undefined}
                 class={`flex items-center justify-center p-1 rounded-lg transition-transform duration-150 hover:scale-110 hover:bg-[#232e47] focus:bg-[#232e47] outline-none flag-link ${f.code === 'us' ? 'rounded-t-xl' : ''} ${f.code === 'cl' ? 'rounded-b-xl' : ''}`.trim()}
                 tabindex="0"
