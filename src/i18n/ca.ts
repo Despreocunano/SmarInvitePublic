@@ -1,7 +1,7 @@
 export default {
   home: {
-    title: "Welcome to SmartInvite",
-    description: "The best way to manage your event invitations.",
+    title: "Welcome to SmartInvite Canada",
+    description: "The best way to manage your event invitations in Canads.",
     hero: {
       title: "Your love story deserves a unique invitation",
       subtitle: "An interactive, original, and eco-friendly experience for your wedding",
@@ -129,14 +129,14 @@ export default {
     },
     header: {
       menu: {
-        comoFunciona: { label: "How it works", href: "/ca/how-it-works" },
-        ejemplos: { label: "Examples", href: "/ca/examples" },
-        invitados: { label: "Guest Management", href: "/ca/guests" }
+        comoFunciona: { label: "How it works", href: "/how-it-works" },
+        ejemplos: { label: "Examples", href: "/examples" },
+        invitados: { label: "Guest Management", href: "/guests" }
       },
       login: "Log in",
       loginSecondary: "I already have an account",
       register: "Create my free invitation",
-      flagAlt: "Canada"
+      flagAlt: "United States"
     },
     exampleCard: {
       button: "View example"
@@ -149,19 +149,19 @@ export default {
         {
           name: "Infinite Kiss",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "https://app.smartinvite.me/ejemplos/beso-infinito",
+          link: "/ejemplos-beso-infinito-en",
           color: "rose"
         },
         {
           name: "Minimalist",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "https://app.smartinvite.me/ejemplos/minimalista",
+          link: "/ejemplos/minimalista-en",
           color: "rose"
         },
         {
           name: "Forest",
           image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "https://app.smartinvite.me/ejemplos/bosque",
+          link: "/ejemplos/bosque-en",
           color: "rose"
         }
       ]
@@ -174,22 +174,22 @@ export default {
         {
           name: "Infinite Kiss",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-          link: "https://app.smartinvite.me/ejemplos/beso-infinito"
+          link: "/ejemplos/beso-infinito-en"
         },
         {
           name: "Minimalist",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-          link: "https://app.smartinvite.me/ejemplos/minimalista"
+          link: "/ejemplos/minimalista-en"
         },
         {
           name: "Forest",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-          link: "https://app.smartinvite.me/ejemplos/bosque"
+          link: "/ejemplos/bosque-en"
         },
         {
           name: "Signature",
           preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-          link: "https://app.smartinvite.me/ejemplos/signature"
+          link: "/ejemplo/signature-en"
         }
       ]
     }
@@ -203,73 +203,73 @@ export default {
       {
         name: "Infinite Kiss",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
-        link: "https://app.smartinvite.me/ejemplos/beso-infinito",
+        link: "/ejemplos/beso-infinito-en",
         color: "rose"
       },
       {
         name: "Minimalist",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
-        link: "https://app.smartinvite.me/ejemplos/minimalista",
+        link: "/ejemplos/minimalista-en",
         color: "rose"
       },
       {
         name: "Forest",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
-        link: "https://app.smartinvite.me/ejemplos/bosque",
+        link: "/ejemplos/bosque-en",
         color: "rose"
       },
       {
         name: "Signature",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png",
-        link: "https://app.smartinvite.me/ejemplos/signature",
+        link: "/ejemplos/signature-en",
         color: "rose"
       },
       {
         name: "Late",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "https://app.smartinvite.me/ejemplos/late",
+        link: "/ejemplos/late-en",
         color: "rose"
       },
       {
         name: "Passport",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png",
-        link: "https://app.smartinvite.me/ejemplos/passport",
+        link: "/ejemplos/passport-en",
         color: "rose"
       },
       {
         name: "Boho",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png",
-        link: "https://app.smartinvite.me/ejemplos/boho",
+        link: "/ejemplos/boho-en",
         color: "rose"
       },
       {
         name: "Infinite Kiss Dark",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png",
-        link: "https://app.smartinvite.me/ejemplos/beso-infinito-dark",
+        link: "/ejemplos/beso-infinito-dark-en",
         color: "rose"
       },
       {
         name: "Late Petro",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png",
-        link: "https://app.smartinvite.me/ejemplos/late-petro",
+        link: "/ejemplos/late-petro-en",
         color: "rose"
       },
       {
         name: "Late Pastel",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png",
-        link: "https://app.smartinvite.me/ejemplos/late-pastel",
+        link: "/ejemplos/late-pastel-en",
         color: "rose"
       },
       {
         name: "Natural Green",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png",
-        link: "https://app.smartinvite.me/ejemplos/natural-green",
+        link: "/ejemplos/natural-green-en",
         color: "rose"
       },
       {
         name: "Watercolor",
         image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png",
-        link: "https://app.smartinvite.me/ejemplos/acuarela",
+        link: "/ejemplos/acuarela-en",
         color: "rose"
       }
     ]

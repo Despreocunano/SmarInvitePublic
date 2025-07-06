@@ -82,6 +82,7 @@ if (typeof window !== 'undefined') {
             {flagOptions.filter(f => f.code !== currentFlag).map(f => (
               <a
                 href={f.href}
+                target={f.code === 'cl' ? '_self' : undefined}
                 class={`flex items-center justify-center p-1 rounded-lg transition-transform duration-150 hover:scale-110 hover:bg-[#232e47] focus:bg-[#232e47] outline-none flag-link ${f.code === 'us' ? 'rounded-t-xl' : ''} ${f.code === 'cl' ? 'rounded-b-xl' : ''}`.trim()}
                 tabindex="0"
                 aria-label={f.label}
