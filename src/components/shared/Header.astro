@@ -42,18 +42,28 @@ if (typeof window !== 'undefined') {
 }
 
 function getCountryPath(targetCountry: string) {
-  let path = currentPath
-    .replace(/^\/(mx|pa|ca|cl)/, '')
-    .replace(/^\/examples$/, '/ejemplos')
-    .replace(/^\/ejemplos$/, '/examples')
-    .replace(/^\/guests$/, '/invitados')
-    .replace(/^\/invitados$/, '/guests')
-    .replace(/^\/how-it-works$/, '/como-funciona')
-    .replace(/^\/como-funciona$/, '/how-it-works');
+  // Extraer la ruta actual sin el prefijo de país
+  let path = currentPath.replace(/^\/(mx|pa|ca|cl)/, '');
+  if (path === '') path = '/';
+  
+  // Mapear rutas según el idioma de destino
+  if (targetCountry === 'mx' || targetCountry === 'pa') {
+    // Para español: convertir rutas en inglés a español
+    if (path === '/examples') path = '/ejemplos';
+    if (path === '/guests') path = '/invitados';
+    if (path === '/how-it-works') path = '/como-funciona';
+  } else if (targetCountry === 'us' || targetCountry === 'ca') {
+    // Para inglés: convertir rutas en español a inglés
+    if (path === '/ejemplos') path = '/examples';
+    if (path === '/invitados') path = '/guests';
+    if (path === '/como-funciona') path = '/how-it-works';
+  }
+  
+  // Construir la URL final
   if (targetCountry === 'mx') return '/mx' + (path === '/' ? '' : path);
   if (targetCountry === 'pa') return '/pa' + (path === '/' ? '' : path);
   if (targetCountry === 'ca') return '/ca' + (path === '/' ? '' : path);
-  if (targetCountry === 'us') return path === '/ejemplos' ? '/examples' : path || '/';
+  if (targetCountry === 'us') return path === '/' ? '/' : path;
   if (targetCountry === 'cl') return 'https://tuparte.digital' + (path === '/' ? '' : path);
   return '/';
 }
