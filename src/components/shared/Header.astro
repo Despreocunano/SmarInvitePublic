@@ -1,6 +1,6 @@
 ---
 import { User, Menu, X, UserPlus, ChevronDown } from '@lucide/astro'
-import Logo from '../../assets/images/logo-parte.svg'
+import Logo from '../../assets/images/logo-dark.svg'
 const { texts } = Astro.props;
 const currentPath = Astro.url.pathname;
 
@@ -58,13 +58,13 @@ function getCountryPath(targetCountry: string) {
   return '/';
 }
 ---
-<header class="fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-gray-900 backdrop-blur-md shadow-lg border-b border-white/10">
+<header class="fixed top-0 left-0 right-0 z-[60] transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200/50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center">
         <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : currentFlag === 'ca' ? '/ca' : '/'} class="flex items-center">
-          <img src={Logo.src} alt="Parte Digital" class="h-8 md:h-12 w-auto" />
+          <img src={Logo.src} alt="Parte Digital" class="h-8 md:h-10 w-auto" />
         </a>
       </div>
 
@@ -72,18 +72,18 @@ function getCountryPath(targetCountry: string) {
       <div class="flex items-center gap-2">
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center">
-          <a href={texts.home.header.menu.comoFunciona.href} class={`font-medium px-3 py-2 rounded-lg relative group transition-colors duration-300 ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'}`}>{texts.home.header.menu.comoFunciona.label}</a>
-          <a href={texts.home.header.menu.ejemplos.href} class={`ml-2 font-medium px-3 py-2 rounded-lg relative group transition-colors duration-300 ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-gradient-to-r from-fuchsia-500/30 to-violet-500/30 text-fuchsia-200 shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'}`}>{texts.home.header.menu.ejemplos.label}</a>
-          <a href={texts.home.header.menu.invitados.href} class={`ml-2 font-medium px-3 py-2 rounded-lg relative group transition-colors duration-300 ${isActive(texts.home.header.menu.invitados.href) ? 'bg-gradient-to-r from-emerald-500/30 to-blue-500/30 text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'}`}>{texts.home.header.menu.invitados.label}</a>
+          <a href={texts.home.header.menu.comoFunciona.href} class={`font-medium px-4 py-2 rounded-lg relative group transition-all duration-300 ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-slate-100 text-slate-900 shadow-sm' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}>{texts.home.header.menu.comoFunciona.label}</a>
+          <a href={texts.home.header.menu.ejemplos.href} class={`ml-2 font-medium px-4 py-2 rounded-lg relative group transition-all duration-300 ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-slate-100 text-slate-900 shadow-sm' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}>{texts.home.header.menu.ejemplos.label}</a>
+          <a href={texts.home.header.menu.invitados.href} class={`ml-2 font-medium px-4 py-2 rounded-lg relative group transition-all duration-300 ${isActive(texts.home.header.menu.invitados.href) ? 'bg-slate-100 text-slate-900 shadow-sm' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}>{texts.home.header.menu.invitados.label}</a>
         </nav>
         
         <!-- Separator -->
-        <div class="hidden md:block w-px h-6 bg-white/20 mx-1"></div>
+        <div class="hidden md:block w-px h-6 bg-slate-300 mx-2"></div>
         
         <!-- Desktop Login button -->
         <a
           href="https://app.smartinvite.me/auth?showLogin=true"
-          class="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-white/20 hover:bg-white/30 rounded-full transition-all duration-300 backdrop-blur-sm border border-white/20"
+          class="hidden md:inline-flex items-center px-5 py-2.5 text-sm font-medium text-slate-700 bg-slate-50 hover:bg-slate-100 hover:text-slate-900 rounded-xl transition-all duration-300 border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-md"
         >
           <User class="h-4 w-4 mr-2" />
           {texts.home.header.login}
@@ -91,20 +91,20 @@ function getCountryPath(targetCountry: string) {
         
         <!-- Flag Dropdown -->
         <div class="relative flag-dropdown ml-2">
-          <button id="flag-menu-btn" class="flex items-center gap-1 px-2 py-1 rounded hover:bg-white/10 transition" aria-haspopup="true" aria-expanded="false" type="button">
+          <button id="flag-menu-btn" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-50 transition-all duration-300 border border-slate-200 hover:border-slate-300" aria-haspopup="true" aria-expanded="false" type="button">
             <img src={(flagOptions.find(f => f.code === currentFlag) ?? flagOptions[0]).img} alt={texts.home.header.flagAlt} class="h-5 w-8 object-cover rounded shadow inline-block align-middle" />
-            <ChevronDown class="h-4 w-4 text-white" />
+            <ChevronDown class="h-4 w-4 text-slate-600" />
           </button>
-          <div id="flag-menu" class="absolute left-0 top-full mt-5 w-16 bg-[#101828] rounded-xl shadow-lg z-50 hidden border border-gray-700 p-2 flex flex-col gap-2 transition-all duration-200">
+          <div id="flag-menu" class="absolute left-0 top-full mt-2 w-16 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl z-50 hidden border border-slate-200 p-2 flex flex-col gap-2 transition-all duration-200">
             {flagOptions.filter(f => f.code !== currentFlag).map(f => (
               <a
                 href={getCountryPath(f.code)}
                 target={f.code === 'cl' ? '_self' : undefined}
-                class={`flex items-center justify-center p-1 rounded-lg transition-transform duration-150 hover:scale-110 hover:bg-[#232e47] focus:bg-[#232e47] outline-none flag-link ${f.code === 'us' ? 'rounded-t-xl' : ''} ${f.code === 'cl' ? 'rounded-b-xl' : ''}`.trim()}
+                class={`flex items-center justify-center p-1.5 rounded-lg transition-all duration-200 hover:scale-110 hover:bg-slate-100 focus:bg-slate-100 outline-none flag-link shadow-sm hover:shadow-md`.trim()}
                 tabindex="0"
                 aria-label={f.label}
               >
-                <img src={f.img} alt={f.label} class="h-5 w-8 object-cover rounded shadow border border-gray-600 transition-all duration-150" />
+                <img src={f.img} alt={f.label} class="h-5 w-8 object-cover rounded shadow-sm border border-slate-300 transition-all duration-200" />
               </a>
             ))}
           </div>
@@ -113,7 +113,7 @@ function getCountryPath(targetCountry: string) {
         <!-- Mobile menu button -->
         <button 
           id="mobile-menu-button"
-          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-white/20 transition-colors duration-300"
+          class="md:hidden inline-flex items-center justify-center p-2.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all duration-300 border border-slate-200 hover:border-slate-300"
           aria-expanded="false"
         >
           <Menu id="menu-icon" class="h-6 w-6" />
@@ -126,17 +126,17 @@ function getCountryPath(targetCountry: string) {
   <!-- Mobile Full Screen Panel -->
   <div 
     id="mobile-panel" 
-    class="fixed inset-0 w-screen h-[100dvh] bg-gray-900 z-[70] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-hidden"
+    class="fixed inset-0 w-screen h-[100dvh] bg-white/98 backdrop-blur-md z-[70] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-hidden"
   >
     <!-- Panel Header - Same width as navbar -->
-    <div class="border-b border-gray-700 bg-gray-900 flex-shrink-0">
+    <div class="border-b border-slate-200 bg-white/95 backdrop-blur-md flex-shrink-0 shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
-          <img src={Logo.src} alt="Parte Digital" class="h-8 w-auto" />
+          <img src={Logo.src} alt="Parte Digital" class="h-6 w-auto" />
           <div class="flex items-center gap-2">
             <button 
               id="close-panel-button"
-              class="p-2 rounded-md text-white hover:text-white hover:bg-white/20 transition-colors duration-300"
+              class="p-2.5 rounded-lg text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-all duration-300"
             >
               <X class="h-6 w-6" />
             </button>
@@ -146,57 +146,57 @@ function getCountryPath(targetCountry: string) {
     </div>
 
     <!-- Panel Content -->
-    <div class="flex flex-col h-[100dvh] bg-gray-900">
+    <div class="flex flex-col h-[100dvh] bg-white/95">
       <!-- Navigation Links -->
-      <nav class="flex-1 px-6 py-8 bg-gray-900 overflow-y-auto">
+      <nav class="flex-1 px-6 py-8 bg-white/95 overflow-y-auto">
         <div class="space-y-4">
           <a 
             href={texts.home.header.menu.comoFunciona.href}
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-gradient-to-r from-rose-500/30 to-pink-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-300 font-medium text-lg group ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-slate-100 text-slate-900 shadow-sm border border-slate-200' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-rose-500 opacity-100' : 'bg-rose-500 opacity-30 group-hover:opacity-100'}`}></span>
+            <span class={`w-3 h-3 rounded-full mr-4 transition-all duration-300 ${isActive(texts.home.header.menu.comoFunciona.href) ? 'bg-slate-600 opacity-100' : 'bg-slate-400 opacity-40 group-hover:opacity-100 group-hover:bg-slate-600'}`}></span>
             {texts.home.header.menu.comoFunciona.label}
           </a>
           <a 
             href={texts.home.header.menu.ejemplos.href}
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-gradient-to-r from-fuchsia-500/30 to-violet-500/30 text-fuchsia-200 shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-300 font-medium text-lg group ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-slate-100 text-slate-900 shadow-sm border border-slate-200' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-fuchsia-500 opacity-100' : 'bg-fuchsia-500 opacity-30 group-hover:opacity-100'}`}></span>
+            <span class={`w-3 h-3 rounded-full mr-4 transition-all duration-300 ${isActive(texts.home.header.menu.ejemplos.href) ? 'bg-slate-600 opacity-100' : 'bg-slate-400 opacity-40 group-hover:opacity-100 group-hover:bg-slate-600'}`}></span>
             {texts.home.header.menu.ejemplos.label}
           </a>
           <a 
             href={texts.home.header.menu.invitados.href}
-            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-200 font-medium text-lg group ${isActive(texts.home.header.menu.invitados.href) ? 'bg-gradient-to-r from-emerald-500/30 to-blue-500/30 text-white shadow-lg' : 'text-white hover:text-white hover:bg-gray-800'}`}
+            class={`mobile-menu-link flex items-center px-6 py-4 rounded-xl transition-all duration-300 font-medium text-lg group ${isActive(texts.home.header.menu.invitados.href) ? 'bg-slate-100 text-slate-900 shadow-sm border border-slate-200' : 'text-slate-700 hover:text-slate-900 hover:bg-slate-50'}`}
           >
-            <span class={`w-3 h-3 rounded-full mr-4 transition-opacity duration-200 ${isActive(texts.home.header.menu.invitados.href) ? 'bg-emerald-500 opacity-100' : 'bg-emerald-500 opacity-30 group-hover:opacity-100'}`}></span>
+            <span class={`w-3 h-3 rounded-full mr-4 transition-all duration-300 ${isActive(texts.home.header.menu.invitados.href) ? 'bg-slate-600 opacity-100' : 'bg-slate-400 opacity-40 group-hover:opacity-100 group-hover:bg-slate-600'}`}></span>
             {texts.home.header.menu.invitados.label}
           </a>
         </div>
       </nav>
 
       <!-- Panel Footer with Action Buttons -->
-      <div class="p-6 pb-8 border-t border-gray-700 bg-gray-900 flex-shrink-0">
+      <div class="p-6 pb-8 border-t border-slate-200 bg-white/95 backdrop-blur-md flex-shrink-0 shadow-lg">
         <!-- Primary CTA - Register -->
         <a
           href="https://app.smartinvite.me/auth"
-          class="flex items-center justify-center w-full px-6 py-4 text-white bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 rounded-xl transition-all duration-300 font-semibold shadow-lg shadow-rose-500/25 group text-lg mb-4"
+          class="flex items-center justify-center w-full px-6 py-4 text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-all duration-300 font-semibold shadow-xl shadow-slate-900/20 group text-lg mb-4"
         >
-          <UserPlus class="h-6 w-6 mr-3 group-hover:scale-110 transition-transform duration-200" />
+          <UserPlus class="h-6 w-6 mr-3 group-hover:scale-110 transition-transform duration-300" />
           {texts.home.header.register}
         </a>
 
         <!-- Secondary CTA - Login -->
         <a
           href="https://app.smartinvite.me/auth?showLogin=true"
-          class="flex items-center justify-center w-full px-6 py-3 text-white bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 font-medium border border-white/20 group text-base"
+          class="flex items-center justify-center w-full px-6 py-3 text-slate-700 bg-slate-100 hover:bg-slate-200 hover:text-slate-900 rounded-xl transition-all duration-300 font-medium border border-slate-200 hover:border-slate-300 group text-base shadow-sm"
         >
-          <User class="h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-200" />
+          <User class="h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
           {texts.home.header.loginSecondary ?? (texts.home.header.login === 'Login' ? 'I already have an account' : 'Ya tengo cuenta')}
         </a>
         
         <!-- Additional Info -->
         <div class="mt-6 text-center">
-          <p class="text-gray-400 text-sm">
+          <p class="text-slate-500 text-sm font-light">
             100% gratis • Sin tarjeta de crédito
           </p>
         </div>

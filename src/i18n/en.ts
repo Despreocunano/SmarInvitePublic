@@ -5,9 +5,9 @@ const i18n: I18n = {
     title: "Welcome to SmartInvite USA",
     description: "The best way to manage your event invitations in USA.",
     hero: {
-      title: "Your love story deserves a unique invitation",
-      subtitle: "An interactive, original, and eco-friendly experience for your wedding",
-      cta: "Create your digital wedding invitation for free",
+      title: "Your celebration deserves a unique invitation",
+      subtitle: "An interactive, original, and eco-friendly experience for your event",
+      cta: "Create your digital invitation for free",
       button: "Create my invitation",
       secondary: "View features",
       heroScroll: "Scroll down",
@@ -17,7 +17,44 @@ const i18n: I18n = {
         "ADD TO CALENDAR",
         "RSVP",
         "DIRECTIONS"
-      ]
+      ],
+      feature1: "Unique events",
+      feature2: "Guest management",
+      feature3: "Interactive location",
+      info: "100% free • No credit card required",
+      badge: "DIGITAL INVITATIONS"
+    },
+    phoneMockup: {
+      time: "9:41",
+      battery: "Battery",
+      eventTypes: {
+        wedding: "Wedding",
+        birthday: "Birthday",
+        corporate: "Corporate",
+        graduation: "Graduation"
+      },
+      events: {
+        wedding: {
+          name: "John & Mary",
+          date: "October 12, 2026",
+          buttons: ["ADD TO CALENDAR", "RSVP", "DIRECTIONS"]
+        },
+        birthday: {
+          name: "Sarah's 25th",
+          date: "December 15, 2025",
+          buttons: ["CONFIRM ATTENDANCE", "GIFT REGISTRY", "LOCATION"]
+        },
+        corporate: {
+          name: "Tech Conference 2025",
+          date: "March 20, 2025",
+          buttons: ["REGISTER NOW", "AGENDA", "VENUE"]
+        },
+        graduation: {
+          name: "Class of 2025",
+          date: "May 30, 2025",
+          buttons: ["ATTEND CEREMONY", "RECEPTION", "PHOTOS"]
+        }
+      }
     },
     features: [
       {
@@ -72,7 +109,22 @@ const i18n: I18n = {
     cta: {
       title: "Create your invitation in under 5 minutes",
       description: "Register now, enter your wedding details, and preview your digital invitation.",
-      button: "Create my invitation"
+      button: "Create my invitation",
+      freeText: "100% free • No credit card required",
+      stats: {
+        invitations: {
+          number: "10K+",
+          label: "Invitations created"
+        },
+        satisfaction: {
+          number: "99%",
+          label: "Satisfaction"
+        },
+        rating: {
+          number: "5★",
+          label: "Rating"
+        }
+      }
     },
     featuresGrid: {
       title: "Everything you need in one place",
@@ -105,8 +157,8 @@ const i18n: I18n = {
         },
         {
           step: "02",
-          title: "Choose the design and complete your information",
-          description: "Choose from more than 10 unique designs and customize every detail of your invitation.",
+          title: "Pick a design & complete details",
+          description: "Choose from more than 20 unique designs and customize every detail of your invitation.",
           color: "from-purple-500 via-purple-600 to-violet-600",
           bgColor: "from-purple-50 to-violet-50"
         },
@@ -159,6 +211,57 @@ const i18n: I18n = {
         { name: "Signature Azure", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure-en" },
         { name: "Signature Copper", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre-en" },
         { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black-en" }
+      ]
+    },
+    invitationTypes: {
+      title: "Choose the perfect invitation type for your event",
+      subtitle: "Each type is designed to create unique experiences and adapt to different celebration styles.",
+      types: [
+        {
+          icon: "Heart",
+          title: "Wedding",
+          description: "Elegant and romantic invitations for your special day with all the details your guests need.",
+          features: [
+            "Ceremony and reception details",
+            "RSVP with meal preferences",
+            "Gift registry integration",
+            "Photo gallery and timeline"
+          ],
+          popular: true
+        },
+        {
+          icon: "Users",
+          title: "Birthday Party",
+          description: "Fun and personalized invitations to celebrate another year of life with style and joy.",
+          features: [
+            "Age celebration themes",
+            "Party games and activities",
+            "Gift suggestions",
+            "Photo sharing space"
+          ]
+        },
+        {
+          icon: "Calendar",
+          title: "Corporate Events",
+          description: "Professional invitations for business meetings, conferences, and corporate celebrations.",
+          features: [
+            "Agenda and speakers",
+            "Registration management",
+            "Networking features",
+            "Professional branding"
+          ]
+        },
+        {
+          icon: "Gift",
+          title: "Special Celebrations",
+          description: "Versatile invitations for graduations, anniversaries, baby showers, and unique moments.",
+          features: [
+            "Customizable themes",
+            "Flexible event details",
+            "Memory sharing",
+            "Celebration timeline"
+          ]
+        }
       ]
     }
   },

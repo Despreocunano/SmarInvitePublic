@@ -1,45 +1,128 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { Mouse } from '@lucide/astro';
-import ExampleCard from '../../components/shared/ExampleCard.astro';
+import { Sparkles, ArrowRight, CheckCircle, Zap, Users, Shield } from '@lucide/astro';
+import TemplateExamples from '../../components/home/TemplateExamples.tsx';
 import texts from '../../i18n/mx';
+
+const templates = (texts.examplesPage.examples as any[]).map((ejemplo: any) => ({
+  name: ejemplo.name,
+  preview: ejemplo.image,
+  link: ejemplo.link,
+  color: ejemplo.color,
+}));
 ---
 
 <Layout title={texts.examplesPage.title} description={texts.examplesPage.description} texts={texts}>
-  <main class="pt-16 min-h-screen">
+  <main class="pt-16">
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <!-- Background Pattern -->
-      <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(244,63,94,0.08),transparent_50%)]"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.08),transparent_50%)]"></div>
-      <!-- Animated dots pattern -->
-      <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute top-20 left-20 w-2 h-2 bg-rose-400 rounded-full animate-pulse"></div>
-        <div class="absolute top-40 right-32 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
-        <div class="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse delay-500"></div>
-        <div class="absolute bottom-20 right-20 w-1 h-1 bg-emerald-400 rounded-full animate-pulse delay-1500"></div>
-      </div>
-      <div class="relative z-10 w-full">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 class="text-4xl md:text-5xl font-bold text-white mb-6" set:html={texts.examplesPage.heroTitle} />
-          <p class="text-xl text-fuchsia-200 mb-8">
-            {texts.examplesPage.heroSubtitle}
-          </p>
+    <section class="relative py-32 overflow-hidden">
+      <!-- Fondo con gradiente premium -->
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100/30"></div>
+      
+      <!-- Patrón geométrico sutil -->
+      <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+      
+      <!-- Elementos decorativos flotantes -->
+      <div class="absolute top-20 left-20 w-3 h-3 bg-slate-300 rounded-full opacity-60 animate-pulse"></div>
+      <div class="absolute top-40 right-32 w-2 h-2 bg-slate-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
+      <div class="absolute bottom-32 left-1/4 w-4 h-4 bg-slate-200 rounded-full opacity-50 animate-pulse delay-500"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-4xl mx-auto">
+          <!-- Badge premium -->
+          <div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm mb-12">
+            <Sparkles class="w-5 h-5 text-slate-600" />
+            <span class="text-sm font-semibold text-slate-700 tracking-wide">PLANTILLAS PROFESIONALES</span>
+          </div>
+          
+          <!-- Título principal -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-[0.95] tracking-tight" set:html={texts.examplesPage.heroTitle} />
+          
+          <!-- Subtítulo -->
+          <p class="text-2xl text-slate-600 mb-16 leading-relaxed max-w-3xl mx-auto">{texts.examplesPage.heroSubtitle}</p>
+          
+          <!-- Mini estadísticas -->
+          <div class="flex items-center justify-center gap-8 text-sm text-slate-500">
+            <div class="flex items-center gap-2">
+              <Zap class="w-4 h-4 text-emerald-500" />
+              <span>14+ plantillas</span>
+            </div>
+            <div class="w-px h-4 bg-slate-300"></div>
+            <div class="flex items-center gap-2">
+              <Users class="w-4 h-4 text-blue-500" />
+              <span>Optimizado móvil</span>
+            </div>
+            <div class="w-px h-4 bg-slate-300"></div>
+            <div class="flex items-center gap-2">
+              <Shield class="w-4 h-4 text-emerald-500" />
+              <span>Fácil personalización</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="pointer-events-none absolute left-1/2 -translate-x-1/2 bottom-8 z-20 flex flex-col items-center w-auto">
-        <Mouse class="h-10 w-10 text-white animate-bounce" />
-        <span class="text-xs text-white/70 mt-1">{texts.examplesPage.heroScroll}</span>
-      </div>
     </section>
-    <!-- Ejemplos Section -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {texts.examplesPage.examples.map((ejemplo) => (
-          <ExampleCard nombre={ejemplo.name} imagen={ejemplo.image} enlace={ejemplo.link} color={ejemplo.color} buttonText={texts.home.exampleCard.button} />
-        ))}
+
+    <!-- Templates Section -->
+    <TemplateExamples
+      title=""
+      description=""
+      buttonText={texts.exampleCard?.button || 'Ver ejemplo'}
+      templates={templates}
+      client:load
+    />
+
+    <!-- CTA Final Premium -->
+    <section class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      
+      <!-- Patrón de fondo -->
+      <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 32px 32px;"></div>
+      
+      <!-- Elementos decorativos -->
+      <div class="absolute top-20 left-20 w-4 h-4 bg-white/20 rounded-full animate-pulse"></div>
+      <div class="absolute top-40 right-32 w-3 h-3 bg-white/30 rounded-full animate-pulse delay-1000"></div>
+      <div class="absolute bottom-32 left-1/4 w-2 h-2 bg-white/25 rounded-full animate-pulse delay-500"></div>
+      
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-4xl mx-auto space-y-12">
+          <!-- Título -->
+          <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">¿Listo para crear tu invitación?</h2>
+          <p class="text-2xl text-slate-300 leading-relaxed">Elige tu plantilla favorita y personalízala en minutos</p>
+          
+          <!-- Botón principal -->
+          <a
+            href="https://app.smartinvite.me/auth"
+            class="group inline-flex items-center px-12 py-6 text-xl font-bold text-slate-900 bg-white hover:bg-slate-50 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
+          >
+            <span>Comenzar a crear ahora</span>
+            <ArrowRight class="ml-4 w-6 h-6 transition-transform duration-300 group-hover:translate-x-2" />
+          </a>
+          
+          <!-- Información adicional -->
+          <div class="flex items-center justify-center gap-3 text-slate-400">
+            <CheckCircle class="w-4 h-4 text-emerald-400" />
+            <span class="text-lg">100% gratis • Sin tarjeta de crédito</span>
+          </div>
+          
+          <!-- Mini testimonial o estadística -->
+          <div class="flex items-center justify-center gap-8 pt-8 border-t border-slate-700">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white">10K+</div>
+              <div class="text-sm text-slate-400">Invitaciones creadas</div>
+            </div>
+            <div class="w-px h-12 bg-slate-700"></div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white">14+</div>
+              <div class="text-sm text-slate-400">Plantillas profesionales</div>
+            </div>
+            <div class="w-px h-12 bg-slate-700"></div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-white">5★</div>
+              <div class="text-sm text-slate-400">Valoración de usuarios</div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-</Layout> 
+</Layout>

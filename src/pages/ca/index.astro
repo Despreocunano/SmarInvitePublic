@@ -8,6 +8,7 @@ import Footer from '../../components/shared/Footer.astro';
 
 // Importa los islands de React
 import TemplateExamples from '../../components/home/TemplateExamples.tsx';
+import InvitationTypes from '../../components/shared/InvitationTypes.astro';
 
 // Importa los iconos de lucide-react (necesarios para los datos)
 import { Users, Check, Gift, Link as LinkIcon, LayoutDashboard, Table2 } from '@lucide/astro';
@@ -41,6 +42,11 @@ const featureSections = (texts.home.features as any[]).map((feature: any, idx: n
       subtitle={texts.home.stepsSection.subtitle}
       steps={texts.home.stepsSection.steps}
     />
+    <InvitationTypes
+      title={texts.home.invitationTypes.title}
+      subtitle={texts.home.invitationTypes.subtitle}
+      types={texts.home.invitationTypes.types}
+    />
     <TemplateExamples 
       title={texts.home.templateExamples.title}
       description={texts.home.templateExamples.description}
@@ -59,6 +65,7 @@ const featureSections = (texts.home.features as any[]).map((feature: any, idx: n
       title={texts.home.cta.title}
       description={texts.home.cta.description}
       button={texts.home.cta.button}
+      texts={texts.home}
     />
     <FeaturesGrid
     title={texts.home.featuresGrid.title}

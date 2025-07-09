@@ -5,56 +5,19 @@ const i18n: I18n = {
     title: "Welcome to SmartInvite Canada",
     description: "The best way to manage your event invitations in Canads.",
     hero: {
-      title: "La teva celebració mereix una invitació única",
-      subtitle: "Una experiència interactiva, original i eco-friendly per al teu esdeveniment",
-      cta: "Crea la teva invitació digital gratis",
-      button: "Crear la meva invitació",
-      secondary: "Veure característiques",
-      heroScroll: "Deslitza per veure més",
-      invitationName: "Joan i Maria",
-      invitationDate: "12 d'Octubre, 2026",
+      title: "Your love story deserves a unique invitation",
+      subtitle: "An interactive, original, and eco-friendly experience for your wedding",
+      cta: "Create your digital wedding invitation for free",
+      button: "Create my invitation",
+      secondary: "View features",
+      heroScroll: "Scroll down",
+      invitationName: "John & Mary",
+      invitationDate: "October 12, 2026",
       invitationButtons: [
-        "AGENDAR",
-        "CONFIRMAR ASSISTÈNCIA",
-        "COM ARRIBAR?"
-      ],
-      feature1: "Esdeveniments únics",
-      feature2: "Gestió d'invitats",
-      feature3: "Ubicació interactiva",
-      info: "100% gratis • Sense targeta de crèdit",
-      badge: "INVITACIONS DIGITALS"
-    },
-    phoneMockup: {
-      time: "9:41",
-      battery: "Bateria",
-      eventTypes: {
-        wedding: "Boda",
-        birthday: "Aniversari",
-        corporate: "Corporatiu",
-        graduation: "Graduació"
-      },
-      events: {
-        wedding: {
-          name: "Joan i Maria",
-          date: "12 d'Octubre, 2026",
-          buttons: ["AGENDAR", "CONFIRMAR ASSISTÈNCIA", "COM ARRIBAR?"]
-        },
-        birthday: {
-          name: "25 anys de Sarah",
-          date: "15 de Desembre, 2025",
-          buttons: ["CONFIRMAR ASSISTÈNCIA", "REGAL", "UBICACIÓ"]
-        },
-        corporate: {
-          name: "Conferència Tech 2025",
-          date: "20 de Març, 2025",
-          buttons: ["REGISTRAR-SE ARA", "AGENDA", "SEU"]
-        },
-        graduation: {
-          name: "Generació 2025",
-          date: "30 de Maig, 2025",
-          buttons: ["ASSISTIR CERIMÒNIA", "RECEPCIÓ", "FOTOS"]
-        }
-      }
+        "ADD TO CALENDAR",
+        "RSVP",
+        "DIRECTIONS"
+      ]
     },
     features: [
       {

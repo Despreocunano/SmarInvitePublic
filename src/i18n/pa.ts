@@ -3,21 +3,58 @@ import type { I18n } from './types';
 const i18n: I18n = {
   home: {
     title: "Bienvenido a SmartInvite Panamá",
-    description: "La mejor manera de gestionar tus invitaciones de matrimonio en Panamá.",
+    description: "Invitaciones Digitales para Matrimonios, Bautizos, Cumpleaños y más.",
     hero: {
-      title: "Tu historia de amor merece una invitación única",
-      subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
-      cta: "Crea tu invitación de matrimonio digital",
+      title: "Tu celebración merece una invitación única",
+      subtitle: "Una experiencia interactiva, original y eco-friendly para tu evento",
+      cta: "Crea tu invitación digital gratis",
       button: "Crear mi invitación",
       secondary: "Ver características",
       heroScroll: "Desliza para ver más",
-      invitationName: "Juan & María",
+      invitationName: "Juan y María",
       invitationDate: "12 de Octubre, 2026",
       invitationButtons: [
         "AGENDAR",
         "CONFIRMAR ASISTENCIA",
         "¿CÓMO LLEGAR?"
-      ]
+      ],
+      feature1: "Eventos únicos",
+      feature2: "Gestión de invitados",
+      feature3: "Ubicación interactiva",
+      info: "100% gratis • Sin tarjeta de crédito",
+      badge: "INVITACIONES DIGITALES"
+    },
+    phoneMockup: {
+      time: "9:41",
+      battery: "Batería",
+      eventTypes: {
+        wedding: "Boda",
+        birthday: "Cumpleaños",
+        corporate: "Corporativo",
+        graduation: "Graduación"
+      },
+      events: {
+        wedding: {
+          name: "Juan y María",
+          date: "12 de Octubre, 2026",
+          buttons: ["AGENDAR", "CONFIRMAR ASISTENCIA", "¿CÓMO LLEGAR?"]
+        },
+        birthday: {
+          name: "25 años de Sarah",
+          date: "15 de Diciembre, 2025",
+          buttons: ["CONFIRMAR ASISTENCIA", "REGALO", "UBICACIÓN"]
+        },
+        corporate: {
+          name: "Conferencia Tech 2025",
+          date: "20 de Marzo, 2025",
+          buttons: ["REGISTRARSE AHORA", "AGENDA", "SEDE"]
+        },
+        graduation: {
+          name: "Generación 2025",
+          date: "30 de Mayo, 2025",
+          buttons: ["ASISTIR CEREMONIA", "RECEPCIÓN", "FOTOS"]
+        }
+      }
     },
     features: [
       {
@@ -71,8 +108,23 @@ const i18n: I18n = {
     ],
     cta: {
       title: "Crea tu invitación en menos de 5 minutos",
-      description: "Regístrate ahora, ingresa los datos de tu boda y visualiza tu invitación digital.",
-      button: "Crear mi invitación"
+      description: "Regístrate ahora, ingresa los datos de tu evento y visualiza tu invitación digital.",
+      button: "Crear mi invitación",
+      freeText: "Prueba 100% gratis • Sin tarjeta de crédito",
+      stats: {
+        invitations: {
+          number: "10K+",
+          label: "Invitaciones creadas"
+        },
+        satisfaction: {
+          number: "99%",
+          label: "Satisfacción"
+        },
+        rating: {
+          number: "5★",
+          label: "Valoración"
+        }
+      }
     },
     featuresGrid: {
       title: "Todo lo que necesitas en un solo lugar",
@@ -99,30 +151,22 @@ const i18n: I18n = {
         {
           step: "01",
           title: "Crea tu cuenta",
-          description: "Regístrate de forma gratuita y accede a todas los diseños disponibles. ¡Solo toma 30 segundos!",
-          color: "from-blue-500 via-blue-600 to-indigo-600",
-          bgColor: "from-blue-50 to-indigo-50"
+          description: "Regístrate de forma gratuita y accede a todos los diseños disponibles. ¡Solo toma 30 segundos!",
         },
         {
           step: "02",
           title: "Elige el diseño y completa tu información",
-          description: "Elige entre más de 10 diseños únicos y personaliza cada detalle de tu invitación.",
-          color: "from-purple-500 via-purple-600 to-violet-600",
-          bgColor: "from-purple-50 to-violet-50"
+          description: "Elige entre más de 20 diseños únicos y personaliza cada detalle de tu invitación.",
         },
         {
           step: "03",
           title: "Visualiza tu invitación digital",
           description: "Revisa cómo se ve tu invitación en tiempo real y ajusta los detalles que necesites.",
-          color: "from-emerald-500 via-emerald-600 to-teal-600",
-          bgColor: "from-emerald-50 to-teal-50"
         },
         {
           step: "04",
           title: "Publícalo y comparte con tus invitados",
-          description: "Activa tu invitación con un clic y compártela con todos tus invitados de forma instantánea.",
-          color: "from-rose-500 via-rose-600 to-pink-600",
-          bgColor: "from-rose-50 to-pink-50"
+          description: "Activa tu invitación con un clic y compártela con todos tus invitados al instante.",
         }
       ]
     },
@@ -164,6 +208,57 @@ const i18n: I18n = {
         { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black" }
       ]
     },
+    invitationTypes: {
+      title: "Elige el tipo de invitación perfecto para tu evento",
+      subtitle: "Cada tipo está diseñado para crear experiencias únicas y adaptarse a diferentes estilos de celebración.",
+      types: [
+        {
+          icon: "Heart",
+          title: "Matrimonio",
+          description: "Invitaciones elegantes y románticas para tu día especial con todos los detalles que tus invitados necesitan.",
+          features: [
+            "Detalles de ceremonia y recepción",
+            "RSVP con preferencias de menú",
+            "Integración de lista de regalos",
+            "Galería de fotos y cronología"
+          ],
+          popular: true
+        },
+        {
+          icon: "Users",
+          title: "Cumpleaños",
+          description: "Invitaciones divertidas y personalizadas para celebrar un año más de vida con estilo y alegría.",
+          features: [
+            "Temas de celebración de edad",
+            "Juegos y actividades de fiesta",
+            "Sugerencias de regalos",
+            "Espacio para compartir fotos"
+          ]
+        },
+        {
+          icon: "Calendar",
+          title: "Eventos Corporativos",
+          description: "Invitaciones profesionales para reuniones de negocios, conferencias y celebraciones empresariales.",
+          features: [
+            "Agenda y ponentes",
+            "Gestión de registros",
+            "Funciones de networking",
+            "Branding profesional"
+          ]
+        },
+        {
+          icon: "Gift",
+          title: "Celebraciones Especiales",
+          description: "Invitaciones versátiles para graduaciones, aniversarios, baby showers y momentos únicos.",
+          features: [
+            "Temas personalizables",
+            "Detalles flexibles del evento",
+            "Compartir recuerdos",
+            "Cronología de celebración"
+          ]
+        }
+      ]
+    },
     examplesSection: {
       title: "Algunos ejemplos de invitaciones",
       description: "Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.",
@@ -193,7 +288,7 @@ const i18n: I18n = {
   howItWorksPage: {
     title: "Descubre Cómo funciona",
     description: "Crea tu invitación digital en 4 pasos, olvidate del papel, de los tiempos de espera, tu invitación en minutos!",
-    heroTitle: "Crea tu invitación digital en <span class='text-rose-400'>4 simples pasos</span>",
+    heroTitle: "Crea tu invitación digital en 4 simples pasos",
     heroSubtitle: "Desde el registro hasta compartir con tus invitados, te guiamos en todo el proceso",
     heroButton: "Comenzar ahora",
     heroScroll: "Desliza para ver más",
@@ -251,7 +346,7 @@ const i18n: I18n = {
   examplesPage: {
     title: "Ejemplos de invitaciones",
     description: "Explora nuestro catálogo de diseños y sorpréndete con tu invitación digital",
-    heroTitle: "Explora nuestros <span class='text-fuchsia-400'>ejemplos de invitaciones</span>",
+    heroTitle: "Explora nuestros ejemplos de invitaciones",
     heroSubtitle: "Inspírate con los distintos estilos y diseños que puedes usar para tu invitación digital.",
     heroScroll: "Desliza para ver más",
     examples: [
@@ -274,7 +369,7 @@ const i18n: I18n = {
   guestPage: {
     title: "Gestión de Invitados",
     description: "Descrubre las dos formas que hemos creado para que compartas tu invitación digital.",
-    heroTitle: "Gestiona tus invitados en <span class='text-emerald-400'>2 formas realmente simples</span>",
+    heroTitle: "Gestiona tus invitados en 2 formas realmente sencillas",
     heroSubtitle: "Elige la opción que más se adapte a tu evento y facilita la confirmación de asistencia de tus invitados",
     heroScroll: "Desliza para ver más",
     traditional: {

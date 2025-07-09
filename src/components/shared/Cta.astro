@@ -1,44 +1,75 @@
 ---
-const { title, description, button } = Astro.props;
-import { Heart } from '@lucide/astro';
+const { title, description, button, texts } = Astro.props;
+import { ArrowRight, CheckCircle } from '@lucide/astro';
 ---
-<section class="py-20 bg-gradient-to-b from-white to-rose-50/30">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-gradient-to-r from-rose-500 to-rose-600 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0%,rgba(0,0,0,0)_70%)]"></div>
-      <div class="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:250%_250%] animate-shimmer"></div>
+<section class="py-24 relative overflow-hidden">
+  <!-- Fondo con gradiente sutil -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100/50"></div>
+  
+  <!-- Patrón de fondo muy sutil -->
+  <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0); background-size: 32px 32px;"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <!-- Contenedor principal -->
+    <div class="relative bg-white rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/20 overflow-hidden">
       
-      <!-- Floating hearts decoration -->
-      <div class="absolute top-4 left-4 opacity-20">
-        <Heart class="h-8 w-8 text-white animate-pulse" />
-      </div>
-      <div class="absolute top-8 right-8 opacity-20">
-        <Heart class="h-6 w-6 text-white animate-pulse" style="animation-delay: 0.5s;" />
-      </div>
-      <div class="absolute bottom-6 left-12 opacity-20">
-        <Heart class="h-4 w-4 text-white animate-pulse" style="animation-delay: 1s;" />
-      </div>
+      <!-- Elementos decorativos de fondo -->
+      <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-slate-100/40 to-transparent rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-slate-50/60 to-transparent rounded-full blur-2xl"></div>
       
-      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div class="text-center md:text-left">
-          <div class="flex items-center justify-center md:justify-start mb-4">
-            <Heart class="h-8 w-8 text-white mr-3 animate-bounce" />
-            <h2 class="text-2xl md:text-3xl font-bold text-white">
-              {title}
-            </h2>
-          </div>
-          <p class="text-white/90 text-lg">
-            {description}
-          </p>
+      <!-- Contenido -->
+      <div class="relative px-8 py-16 sm:px-12 sm:py-20 text-center">
+        
+        <!-- Icono decorativo -->
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-slate-100 rounded-2xl mb-8">
+          <CheckCircle class="w-8 h-8 text-slate-600" />
         </div>
-        <a
-          href="https://app.smartinvite.me/register"
-          class="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 text-lg rounded-md bg-gradient-to-r from-white to-rose-50 hover:from-rose-50 hover:to-white text-rose-600 transition-all duration-300 group shadow-lg shadow-black/10 hover:shadow-xl hover:scale-105"
-        >
-          <span class="font-semibold">{button}</span>
-          <Heart class="ml-3 h-6 w-6 text-rose-500 group-hover:animate-pulse" />
-        </a>
+        
+        <!-- Título -->
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+          {title}
+        </h2>
+        
+        <!-- Descripción -->
+        <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+          {description}
+        </p>
+        
+        <!-- Botón principal -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            href="https://app.smartinvite.me/register"
+            class="group inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-slate-900 hover:bg-slate-800 rounded-xl transition-all duration-300 shadow-lg shadow-slate-900/25 hover:shadow-xl hover:shadow-slate-900/30 min-w-[200px]"
+          >
+            <span>{button}</span>
+            <ArrowRight class="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </a>
+          
+          <!-- Información adicional -->
+          <div class="flex items-center gap-2 text-sm text-slate-500">
+            <div class="w-2 h-2 bg-emerald-500 rounded-full"></div>
+            <span>{texts?.cta?.freeText || "100% gratis • Sin tarjeta de crédito"}</span>
+          </div>
+        </div>
+        
+        <!-- Estadísticas o badges -->
+        <div class="flex items-center justify-center gap-8 mt-12 pt-8 border-t border-slate-200/50">
+          <div class="text-center">
+            <div class="text-2xl font-bold text-slate-900">{texts?.cta?.stats?.invitations?.number || "10K+"}</div>
+            <div class="text-sm text-slate-600">{texts?.cta?.stats?.invitations?.label || "Invitaciones creadas"}</div>
+          </div>
+          <div class="w-px h-12 bg-slate-200"></div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-slate-900">{texts?.cta?.stats?.satisfaction?.number || "99%"}</div>
+            <div class="text-sm text-slate-600">{texts?.cta?.stats?.satisfaction?.label || "Satisfacción"}</div>
+          </div>
+          <div class="w-px h-12 bg-slate-200"></div>
+          <div class="text-center">
+            <div class="text-2xl font-bold text-slate-900">{texts?.cta?.stats?.rating?.number || "5★"}</div>
+            <div class="text-sm text-slate-600">{texts?.cta?.stats?.rating?.label || "Valoración"}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section> 
+</section>

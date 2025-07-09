@@ -1,0 +1,96 @@
+---
+const { title = '', subtitle = '', types = [] } = Astro.props;
+import { Heart, Users, Calendar, Gift } from '@lucide/astro';
+
+const iconMap: Record<string, any> = { Heart, Users, Calendar, Gift };
+---
+
+<section class="py-32 bg-gradient-to-b from-white via-slate-50/20 to-white relative overflow-hidden">
+  <!-- Elementos decorativos de fondo -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(148,163,184,0.08),transparent_50%)]"></div>
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(100,116,139,0.06),transparent_50%)]"></div>
+  
+  <!-- Patrón de puntos sutil -->
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.3) 1px, transparent 0); background-size: 24px 24px;"></div>
+  
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header Section -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-bold text-slate-700 mb-8 leading-tight">
+        {title}
+      </h2>
+      <p class="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Types Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {types.map((type: { icon: string; title: string; description: string; features: string[]; popular?: boolean }, idx: number) => {
+        const Icon = iconMap[type.icon];
+        
+        return (
+          <div class="group relative">
+            <!-- Badge "Popular" si aplica -->
+            {type.popular && (
+              <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                <div class="bg-gradient-to-r from-slate-600 to-gray-700 text-white px-4 py-1 rounded-full text-xs font-semibold shadow-lg">
+                  Más Popular
+                </div>
+              </div>
+            )}
+            
+            <!-- Sombra de fondo sutil -->
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-200/20 to-gray-300/15 rounded-3xl blur-xl transform translate-y-3 opacity-60"></div>
+            
+            <!-- Card principal -->
+            <div class={`relative bg-gradient-to-br from-white via-slate-50/50 to-gray-50/30 backdrop-blur-sm rounded-3xl p-8 border ${type.popular ? 'border-slate-300/80 shadow-xl' : 'border-slate-200/60 shadow-lg'} overflow-hidden h-full flex flex-col`}>
+              <!-- Elementos decorativos internos -->
+              <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/40 to-transparent rounded-full blur-2xl"></div>
+              <div class="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-slate-100/30 to-transparent rounded-full blur-xl"></div>
+              
+              <!-- Contenido de la card -->
+              <div class="relative z-10 flex flex-col h-full">
+                <!-- Icono -->
+                <div class="mb-6 flex justify-center">
+                  <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-100 via-white to-gray-50 text-slate-600 rounded-2xl shadow-lg border border-slate-200/50 relative">
+                    {Icon && <Icon class="h-8 w-8" />}
+                    <div class="absolute inset-0 bg-gradient-to-br from-white/50 to-transparent rounded-2xl"></div>
+                  </div>
+                </div>
+                
+                <!-- Título -->
+                <h3 class="text-xl font-bold text-slate-800 mb-4 text-center leading-tight">
+                  {type.title}
+                </h3>
+                
+                <!-- Descripción -->
+                <p class="text-slate-600 text-sm leading-relaxed text-center mb-6 flex-grow">
+                  {type.description}
+                </p>
+                
+                <!-- Features -->
+                <div class="space-y-3">
+                  {type.features.map((feature: string) => (
+                    <div class="flex items-start gap-3">
+                      <div class="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></div>
+                      <span class="text-sm text-slate-600 leading-relaxed">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <!-- Borde inferior decorativo -->
+              <div class="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200/50 to-transparent"></div>
+              
+              <!-- Efecto especial para el popular -->
+              {type.popular && (
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-100/20 via-transparent to-gray-100/20 rounded-3xl"></div>
+              )}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>

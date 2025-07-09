@@ -5,19 +5,56 @@ const i18n: I18n = {
     title: "Bienvenido a SmartInvite México",
     description: "La mejor manera de gestionar tus invitaciones de matrimonio en México.",
     hero: {
-      title: "Tu historia de amor merece una invitación única",
-      subtitle: "Una experiencia interactiva, original y ecológica para tu boda",
-      cta: "Crea tu invitación de matrimonio digital",
+      title: "Tu celebración merece una invitación única",
+      subtitle: "Una experiencia interactiva, original y eco-friendly para tu evento",
+      cta: "Crea tu invitación digital gratis",
       button: "Crear mi invitación",
       secondary: "Ver características",
       heroScroll: "Desliza para ver más",
-      invitationName: "Juan & María",
+      invitationName: "Juan y María",
       invitationDate: "12 de Octubre, 2026",
       invitationButtons: [
         "AGENDAR",
         "CONFIRMAR ASISTENCIA",
         "¿CÓMO LLEGAR?"
-      ]
+      ],
+      feature1: "Eventos únicos",
+      feature2: "Gestión de invitados",
+      feature3: "Ubicación interactiva",
+      info: "100% gratis • Sin tarjeta de crédito",
+      badge: "INVITACIONES DIGITALES"
+    },
+    phoneMockup: {
+      time: "9:41",
+      battery: "Batería",
+      eventTypes: {
+        wedding: "Boda",
+        birthday: "Cumpleaños",
+        corporate: "Corporativo",
+        graduation: "Graduación"
+      },
+      events: {
+        wedding: {
+          name: "Juan y María",
+          date: "12 de Octubre, 2026",
+          buttons: ["AGENDAR", "CONFIRMAR ASISTENCIA", "¿CÓMO LLEGAR?"]
+        },
+        birthday: {
+          name: "25 años de Sarah",
+          date: "15 de Diciembre, 2025",
+          buttons: ["CONFIRMAR ASISTENCIA", "REGALO", "UBICACIÓN"]
+        },
+        corporate: {
+          name: "Conferencia Tech 2025",
+          date: "20 de Marzo, 2025",
+          buttons: ["REGISTRARSE AHORA", "AGENDA", "SEDE"]
+        },
+        graduation: {
+          name: "Generación 2025",
+          date: "30 de Mayo, 2025",
+          buttons: ["ASISTIR CEREMONIA", "RECEPCIÓN", "FOTOS"]
+        }
+      }
     },
     features: [
       {
@@ -72,7 +109,22 @@ const i18n: I18n = {
     cta: {
       title: "Crea tu invitación en menos de 5 minutos",
       description: "Regístrate ahora, ingresa los datos de tu boda y visualiza tu invitación digital.",
-      button: "Crear mi invitación"
+      button: "Crear mi invitación",
+      freeText: "100% gratis • Sin tarjeta de crédito",
+      stats: {
+        invitations: {
+          number: "10K+",
+          label: "Invitaciones creadas"
+        },
+        satisfaction: {
+          number: "99%",
+          label: "Satisfacción"
+        },
+        rating: {
+          number: "5★",
+          label: "Valoración"
+        }
+      }
     },
     featuresGrid: {
       title: "Todo lo que necesitas en un solo lugar",
@@ -162,6 +214,57 @@ const i18n: I18n = {
         { name: "Signature Azure", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure" },
         { name: "Signature Cobre", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre" },
         { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black" }
+      ]
+    },
+    invitationTypes: {
+      title: "Elige el tipo de invitación perfecto para tu evento",
+      subtitle: "Cada tipo está diseñado para crear experiencias únicas y adaptarse a diferentes estilos de celebración.",
+      types: [
+        {
+          icon: "Heart",
+          title: "Matrimonio",
+          description: "Invitaciones elegantes y románticas para tu día especial con todos los detalles que tus invitados necesitan.",
+          features: [
+            "Detalles de ceremonia y recepción",
+            "RSVP con preferencias de menú",
+            "Integración de lista de regalos",
+            "Galería de fotos y cronología"
+          ],
+          popular: true
+        },
+        {
+          icon: "Users",
+          title: "Cumpleaños",
+          description: "Invitaciones divertidas y personalizadas para celebrar un año más de vida con estilo y alegría.",
+          features: [
+            "Temas de celebración de edad",
+            "Juegos y actividades de fiesta",
+            "Sugerencias de regalos",
+            "Espacio para compartir fotos"
+          ]
+        },
+        {
+          icon: "Calendar",
+          title: "Eventos Corporativos",
+          description: "Invitaciones profesionales para reuniones de negocios, conferencias y celebraciones empresariales.",
+          features: [
+            "Agenda y ponentes",
+            "Gestión de registros",
+            "Funciones de networking",
+            "Branding profesional"
+          ]
+        },
+        {
+          icon: "Gift",
+          title: "Celebraciones Especiales",
+          description: "Invitaciones versátiles para graduaciones, aniversarios, baby showers y momentos únicos.",
+          features: [
+            "Temas personalizables",
+            "Detalles flexibles del evento",
+            "Compartir recuerdos",
+            "Cronología de celebración"
+          ]
+        }
       ]
     },
   },

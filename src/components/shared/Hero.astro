@@ -1,114 +1,194 @@
 ---
 const { texts } = Astro.props;
-import { Heart, Mouse } from '@lucide/astro' 
+import { Mouse, Calendar, MapPin, Users, Sparkles, ArrowRight, CheckCircle } from '@lucide/astro' 
 import HeroPrincipal from '../../assets/images/hero_principal.webp'
+import PhoneMockup from '../home/PhoneMockup.tsx';
+
+// Datos de eventos para el slider usando traducciones
+const events = [
+  {
+    id: 'wedding-1',
+    name: texts.home.phoneMockup.events.wedding.name,
+    date: texts.home.phoneMockup.events.wedding.date,
+    image: 'https://images.pexels.com/photos/1589820/pexels-photo-1589820.jpeg',
+    buttons: texts.home.phoneMockup.events.wedding.buttons,
+    type: 'Wedding'
+  },
+  {
+    id: 'birthday-1',
+    name: texts.home.phoneMockup.events.birthday.name,
+    date: texts.home.phoneMockup.events.birthday.date,
+    image: 'https://images.pexels.com/photos/1462630/pexels-photo-1462630.jpeg',
+    buttons: texts.home.phoneMockup.events.birthday.buttons,
+    type: 'Birthday'
+  },
+  {
+    id: 'corporate-1',
+    name: texts.home.phoneMockup.events.corporate.name,
+    date: texts.home.phoneMockup.events.corporate.date,
+    image: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg',
+    buttons: texts.home.phoneMockup.events.corporate.buttons,
+    type: 'Corporate'
+  },
+  {
+    id: 'graduation-1',
+    name: texts.home.phoneMockup.events.graduation.name,
+    date: texts.home.phoneMockup.events.graduation.date,
+    image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg',
+    buttons: texts.home.phoneMockup.events.graduation.buttons,
+    type: 'Graduation'
+  }
+];
 ---
-<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-rose-500 to-rose-700">
-  {/* Imagen de fondo */}
-  <img
-    class="absolute inset-0 w-full h-full object-cover z-0"
-    src={HeroPrincipal.src}
-    alt="Hero background"
-    loading="eager"
-    draggable="false"
-  />
-  {/* Capa de oscurecimiento opcional */}
-  <div class="absolute inset-0 bg-black/40 z-10 pointer-events-none"></div>
+<section class="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100/50">
+  {/* Gradiente con patrón geométrico sutil */}
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-100/50 opacity-90"></div>
+  <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.1) 1px, transparent 0); background-size: 40px 40px;"></div>
+  
+  {/* Patrón geométrico sutil */}
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+  
+  {/* Elementos decorativos flotantes neutros */}
+  <div class="absolute inset-0 z-15 pointer-events-none">
+    <div class="absolute top-20 left-20 w-3 h-3 bg-slate-300 rounded-full opacity-60 animate-pulse"></div>
+    <div class="absolute top-40 right-32 w-2 h-2 bg-slate-400 rounded-full opacity-40 animate-pulse delay-1000"></div>
+    <div class="absolute bottom-32 left-1/4 w-4 h-4 bg-slate-200 rounded-full opacity-50 animate-pulse delay-500"></div>
+    <div class="absolute bottom-20 right-20 w-2 h-2 bg-slate-500 rounded-full opacity-30 animate-pulse delay-1500"></div>
+    <div class="absolute top-1/3 left-10 w-2 h-2 bg-slate-300 rounded-full opacity-40 animate-pulse delay-2000"></div>
+    <div class="absolute top-2/3 right-10 w-3 h-3 bg-slate-400 rounded-full opacity-50 animate-pulse delay-2500"></div>
+  </div>
+
   {/* Contenido del hero */}
-  <div class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-12 pt-32 pb-20 md:pt-40 md:pb-32">
-    <div 
-      class="flex-1 text-center md:text-left"
-    >
-      <div class="inline-block mb-6">
-        <div 
-          class="w-24 h-px bg-gradient-to-r from-transparent via-rose-400 to-transparent"
-        />
+  <div class="relative z-20 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-16 pt-32 pb-20 lg:pt-40 lg:pb-32">
+    
+    {/* Contenido principal */}
+    <div class="flex-1 text-center lg:text-left max-w-2xl">
+      {/* Badge premium */}
+      <div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm mb-2">
+        <Sparkles class="w-5 h-5 text-slate-600" />
+        <span class="text-sm font-semibold text-slate-700 tracking-wide">{texts.home.hero.badge}</span>
       </div>
-      <p class="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-        <span class="bg-clip-text text-transparent bg-gradient-to-r from-rose-200 to-rose-400">
+      
+      {/* Título principal */}
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 lg:mb-8 leading-tight tracking-tight">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-slate-900 via-slate-800 to-slate-700">
           {texts.home.hero.title}
         </span>
-      </p>
-      <p class="text-lg md:text-2xl text-white/90 mb-6 md:mb-8 font-light">
+      </h1>
+      
+      {/* Subtítulo */}
+      <p class="text-xl sm:text-2xl text-slate-600 mb-8 lg:mb-10 font-light leading-relaxed">
         {texts.home.hero.subtitle}
       </p>
-      <h1 class="text-xl md:text-3xl text-white font-light mb-8 md:mb-12">
+      
+      {/* CTA secundario */}
+      <p class="text-lg sm:text-xl lg:text-2xl text-slate-500 font-light mb-10 lg:mb-12 leading-relaxed">
         {texts.home.hero.cta}
-      </h1>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-        <div
-          class="w-full sm:w-auto"
+      </p>
+      
+      {/* Botones de acción con colores neutros */}
+      <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mb-12">
+        <a
+          href="https://app.smartinvite.me/auth"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center justify-center px-10 py-5 text-lg font-semibold rounded-2xl bg-slate-900 hover:bg-slate-800 text-white transition-all duration-300 shadow-2xl shadow-slate-900/25 hover:shadow-slate-900/40 hover:scale-105 transform"
         >
-          <a
-            href="https://app.smartinvite.me/auth"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center w-full px-8 py-4 text-lg rounded-md bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white transition-all duration-300 group shadow-lg shadow-rose-500/25"
-          >
-            <span>{texts.home.hero.button}</span>
-            <Heart class="ml-2 h-5 w-5 group-hover:text-white transition-transform group-hover:scale-125" />
-          </a>
+          <Sparkles class="mr-3 h-6 w-6 group-hover:animate-pulse" />
+          <span>{texts.home.hero.button}</span>
+          <ArrowRight class="ml-3 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
+        </a>
+        
+        <a
+          href="#feature-section"
+          class="group inline-flex items-center justify-center px-10 py-5 text-lg font-medium rounded-2xl bg-white text-slate-700 border border-slate-200 hover:bg-slate-50 hover:border-slate-300 hover:text-slate-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+        >
+          <span>{texts.home.hero.secondary}</span>
+        </a>
+      </div>
+
+      {/* Características destacadas */}
+      <div class="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-500">
+        <div class="flex items-center gap-2">
+          <Calendar class="w-4 h-4 text-slate-600" />
+          <span>{texts.home.hero.feature1}</span>
         </div>
-        <div class="w-full sm:w-auto">
-          <a
-            href="#feature-section"
-            class="inline-flex items-center justify-center w-full px-8 py-4 text-lg rounded-md bg-white/10 text-white border-white/20 hover:bg-white/20 transition-all duration-300 backdrop-blur-sm shadow-lg shadow-rose-500/10"
-          >
-            {texts.home.hero.secondary}
-          </a>
+        <div class="flex items-center gap-2">
+          <Users class="w-4 h-4 text-slate-600" />
+          <span>{texts.home.hero.feature2}</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <MapPin class="w-4 h-4 text-slate-600" />
+          <span>{texts.home.hero.feature3}</span>
         </div>
       </div>
     </div>
 
-    <div 
-      class="flex-1 max-w-[280px] hidden md:block"
-    >
-      <div class="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-xl">
-        <div class="h-[32px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[72px] rounded-s-lg"></div>
-        <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[124px] rounded-s-lg"></div>
-        <div class="h-[46px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -start-[17px] top-[178px] rounded-s-lg"></div>
-        <div class="h-[64px] w-[3px] bg-gray-800 dark:bg-gray-800 absolute -end-[17px] top-[142px] rounded-e-lg"></div>
-        <div class="rounded-[2rem] overflow-hidden w-[272px] h-[572px] bg-white dark:bg-gray-800">
-          <div class="relative h-full">
-            <img
-              src="https://images.pexels.com/photos/1589820/pexels-photo-1589820.jpeg"
-              class="absolute inset-0 h-full w-full object-cover"
-              alt="Wedding invitation preview"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60 flex flex-col items-center justify-center text-white p-6">
-              <div class="absolute top-0 left-0 right-0 h-6 bg-black/80"></div>
-              <div>
-                <h3 class="text-2xl font-serif mb-4">{texts.home.hero.invitationName}</h3>
-                <p class="text-sm mb-8">{texts.home.hero.invitationDate}</p>
-              </div>
-              <div class="space-y-3 w-full">
-                <button
-                  class="w-full bg-gradient-to-r from-rose-500 to-rose-600 text-white rounded-lg py-2 text-sm font-medium shadow-lg shadow-rose-500/25"
-                >
-                  {texts.home.hero.invitationButtons?.[0] ?? 'AGENDAR'}
-                </button>
-                <button
-                  class="w-full bg-white/20 text-white rounded-lg py-2 text-sm font-medium backdrop-blur-sm"
-                >
-                  {texts.home.hero.invitationButtons?.[1] ?? 'CONFIRMAR ASISTENCIA'}
-                </button>
-                <button
-                  class="w-full bg-white/20 text-white rounded-lg py-2 text-sm font-medium backdrop-blur-sm"
-                >
-                  {texts.home.hero.invitationButtons?.[2] ?? '¿CÓMO LLEGAR?'}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    {/* Mockup del teléfono con slider */}
+    <PhoneMockup events={events} texts={texts} client:load />
   </div>
 
-  <div 
-    class="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center w-auto"
-  >
-    <Mouse class="h-10 w-10 text-white animate-bounce" />
-    <span class="text-xs text-white/70 mt-1">{texts.home.hero.heroScroll ?? (texts.home.hero.button === 'Create my invitation' ? 'Scroll to see more' : 'Desliza para ver más')}</span>
+  {/* Indicador de scroll mejorado */}
+  <div class="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
+    <div class="relative">
+      <Mouse class="h-12 w-12 text-slate-600 animate-bounce" />
+      <div class="absolute inset-0 bg-slate-200/20 rounded-full blur-xl"></div>
+    </div>
+    <span class="text-xs text-slate-500 mt-2 font-medium tracking-wide">{texts.home.hero.heroScroll ?? (texts.home.hero.button === 'Create my invitation' ? 'Scroll to see more' : 'Desliza para ver más')}</span>
   </div>
 </section>
+
+<style>
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Estilos para el componente PhoneMockup */
+  :global(.phone-mockup-slide) {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  :global(.phone-mockup-slide.active) {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  :global(.phone-mockup-slide.inactive) {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  /* Animaciones para el slider del teléfono */
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  @keyframes slideInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

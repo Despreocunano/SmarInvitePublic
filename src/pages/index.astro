@@ -5,7 +5,7 @@ import FeaturesGrid from '../components/shared/FeaturesGrid.astro';
 import FeatureSection from '../components/shared/FeatureSection.astro';
 import Cta from '../components/shared/Cta.astro';
 import Footer from '../components/shared/Footer.astro';
-import ExampleCard from '../components/shared/ExampleCard.astro';
+import InvitationTypes from '../components/shared/InvitationTypes.astro';
 
 // Importa los islands de React
 import TemplateExamples from '../components/home/TemplateExamples.tsx';
@@ -43,6 +43,11 @@ const featureSections = (texts.home.features as any[]).map((feature: any, idx: n
       subtitle={texts.home.stepsSection.subtitle}
       steps={texts.home.stepsSection.steps}
     />
+    <InvitationTypes
+      title={texts.home.invitationTypes.title}
+      subtitle={texts.home.invitationTypes.subtitle}
+      types={texts.home.invitationTypes.types}
+    />
     <TemplateExamples 
       title={texts.home.templateExamples.title}
       description={texts.home.templateExamples.description}
@@ -60,6 +65,7 @@ const featureSections = (texts.home.features as any[]).map((feature: any, idx: n
       title={texts.home.cta.title}
       description={texts.home.cta.description}
       button={texts.home.cta.button}
+      texts={texts.home}
     />
     <FeaturesGrid
     title={texts.home.featuresGrid.title}
