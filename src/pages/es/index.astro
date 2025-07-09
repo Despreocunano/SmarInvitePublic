@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/shared/Hero.astro';
+import FeaturesGrid from '../../components/shared/FeaturesGrid.astro';
+import FeatureSection from '../../components/shared/FeatureSection.astro';
+import Cta from '../../components/shared/Cta.astro';
+import Footer from '../../components/shared/Footer.astro';
+import StepsSection from '../../components/shared/StepsSection.astro';
+import texts from '../../i18n/pa';
+import TemplateExamples from '../../components/home/TemplateExamples.tsx';
+import InvitationTypes from '../../components/shared/InvitationTypes.astro';
+import { Users, Check, Gift, Link as LinkIcon, LayoutDashboard, Table2 } from '@lucide/astro';
+import app1 from '../../assets/images/app_gestion.png';
+import app2 from '../../assets/images/app_compartir.png';
+import app3 from '../../assets/images/app_invitados.png';
+import app5 from '../../assets/images/app_mesas.png';
+import app6 from '../../assets/images/app_lista.png';
+
+const featureSections = (texts.home.features as any[]).map((feature: any, idx: number) => ({
+  ...feature,
+  image: [app3, app2, app1, app5, app6][idx],
+  icon: [Check, LayoutDashboard, Users, Table2, Gift][idx],
+  color: ["emerald", "purple", "blue", "rose", "pink"][idx]
+}));
+---
+<Layout
+  title={texts.home.title}
+  description={texts.home.description}
+  texts={texts}
+>
+  <main>
+    <Hero texts={texts} />
+    <StepsSection
+      title={texts.home.stepsSection.title}
+      subtitle={texts.home.stepsSection.subtitle}
+      steps={texts.home.stepsSection.steps}
+    />
+    <InvitationTypes
+      title={texts.home.invitationTypes.title}
+      subtitle={texts.home.invitationTypes.subtitle}
+      types={texts.home.invitationTypes.types}
+    />
+    <TemplateExamples 
+      title={texts.home.templateExamples.title}
+      description={texts.home.templateExamples.description}
+      buttonText={texts.home.templateExamples.buttonText}
+      templates={texts.home.templateExamples.templates}
+      maxItems={4}
+      client:load 
+    />
+    <FeatureSection id="feature-section" section={featureSections[0]} isEven={true} />
+    <FeatureSection section={featureSections[1]} isEven={false} />
+    <FeatureSection section={featureSections[2]} isEven={true} />
+    <FeatureSection section={featureSections[3]} isEven={false} />
+    <FeatureSection section={featureSections[4]} isEven={true} />
+
+    <Cta
+      title={texts.home.cta.title}
+      description={texts.home.cta.description}
+      button={texts.home.cta.button}
+      texts={texts.home}
+    />
+    <FeaturesGrid
+    title={texts.home.featuresGrid.title}
+    subtitle={texts.home.featuresGrid.subtitle}
+    features={texts.home.featuresGrid.features}
+  />    <Footer texts={texts} />  
+  </main>
+</Layout>

@@ -14,6 +14,8 @@ let urlPrefix = '';
 if (currentPath.startsWith('/pa')) { currentFlag = 'pa'; urlPrefix = '/pa'; }
 else if (currentPath.startsWith('/mx')) { currentFlag = 'mx'; urlPrefix = '/mx'; }
 else if (currentPath.startsWith('/ca')) { currentFlag = 'ca'; urlPrefix = '/ca'; }
+else if (currentPath.startsWith('/es')) { currentFlag = 'es'; urlPrefix = '/es'; }
+else if (currentPath.startsWith('/co')) { currentFlag = 'co'; urlPrefix = '/co'; }
 else if (currentPath.startsWith('/cl')) { currentFlag = 'cl'; urlPrefix = ''; }
 
 const flagOptions = [
@@ -21,6 +23,8 @@ const flagOptions = [
   { code: 'ca', href: '/ca', label: 'Canada', img: 'https://flagcdn.com/ca.svg' },
   { code: 'pa', href: '/pa', label: 'Panama', img: 'https://flagcdn.com/pa.svg' },
   { code: 'mx', href: '/mx', label: 'México', img: 'https://flagcdn.com/mx.svg' },
+  { code: 'es', href: '/es', label: 'España', img: 'https://flagcdn.com/es.svg' },
+  { code: 'co', href: '/co', label: 'Colombia', img: 'https://flagcdn.com/co.svg' },
   { code: 'cl', href: 'https://tuparte.digital', label: 'Chile', img: 'https://flagcdn.com/cl.svg' },
 ];
 
@@ -42,29 +46,14 @@ if (typeof window !== 'undefined') {
 }
 
 function getCountryPath(targetCountry: string) {
-  // Extraer la ruta actual sin el prefijo de país
-  let path = currentPath.replace(/^\/(mx|pa|ca|cl)/, '');
-  if (path === '') path = '/';
-  
-  // Mapear rutas según el idioma de destino
-  if (targetCountry === 'mx' || targetCountry === 'pa') {
-    // Para español: convertir rutas en inglés a español
-    if (path === '/examples') path = '/ejemplos';
-    if (path === '/guests') path = '/invitados';
-    if (path === '/how-it-works') path = '/como-funciona';
-  } else if (targetCountry === 'us' || targetCountry === 'ca') {
-    // Para inglés: convertir rutas en español a inglés
-    if (path === '/ejemplos') path = '/examples';
-    if (path === '/invitados') path = '/guests';
-    if (path === '/como-funciona') path = '/how-it-works';
-  }
-  
-  // Construir la URL final
-  if (targetCountry === 'mx') return '/mx' + (path === '/' ? '' : path);
-  if (targetCountry === 'pa') return '/pa' + (path === '/' ? '' : path);
-  if (targetCountry === 'ca') return '/ca' + (path === '/' ? '' : path);
-  if (targetCountry === 'us') return path === '/' ? '/' : path;
-  if (targetCountry === 'cl') return 'https://tuparte.digital' + (path === '/' ? '' : path);
+  // Siempre llevar al home del país correspondiente
+  if (targetCountry === 'mx') return '/mx';
+  if (targetCountry === 'pa') return '/pa';
+  if (targetCountry === 'ca') return '/ca';
+  if (targetCountry === 'es') return '/es';
+  if (targetCountry === 'co') return '/co';
+  if (targetCountry === 'us') return '/';
+  if (targetCountry === 'cl') return 'https://tuparte.digital';
   return '/';
 }
 ---
@@ -73,7 +62,7 @@ function getCountryPath(targetCountry: string) {
     <div class="flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center">
-        <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : currentFlag === 'ca' ? '/ca' : '/'} class="flex items-center">
+        <a href={currentFlag === 'cl' ? 'https://tuparte.digital' : currentFlag === 'pa' ? '/pa' : currentFlag === 'mx' ? '/mx' : currentFlag === 'ca' ? '/ca' : currentFlag === 'es' ? '/es' : currentFlag === 'co' ? '/co' : '/'} class="flex items-center">
           <img src={Logo.src} alt="Parte Digital" class="h-8 md:h-10 w-auto" />
         </a>
       </div>
@@ -105,12 +94,12 @@ function getCountryPath(targetCountry: string) {
             <img src={(flagOptions.find(f => f.code === currentFlag) ?? flagOptions[0]).img} alt={texts.home.header.flagAlt} class="h-5 w-8 object-cover rounded shadow inline-block align-middle" />
             <ChevronDown class="h-4 w-4 text-slate-600" />
           </button>
-          <div id="flag-menu" class="absolute left-0 top-full mt-2 w-16 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl z-50 hidden border border-slate-200 p-2 flex flex-col gap-2 transition-all duration-200">
+          <div id="flag-menu" class="absolute left-0 top-full mt-2 w-full bg-white/95 backdrop-blur-md rounded-xl shadow-2xl z-50 hidden border border-slate-200 p-2 flex flex-col gap-2 transition-all duration-200">
             {flagOptions.filter(f => f.code !== currentFlag).map(f => (
               <a
                 href={getCountryPath(f.code)}
                 target={f.code === 'cl' ? '_self' : undefined}
-                class={`flex items-center justify-center p-1.5 rounded-lg transition-all duration-200 hover:scale-110 hover:bg-slate-100 focus:bg-slate-100 outline-none flag-link shadow-sm hover:shadow-md`.trim()}
+                class={`flex items-center justify-center p-1.5 rounded-lg transition-all duration-200 hover:bg-slate-100 focus:bg-slate-100 outline-none flag-link`.trim()}
                 tabindex="0"
                 aria-label={f.label}
               >

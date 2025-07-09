@@ -22,6 +22,24 @@ export default async (request, context) => {
         }
       });
     }
+    if (country === 'ES') {
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: '/es',
+          'Set-Cookie': 'countryPref=es; Path=/; Max-Age=31536000'
+        }
+      });
+    }
+    if (country === 'CO') {
+      return new Response(null, {
+        status: 302,
+        headers: {
+          Location: '/co',
+          'Set-Cookie': 'countryPref=co; Path=/; Max-Age=31536000'
+        }
+      });
+    }
     if (country === 'CL') {
       return new Response(null, {
         status: 302,

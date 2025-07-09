@@ -20,6 +20,8 @@ let lang = 'en';
 if (Astro.url.pathname.startsWith('/pa')) lang = 'es-PA';
 else if (Astro.url.pathname.startsWith('/mx')) lang = 'es-MX';
 else if (Astro.url.pathname.startsWith('/ca')) lang = 'en-CA';
+else if (Astro.url.pathname.startsWith('/es')) lang = 'es-ES';
+else if (Astro.url.pathname.startsWith('/co')) lang = 'es-CO';
 ---
 <!doctype html>
 <html lang={lang} class="scroll-smooth">
@@ -45,7 +47,7 @@ else if (Astro.url.pathname.startsWith('/ca')) lang = 'en-CA';
 		{(() => {
 			// Obtener la ruta actual sin prefijo de país
 			let path = Astro.url.pathname;
-			path = path.replace(/^\/(pa|mx|ca)/, '');
+			path = path.replace(/^\/(pa|mx|ca|es|co)/, '');
 			if (path === '') path = '/';
 			return (
 				<>
@@ -53,6 +55,8 @@ else if (Astro.url.pathname.startsWith('/ca')) lang = 'en-CA';
 					<link rel="alternate" href={`https://smartinvite.me/ca${path}`} hreflang="en-CA" />
 					<link rel="alternate" href={`https://smartinvite.me/pa${path}`} hreflang="es-PA" />
 					<link rel="alternate" href={`https://smartinvite.me/mx${path}`} hreflang="es-MX" />
+					<link rel="alternate" href={`https://smartinvite.me/es${path}`} hreflang="es-ES" />
+					<link rel="alternate" href={`https://smartinvite.me/co${path}`} hreflang="es-CO" />
 					<link rel="alternate" href={`https://smartinvite.me${path}`} hreflang="x-default" />
 				</>
 			);
