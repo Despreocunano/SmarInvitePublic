@@ -14,7 +14,7 @@ import { Image } from 'astro:assets';
         <!-- Badge y título -->
         <div class="space-y-6">
           <!-- Título principal -->
-          <h2 class="text-4xl font-bold text-slate-900 leading-tight tracking-tight">
+          <h2 class="text-4xl font-bold text-slate-600 leading-tight tracking-tight">
             {section.title}
           </h2>
           
@@ -30,11 +30,11 @@ import { Image } from 'astro:assets';
             <div class="group">
               <div class="flex items-start gap-4 p-4 rounded-xl bg-white/60 border border-slate-200/50 transition-all duration-300">
                 <!-- Número -->
-                <div class="flex-shrink-0 w-8 h-8 bg-slate-100 text-slate-700 text-sm font-semibold rounded-lg flex items-center justify-center">
+                <div class="flex-shrink-0 w-8 h-8 bg-slate-100 text-slate-600 text-sm font-semibold rounded-lg flex items-center justify-center">
                   {String(idx + 1).padStart(2, '0')}
                 </div>
                 <!-- Texto -->
-                <span class="text-lg text-slate-700 leading-relaxed">{feature}</span>
+                <span class="text-lg text-slate-600 leading-relaxed">{feature}</span>
               </div>
             </div>
           ))}

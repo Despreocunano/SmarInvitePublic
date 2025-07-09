@@ -21,7 +21,7 @@ const i18n: I18n = {
       feature1: "Unique events",
       feature2: "Guest management",
       feature3: "Interactive location",
-      info: "100% free • No credit card required",
+      info: "Try 100% free • No credit card required",
       badge: "DIGITAL INVITATIONS"
     },
     phoneMockup: {
@@ -110,7 +110,7 @@ const i18n: I18n = {
       title: "Create your invitation in under 5 minutes",
       description: "Register now, enter your wedding details, and preview your digital invitation.",
       button: "Create my invitation",
-      freeText: "100% free • No credit card required",
+      freeText: "Try for free • No credit card required",
       stats: {
         invitations: {
           number: "10K+",
@@ -152,29 +152,21 @@ const i18n: I18n = {
           step: "01",
           title: "Create your account",
           description: "Register for free and access all available designs. It only takes 30 seconds!",
-          color: "from-blue-500 via-blue-600 to-indigo-600",
-          bgColor: "from-blue-50 to-indigo-50"
         },
         {
           step: "02",
           title: "Pick a design & complete details",
           description: "Choose from more than 20 unique designs and customize every detail of your invitation.",
-          color: "from-purple-500 via-purple-600 to-violet-600",
-          bgColor: "from-purple-50 to-violet-50"
         },
         {
           step: "03",
           title: "Preview your digital invitation",
           description: "See how your invitation looks in real time and adjust any details you need.",
-          color: "from-emerald-500 via-emerald-600 to-teal-600",
-          bgColor: "from-emerald-50 to-teal-50"
         },
         {
           step: "04",
           title: "Publish and share with your guests",
           description: "Activate your invitation with one click and share it instantly with all your guests.",
-          color: "from-rose-500 via-rose-600 to-pink-600",
-          bgColor: "from-rose-50 to-pink-50"
         }
       ]
     },
@@ -268,7 +260,7 @@ const i18n: I18n = {
   examplesPage: {
     title: "Invitation Examples",
     description: "Explore available templates for your digital invitation.",
-    heroTitle: "Discover our <span class='text-fuchsia-400'>invitation templates</span>",
+    heroTitle: "Discover our invitation templates",
     heroSubtitle: "Find inspiration in different styles and designs for your digital invitation.",
     examples: [
       { name: "Minimalist", image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista-en", color: "rose" },
@@ -290,7 +282,7 @@ const i18n: I18n = {
   guestPage: {
     title: "Guest Management",
     description: "Learn how to manage guests: traditional RSVPs or email invitations for easy attendance confirmation.",
-    heroTitle: "Manage guests in <span class='text-emerald-400'>two simple ways</span>",
+    heroTitle: "Manage guests in two simple ways",
     heroSubtitle: "Choose the option that best fits your event and simplify attendance confirmations.",
     heroScroll: "Scroll down",
     traditional: {
@@ -319,7 +311,7 @@ const i18n: I18n = {
   howItWorksPage: {
     title: "How SmartInvite Works",
     description: "Learn how to create your digital invitation in 4 simple steps: registration, creation, preview, and sharing.",
-    heroTitle: "Create your digital invitation in <span class='text-rose-400'>4 simple steps</span>",
+    heroTitle: "Create your digital invitation in 4 simple steps",
     heroSubtitle: "From registration to guest sharing—we guide you through the entire process.",
     heroButton: "Get started now",
     heroScroll: "Scroll down",

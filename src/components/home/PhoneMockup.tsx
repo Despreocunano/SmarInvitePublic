@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 // Iconos simples para navegación
 const ChevronLeftIcon = () => (
-  <svg className="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
   </svg>
 );
 
 const ChevronRightIcon = () => (
-  <svg className="w-4 h-4 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   </svg>
 );
@@ -165,7 +165,7 @@ const PhoneMockup: React.FC<PhoneMockupProps> = ({
               animation: 'fadeInDown 1s ease-out'
             }}
           >
-            <span className="text-sm font-medium text-slate-700">
+            <span className="text-sm font-medium text-slate-600">
               {texts.home.phoneMockup.eventTypes[currentEvent.type.toLowerCase() as keyof typeof texts.home.phoneMockup.eventTypes] || currentEvent.type}
             </span>
           </div>

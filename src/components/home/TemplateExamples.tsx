@@ -38,7 +38,7 @@ export default function TemplateExamples({ title, description, buttonText, templ
         <div className="text-center mb-20">
           
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-slate-700 mb-8 leading-tight"
+            className="text-4xl md:text-5xl font-bold text-slate-600 mb-8 leading-tight"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -89,7 +89,7 @@ export default function TemplateExamples({ title, description, buttonText, templ
                   </div>
                   
                   {/* Nombre del template */}
-                  <h3 className="text-base font-semibold text-slate-800 mb-4 text-center tracking-wide uppercase letter-spacing-[0.08em] flex-grow flex items-center justify-center">
+                  <h3 className="text-base font-semibold text-slate-600 mb-4 text-center tracking-wide uppercase letter-spacing-[0.08em] flex-grow flex items-center justify-center">
                     {tpl.name}
                   </h3>
                   

@@ -28,11 +28,11 @@ import texts from '../../i18n/pa';
           <!-- Badge premium -->
           <div class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm mb-12">
             <Sparkles class="w-5 h-5 text-slate-600" />
-            <span class="text-sm font-semibold text-slate-700 tracking-wide">PROCESO SIMPLE Y PODEROSO</span>
+            <span class="text-sm font-semibold text-slate-600 tracking-wide">PROCESO SIMPLE Y PODEROSO</span>
           </div>
           
           <!-- Título principal -->
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 mb-8 leading-[0.95] tracking-tight" set:html={texts.howItWorksPage.heroTitle} />
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-600 mb-8 leading-[0.95] tracking-tight" set:html={texts.howItWorksPage.heroTitle} />
           
           <!-- Subtítulo -->
           <p class="text-2xl text-slate-600 mb-16 leading-relaxed max-w-3xl mx-auto">{texts.howItWorksPage.heroSubtitle}</p>
@@ -81,7 +81,7 @@ import texts from '../../i18n/pa';
                   </div>
                   
                   <div class="space-y-6 flex-1">
-                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 leading-tight tracking-tight">{step.title}</h2>
+                    <h2 class="text-4xl lg:text-5xl font-bold text-slate-600 leading-tight tracking-tight">{step.title}</h2>
                     <p class="text-xl text-slate-600 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ import texts from '../../i18n/pa';
                       <div class="flex-shrink-0 w-8 h-8 bg-slate-100 rounded-xl flex items-center justify-center mt-1 group-hover:bg-slate-200 transition-colors duration-200">
                         <CheckCircle class="w-5 h-5 text-slate-600" />
                       </div>
-                      <span class="text-lg text-slate-700 leading-relaxed font-medium">{bullet}</span>
+                      <span class="text-lg text-slate-600 leading-relaxed font-medium">{bullet}</span>
                     </div>
                   ))}
                 </div>
@@ -110,15 +110,15 @@ import texts from '../../i18n/pa';
                     <div class="text-center space-y-8">
                       <!-- Icono grande -->
                       <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-slate-100 to-slate-200 rounded-3xl shadow-lg">
-                        {idx === 0 && <UserPlus class="h-12 w-12 text-slate-700" />}
-                        {idx === 1 && <FileText class="h-12 w-12 text-slate-700" />}
-                        {idx === 2 && <Eye class="h-12 w-12 text-slate-700" />}
-                        {idx === 3 && <Share2 class="h-12 w-12 text-slate-700" />}
+                        {idx === 0 && <UserPlus class="h-12 w-12 text-slate-600" />}
+                        {idx === 1 && <FileText class="h-12 w-12 text-slate-600" />}
+                        {idx === 2 && <Eye class="h-12 w-12 text-slate-600" />}
+                        {idx === 3 && <Share2 class="h-12 w-12 text-slate-600" />}
                       </div>
                       
                       <!-- Contenido de la card -->
                       <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-slate-900">{step.cardTitle}</h3>
+                        <h3 class="text-2xl font-bold text-slate-600">{step.cardTitle}</h3>
                         <p class="text-slate-600 leading-relaxed text-lg">{step.cardDescription}</p>
                       </div>
                       
@@ -164,7 +164,7 @@ import texts from '../../i18n/pa';
           <!-- Botón principal -->
           <a
             href="https://app.smartinvite.me/auth"
-            class="group inline-flex items-center px-12 py-6 text-xl font-bold text-slate-900 bg-white hover:bg-slate-50 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
+            class="group inline-flex items-center px-12 py-6 text-xl font-bold text-slate-600 bg-white hover:bg-slate-50 rounded-2xl transition-all duration-300 shadow-2xl hover:shadow-3xl hover:scale-105"
           >
             <span>Crear mi invitación gratis</span>
             <ArrowRight class="ml-4 w-6 h-6 transition-transform duration-300 group-hover:translate-x-2" />
