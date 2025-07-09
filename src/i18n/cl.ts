@@ -2,344 +2,402 @@ import type { I18n } from './types';
 
 const i18n: I18n = {
   home: {
-    title: "Welcome to SmartInvite Canada",
-    description: "The best way to manage your event invitations in Canads.",
+    title: "Bienvenido a SmartInvite Chile",
+    description: "Invitaciones Digitales para Matrimonios, Bautizos, Cumpleaños y más.",
     hero: {
-      title: "Your love story deserves a unique invitation",
-      subtitle: "An interactive, original, and eco-friendly experience for your wedding",
-      cta: "Create your digital wedding invitation for free",
-      button: "Create my invitation",
-      secondary: "View features",
-      heroScroll: "Scroll down",
-      invitationName: "John & Mary",
-      invitationDate: "October 12, 2026",
+      title: "Tu celebración merece una invitación única",
+      subtitle: "Una experiencia interactiva, original y eco-friendly para tu evento",
+      cta: "Crea tu invitación digital gratis",
+      button: "Crear mi invitación",
+      secondary: "Ver características",
+      heroScroll: "Desliza para ver más",
+      invitationName: "Juan y María",
+      invitationDate: "12 de Octubre, 2026",
       invitationButtons: [
-        "ADD TO CALENDAR",
-        "RSVP",
-        "DIRECTIONS"
-      ]
+        "AGENDAR",
+        "CONFIRMAR ASISTENCIA",
+        "¿CÓMO LLEGAR?"
+      ],
+      feature1: "Eventos únicos",
+      feature2: "Gestión de invitados",
+      feature3: "Ubicación interactiva",
+      info: "Prueba 100% gratis • Sin tarjeta de crédito",
+      badge: "INVITACIONES DIGITALES"
+    },
+    phoneMockup: {
+      time: "9:41",
+      battery: "Batería",
+      eventTypes: {
+        wedding: "Boda",
+        birthday: "Cumpleaños",
+        corporate: "Corporativo",
+        graduation: "Graduación"
+      },
+      events: {
+        wedding: {
+          name: "Juan y María",
+          date: "12 de Octubre, 2026",
+          buttons: ["AGENDAR", "CONFIRMAR ASISTENCIA", "¿CÓMO LLEGAR?"]
+        },
+        birthday: {
+          name: "25 años de Sarah",
+          date: "15 de Diciembre, 2025",
+          buttons: ["CONFIRMAR ASISTENCIA", "REGALO", "UBICACIÓN"]
+        },
+        corporate: {
+          name: "Conferencia Tech 2025",
+          date: "20 de Marzo, 2025",
+          buttons: ["REGISTRARSE AHORA", "AGENDA", "SEDE"]
+        },
+        graduation: {
+          name: "Generación 2025",
+          date: "30 de Mayo, 2025",
+          buttons: ["ASISTIR CEREMONIA", "RECEPCIÓN", "FOTOS"]
+        }
+      }
     },
     features: [
       {
-        title: "Real-Time Confirmations",
-        description: "Stay up to date with automatic RSVP confirmations. Our digital RSVP system allows your guests to confirm their attendance easily while you receive instant updates and maintain full control over the final guest list.",
+        title: "Confirmaciones en tiempo real",
+        description: "Mantente al día con las confirmaciones de asistencia de forma automática. Nuestro sistema RSVP digital permite a tus invitados confirmar su asistencia de manera sencilla, mientras tú recibes actualizaciones instantáneas y mantienes un control total sobre la lista final de asistentes.",
         features: [
-          "Automatic confirmations",
-          "Real-time statistics",
-          "Plus-one management",
-          "Response tracking"
+          "Confirmaciones automáticas",
+          "Estadísticas en tiempo real",
+          "Gestión de acompañantes",
+          "Seguimiento de respuestas"
         ]
       },
       {
-        title: "Create and Share in Minutes",
-        description: "Choose your favorite design, enter your details, add background music and photo galleries, then share it with your guests for an unforgettable experience from the first moment.",
+        title: "Crea y comparte en minutos",
+        description: "Selecciona el diseño que más te guste, completa la información necesaria, música de fondo, galería de fotos y compártela con tus invitados para que tengan una experiencia inolvidable desde el primer momento.",
         features: [
-          "Share directly via WhatsApp",
-          "Background music",
-          "Photo gallery",
-          "Interactive details"
+          "Comparte directamente en Whatsapp",
+          "Música de fondo",
+          "Galería de fotos",
+          "Información interactiva"
         ]
       },
       {
-        title: "Guest Management",
-        description: "Forget about spreadsheets and paper lists. Our guest management system helps you keep all information organized, updated, and accessible. Easily add, edit, and manage guests, including important details like dietary preferences and plus-ones.",
+        title: "Gestión de invitados",
+        description: "Olvídate de las hojas de cálculo y las listas en papel. Nuestra gestión de invitados te permite mantener toda la información organizada, actualizada y accesible. Añade, edita y gestiona tu lista de invitados con facilidad, incluyendo detalles importantes como preferencias alimentarias y acompañantes.",
         features: [
-          "Comprehensive guest management",
-          "Plus-one tracking",
-          "Dietary preferences",
-          "Centralized contact information"
+          "Gestión completa de invitados",
+          "Control de acompañantes",
+          "Preferencias alimentarias",
+          "Información de contacto centralizada"
         ]
       },
       {
-        title: "Table Organizer",
-        description: "Design the perfect layout for your wedding with our digital table organizer. Add or remove guests, manage table capacities, and visualize your complete event arrangement. A powerful tool that makes seating planning effortless.",
+        title: "Organizador de mesas",
+        description: "Diseña la distribución perfecta para tu boda con nuestro organizador de mesas digital. Agrega y elimina invitados, gestiona capacidades y visualiza la disposición completa de tu matrimonio. Una herramienta poderosa que hace que la organización de mesas sea un juego de niños.",
         features: [
-          "Visual table layout",
-          "Capacity management",
-          "Real-time preview"
+          "Distribución visual de mesas",
+          "Gestión de capacidades",
+          "Vista previa en tiempo real"
         ]
       },
       {
-        title: "Gift Registry",
-        description: "Create and share your personalized gift registry with guests and receive funds directly to your account. No restrictions on where you can spend your balance.",
+        title: "Lista de regalos",
+        description: "Crea y comparte tu lista de regalos personalizada con tus invitados y recibe el dinero directamente en tu cuenta. Que la lista de regalos ya no te obligue a gastar tu saldo en una tienda específica.",
         features: [
-          "Personalized registry",
-          "Integrated payments",
-          "Gift tracking"
+          "Lista personalizada",
+          "Pagos integrados",
+          "Seguimiento de regalos"
         ]
       }
     ],
     cta: {
-      title: "Create your invitation in under 5 minutes",
-      description: "Register now, enter your wedding details, and preview your digital invitation.",
-      button: "Create my invitation",
-      freeText: "100% free • No credit card required",
+      title: "Crea tu invitación en menos de 5 minutos",
+      description: "Regístrate ahora, ingresa los datos de tu evento y visualiza tu invitación digital.",
+      button: "Crear mi invitación",
+      freeText: "Prueba 100% gratis • Sin tarjeta de crédito",
       stats: {
         invitations: {
           number: "10K+",
-          label: "Invitations created"
+          label: "Invitaciones creadas"
         },
         satisfaction: {
           number: "99%",
-          label: "Satisfaction"
+          label: "Satisfacción"
         },
         rating: {
           number: "5★",
-          label: "Rating"
+          label: "Valoración"
         }
       }
     },
     featuresGrid: {
-      title: "Everything you need in one place",
-      subtitle: "Create your invitation for free and adjust the design as often as you like.",
+      title: "Todo lo que necesitas en un solo lugar",
+      subtitle: "Crea tu invitación gratis y ajusta el diseño todas las veces que quieras.",
       features: [
-        { icon: "Globe", title: "Unlimited sharing", description: "Share your invitation via WhatsApp, email, social media, or any digital platform", color: "emerald" },
-        { icon: "Music2", title: "Background music", description: "Your chosen music theme plays in the background of your invitation", color: "purple" },
-        { icon: "Clock", title: "Countdown", description: "Live countdown to your wedding date", color: "amber" },
-        { icon: "MapPin", title: "Location & Directions", description: "Interactive maps ensure guests arrive without issues", color: "rose" },
-        { icon: "Music2", title: "Song requests", description: "Guests can suggest must-play songs for your reception", color: "blue" },
-        { icon: "Gift", title: "Gifts", description: "Guests can send gifts directly through the platform", color: "pink" },
-        { icon: "CalendarDays", title: "Calendar Integration", description: "Guests can save your wedding date with one click", color: "indigo" },
-        { icon: "Image", title: "Photo album", description: "Tell your unique story through a photographic journey", color: "violet" },
-        { icon: "Shirt", title: "Dress code", description: "Share the preferred attire for your special day", color: "blue" },
-        { icon: "Lock", title: "Private Access", description: "Restrict access to invited guests only", color: "gray" },
-        { icon: "LinkIcon", title: "Customizable link", description: "Personalize your invitation URL", color: "purple" },
-        { icon: "UtensilsCrossed", title: "Menu", description: "Display meal options for your event", color: "rose" }
+        { icon: "Globe", title: "Envío ilimitado", description: "Comparte tu invitación por WhatsApp, Email, Redes Sociales y cualquier plataforma digital", color: "emerald" },
+        { icon: "Music2", title: "Música de fondo", description: "La canción que quieras sonará de fondo en tu invitación", color: "purple" },
+        { icon: "Clock", title: "Cuenta regresiva", description: "Emocionante cuenta regresiva en tiempo real hasta la fecha de tu boda", color: "amber" },
+        { icon: "MapPin", title: "Ubicación y cómo llegar", description: "Mapa interactivo con la ubicación de tu boda, tus invitados llegarán sin complicaciones", color: "rose" },
+        { icon: "Music2", title: "Lista de canciones", description: "Tus invitados pueden crear la lista de canciones que no pueden faltar en tu fiesta", color: "blue" },
+        { icon: "Gift", title: "Regalos", description: "Tus invitados podrán enviarte sus regalos", color: "pink" },
+        { icon: "CalendarDays", title: "Agenda", description: "Tus invitados pueden agendar la fecha de tu boda con un solo clic en sus calendarios", color: "indigo" },
+        { icon: "Image", title: "Álbum de fotos", description: "Una historia única en un hermoso recorrido fotográfico", color: "violet" },
+        { icon: "Shirt", title: "Código de vestimenta", description: "Informa a tus invitados el código de vestimenta o estilo elegido para tu gran día", color: "blue" },
+        { icon: "Lock", title: "Acceso VIP", description: "Pon tu invitación en modo privado, solo los invitados con acceso podrán verla", color: "gray" },
+        { icon: "LinkIcon", title: "Enlace personalizable", description: "Personaliza el enlace de tu invitación como quieras", color: "purple" },
+        { icon: "UtensilsCrossed", title: "Menú", description: "Muestra las opciones de menú para tu fiesta", color: "rose" }
       ]
     },
     stepsSection: {
-      title: "Your invitation ready in just 4 steps",
-      subtitle: "A process designed to be simple, fast, and fun. No complications—just amazing results.",
+      title: "En solo 4 pasos tendrás tu invitación lista",
+      subtitle: "Un proceso diseñado para ser simple, rápido y divertido. Sin complicaciones, solo resultados increíbles.",
       steps: [
         {
           step: "01",
-          title: "Create your account",
-          description: "Register for free and access all available designs. It only takes 30 seconds!",
-          color: "from-blue-500 via-blue-600 to-indigo-600",
-          bgColor: "from-blue-50 to-indigo-50"
+          title: "Crea tu cuenta",
+          description: "Regístrate de forma gratuita y accede a todos los diseños disponibles. ¡Solo toma 30 segundos!",
         },
         {
           step: "02",
-          title: "Choose the design and complete your information",
-          description: "Choose from more than 10 unique designs and customize every detail of your invitation.",
-          color: "from-purple-500 via-purple-600 to-violet-600",
-          bgColor: "from-purple-50 to-violet-50"
+          title: "Elige el diseño y completa tu información",
+          description: "Elige entre más de 20 diseños únicos y personaliza cada detalle de tu invitación.",
         },
         {
           step: "03",
-          title: "Preview your digital invitation",
-          description: "See how your invitation looks in real time and adjust any details you need.",
-          color: "from-emerald-500 via-emerald-600 to-teal-600",
-          bgColor: "from-emerald-50 to-teal-50"
+          title: "Visualiza tu invitación digital",
+          description: "Revisa cómo se ve tu invitación en tiempo real y ajusta los detalles que necesites.",
         },
         {
           step: "04",
-          title: "Publish and share with your guests",
-          description: "Activate your invitation with one click and share it instantly with all your guests.",
-          color: "from-rose-500 via-rose-600 to-pink-600",
-          bgColor: "from-rose-50 to-pink-50"
+          title: "Publícalo y comparte con tus invitados",
+          description: "Activa tu invitación con un clic y compártela con todos tus invitados al instante.",
         }
       ]
     },
     footer: {
-      copyright: "© {year} SmartInvite. All rights reserved. A Dreamco LLC product."
+      copyright: "© {year} Smart Invite. Todos los derechos reservados. Un producto de Dreamco LLC."
     },
     header: {
       menu: {
-        comoFunciona: { label: "How it works", href: "/how-it-works" },
-        ejemplos: { label: "Examples", href: "/examples" },
-        invitados: { label: "Guest Management", href: "/guests" }
+        comoFunciona: { label: "¿Cómo funciona?", href: "/pa/como-funciona" },
+        ejemplos: { label: "Ejemplos", href: "/pa/ejemplos" },
+        invitados: { label: "Gestión de invitados", href: "/pa/invitados" }
       },
-      login: "Log in",
-      loginSecondary: "I already have an account",
-      register: "Create my free invitation",
-      flagAlt: "United States"
+      login: "Ingresar",
+      loginSecondary: "Ya tengo cuenta",
+      register: "Crear mi invitación gratis",
+      flagAlt: "Panamá"
+    },
+    exampleCard: {
+      button: "Ver ejemplo"
     },
     templateExamples: {
-      title: "Invitation templates",
-      description: "Browse designs that inspire you and preview how your digital invitation will appear. Each template creates a unique, elegant experience for your event.",
-      buttonText: "Preview template",
+      title: "Algunos ejemplos de invitaciones",
+      description: "Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.",
+      buttonText: "Ver ejemplo",
       templates: [
-        { name: "Minimalist", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista-en" },
-        { name: "Passport", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport-en" },
-        { name: "Boho", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-en" },
-        { name: "Boho Botanic", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico-en" },
-        { name: "Forest", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque-en" },
-        { name: "Infinite Kiss", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito-en" },
-        { name: "Infinite Kiss Dark", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark-en" },
-        { name: "Late Petro", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro-en" },
-        { name: "Late Pastel", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel-en" },
-        { name: "Natural Green", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green-en" },
-        { name: "Watercolor", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela-en" },
-        { name: "Signature Azure", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure-en" },
-        { name: "Signature Copper", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre-en" },
-        { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black-en" }
+        { name: "Minimalista", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista" },
+        { name: "Passport", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport" },
+        { name: "Boho", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho" },
+        { name: "Boho Botánico", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico" },
+        { name: "Bosque", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque" },
+        { name: "Beso infinito", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito" },
+        { name: "Beso infinito Oscuro", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark" },
+        { name: "Late Petro", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro" },
+        { name: "Late Pastel", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel" },
+        { name: "Natural Green", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green" },
+        { name: "Acuarela", preview: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela" },
+        { name: "Signature Azure", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure" },
+        { name: "Signature Cobre", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre" },
+        { name: "Signature Black", preview: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black" }
       ]
     },
     invitationTypes: {
-      title: "Choose the perfect invitation type for your event",
-      subtitle: "Each type is designed to create unique experiences and adapt to different celebration styles.",
+      title: "Elige el tipo de invitación perfecto para tu evento",
+      subtitle: "Cada tipo está diseñado para crear experiencias únicas y adaptarse a diferentes estilos de celebración.",
       types: [
         {
           icon: "Heart",
-          title: "Wedding",
-          description: "Elegant and romantic invitations for your special day with all the details your guests need.",
+          title: "Matrimonio",
+          description: "Invitaciones elegantes y románticas para tu día especial con todos los detalles que tus invitados necesitan.",
           features: [
-            "Ceremony and reception details",
-            "RSVP with meal preferences",
-            "Gift registry integration",
-            "Photo gallery and timeline"
+            "Detalles de ceremonia y recepción",
+            "RSVP con preferencias de menú",
+            "Integración de lista de regalos",
+            "Galería de fotos y cronología"
           ],
           popular: true
         },
         {
           icon: "Users",
-          title: "Birthday Party",
-          description: "Fun and personalized invitations to celebrate another year of life with style and joy.",
+          title: "Cumpleaños",
+          description: "Invitaciones divertidas y personalizadas para celebrar un año más de vida con estilo y alegría.",
           features: [
-            "Age celebration themes",
-            "Party games and activities",
-            "Gift suggestions",
-            "Photo sharing space"
+            "Temas de celebración de edad",
+            "Juegos y actividades de fiesta",
+            "Sugerencias de regalos",
+            "Espacio para compartir fotos"
           ]
         },
         {
           icon: "Calendar",
-          title: "Corporate Events",
-          description: "Professional invitations for business meetings, conferences, and corporate celebrations.",
+          title: "Eventos Corporativos",
+          description: "Invitaciones profesionales para reuniones de negocios, conferencias y celebraciones empresariales.",
           features: [
-            "Agenda and speakers",
-            "Registration management",
-            "Networking features",
-            "Professional branding"
+            "Agenda y ponentes",
+            "Gestión de registros",
+            "Funciones de networking",
+            "Branding profesional"
           ]
         },
         {
           icon: "Gift",
-          title: "Special Celebrations",
-          description: "Versatile invitations for graduations, anniversaries, baby showers, and unique moments.",
+          title: "Celebraciones Especiales",
+          description: "Invitaciones versátiles para graduaciones, aniversarios, baby showers y momentos únicos.",
           features: [
-            "Customizable themes",
-            "Flexible event details",
-            "Memory sharing",
-            "Celebration timeline"
+            "Temas personalizables",
+            "Detalles flexibles del evento",
+            "Compartir recuerdos",
+            "Cronología de celebración"
           ]
+        }
+      ]
+    },
+    examplesSection: {
+      title: "Algunos ejemplos de invitaciones",
+      description: "Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.",
+      cta: "Ver todos los ejemplos",
+      examples: [
+        {
+          name: "Beso Infinito",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
+          link: "/ejemplos/beso-infinito",
+          color: "rose"
+        },
+        {
+          name: "Minimalista",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
+          link: "/ejemplos/minimalista",
+          color: "rose"
+        },
+        {
+          name: "Bosque",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
+          link: "/ejemplos/bosque",
+          color: "rose"
         }
       ]
     }
   },
-  examplesPage: {
-    title: "Invitation Examples",
-    description: "Explore available templates for your digital invitation.",
-    heroTitle: "Discover our <span class='text-fuchsia-400'>invitation templates</span>",
-    heroSubtitle: "Find inspiration in different styles and designs for your digital invitation.",
-    examples: [
-      { name: "Minimalist", image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista-en", color: "rose" },
-      { name: "Passport", image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport-en", color: "rose" },
-      { name: "Boho", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-en", color: "rose" },
-      { name: "Boho Botanic", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico-en", color: "rose" },
-      { name: "Forest", image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque-en", color: "rose" },
-      { name: "Infinite Kiss", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito-en", color: "rose" },
-      { name: "Infinite Kiss Dark", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark-en", color: "rose" },
-      { name: "Late Petro", image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro-en", color: "rose" },
-      { name: "Late Pastel", image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel-en", color: "rose" },
-      { name: "Natural Green", image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green-en", color: "rose" },
-      { name: "Watercolor", image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela-en", color: "rose" },
-      { name: "Signature Azure", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure-en", color: "rose" },
-      { name: "Signature Copper", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre-en", color: "rose" },
-      { name: "Signature Black", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black-en", color: "rose" }
-    ]
-  },
-  guestPage: {
-    title: "Guest Management",
-    description: "Learn how to manage guests: traditional RSVPs or email invitations for easy attendance confirmation.",
-    heroTitle: "Manage guests in <span class='text-emerald-400'>two simple ways</span>",
-    heroSubtitle: "Choose the option that best fits your event and simplify attendance confirmations.",
-    heroScroll: "Scroll down",
-    traditional: {
-      title: "Open Invitation",
-      description: "Share your digital invitation link with guests. They can submit their details and RSVP directly from any device.",
-      bullets: [
-        "Single link for your event",
-        "RSVP confirmation in seconds",
-        "No guest registration required"
-      ],
-      cardTitle: "Easy RSVPs",
-      cardDescription: "Guests confirm attendance in seconds"
-    },
-    email: {
-      title: "Personalized Invitations",
-      description: "Add guests manually to send personalized emails with pre-filled details. Each guest receives a unique link for quick RSVP confirmation.",
-      bullets: [
-        "Custom emails for each guest",
-        "Pre-filled details for convenience",
-        "Real-time RSVP tracking"
-      ],
-      cardTitle: "Personalized Invitations",
-      cardDescription: "Guests receive emails with their information pre-loaded"
-    }
-  },
   howItWorksPage: {
-    title: "How SmartInvite Works",
-    description: "Learn how to create your digital invitation in 4 simple steps: registration, creation, preview, and sharing.",
-    heroTitle: "Create your digital invitation in <span class='text-rose-400'>4 simple steps</span>",
-    heroSubtitle: "From registration to guest sharing—we guide you through the entire process.",
-    heroButton: "Get started now",
-    heroScroll: "Scroll down",
+    title: "Descubre Cómo funciona",
+    description: "Crea tu invitación digital en 4 pasos, olvidate del papel, de los tiempos de espera, tu invitación en minutos!",
+    heroTitle: "Crea tu invitación digital en 4 simples pasos",
+    heroSubtitle: "Desde el registro hasta compartir con tus invitados, te guiamos en todo el proceso",
+    heroButton: "Comenzar ahora",
+    heroScroll: "Desliza para ver más",
     steps: [
       {
         number: "1",
-        title: "Free registration",
-        description: "Start by creating a free account. You'll only need your email and basic information—no credit card or sensitive data required.",
+        title: "Regístrate gratis",
+        description: "Comienza tu viaje creando una cuenta gratuita en nuestra plataforma. Solo necesitas tu email y algunos datos básicos. No requerimos tarjeta de crédito ni información personal sensible.",
         bullets: [
-          "Free with no commitments",
-          "Instant email verification",
-          "Immediate feature access"
+          "Registro gratuito sin compromisos",
+          "Verificación instantánea por email",
+          "Acceso inmediato a todas las funciones"
         ],
-        cardTitle: "Quick Registration",
-        cardDescription: "Account setup in under 2 minutes"
+        cardTitle: "Registro Rápido",
+        cardDescription: "Menos de 2 minutos para crear tu cuenta"
       },
       {
         number: "2",
-        title: "Complete the form",
-        description: "Our intuitive form guides you step by step to create your perfect digital invitation. Include all important details: date, location, times, and special celebration notes.",
+        title: "Completa el formulario",
+        description: "Nuestro formulario intuitivo te guía paso a paso para crear tu invitación digital perfecta. Incluye toda la información importante: fecha, lugar, horarios, y detalles especiales de tu celebración.",
         bullets: [
-          "Step-by-step guided form",
-          "Professional pre-designed templates",
-          "Automatic saving of your progress"
+          "Formulario guiado paso a paso",
+          "Plantillas profesionales predefinidas",
+          "Guardado automático de tu progreso"
         ],
-        cardTitle: "Intuitive Form",
-        cardDescription: "Guided design for perfect results"
+        cardTitle: "Formulario Intuitivo",
+        cardDescription: "Diseño guiado para resultados perfectos"
       },
       {
         number: "3",
-        title: "Preview and adjust",
-        description: "See exactly how your digital invitation will appear before publishing. Edit every detail until it's perfect.",
+        title: "Visualiza y ajusta",
+        description: "Ve exactamente cómo se verá tu invitación digital antes de publicarla. Nuestra plataforma te permite editar cada detalle de tu invitación hasta que quede perfecta.",
         bullets: [
-          "Real-time preview",
-          "Full design customization",
-          "Multiple versions to compare"
+          "Vista previa en tiempo real",
+          "Personalización completa de diseño",
+          "Múltiples versiones para comparar"
         ],
-        cardTitle: "Live Preview",
-        cardDescription: "Edit and customize in real time"
+        cardTitle: "Vista Previa",
+        cardDescription: "Edita y personaliza en tiempo real"
       },
       {
         number: "4",
-        title: "Publish and share",
-        description: "Once satisfied with your invitation, publish it and share instantly with guests. Enjoy a unique, interactive, and eco-friendly experience.",
+        title: "Publícala y compártela",
+        description: "Una vez que estés satisfecho con tu invitación digital, publícala con un solo clic. Compártela fácilmente por WhatsApp, redes sociales, email o genera un enlace directo para tus invitados.",
         bullets: [
-          "Instant publishing",
-          "Share via WhatsApp, email, and more",
-          "Eco-friendly and paperless"
+          "Publicación instantánea",
+          "Compartir por múltiples canales",
+          "Seguimiento de visualizaciones"
         ],
-        cardTitle: "Share Instantly",
-        cardDescription: "Your invitation ready to send in seconds"
+        cardTitle: "Compartir Fácil",
+        cardDescription: "Múltiples opciones de distribución"
       }
     ]
   },
+  examplesPage: {
+    title: "Ejemplos de invitaciones",
+    description: "Explora nuestro catálogo de diseños y sorpréndete con tu invitación digital",
+    heroTitle: "Explora nuestros ejemplos de invitaciones",
+    heroSubtitle: "Inspírate con los distintos estilos y diseños que puedes usar para tu invitación digital.",
+    heroScroll: "Desliza para ver más",
+    examples: [
+      { name: "Minimalista", image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png", link: "/ejemplos/minimalista", color: "rose" },
+      { name: "Passport", image: "https://res.cloudinary.com/sorostica/image/upload/v1750994484/passport_qogrop.png", link: "/ejemplos/passport", color: "rose" },
+      { name: "Boho", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho", color: "rose" },
+      { name: "Boho Botánico", image: "https://res.cloudinary.com/sorostica/image/upload/v1751261232/boho_c3qhu1.png", link: "/ejemplos/boho-botanico", color: "rose" },
+      { name: "Bosque", image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png", link: "/ejemplos/bosque", color: "rose" },
+      { name: "Beso infinito", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png", link: "/ejemplos/beso-infinito", color: "rose" },
+      { name: "Beso infinito Oscuro", image: "https://res.cloudinary.com/sorostica/image/upload/v1751245493/beso_2_asg9yy.png", link: "/ejemplos/beso-infinito-dark", color: "rose" },
+      { name: "Late Petro", image: "https://res.cloudinary.com/sorostica/image/upload/v1751168581/late_h6nbzl.png", link: "/ejemplos/late-petro", color: "rose" },
+      { name: "Late Pastel", image: "https://res.cloudinary.com/sorostica/image/upload/v1751224934/late_pastel_guspln.png", link: "/ejemplos/late-pastel", color: "rose" },
+      { name: "Natural Green", image: "https://res.cloudinary.com/sorostica/image/upload/v1751318234/natural_green_ctmc8g.png", link: "/ejemplos/natural-green", color: "rose" },
+      { name: "Acuarela", image: "https://res.cloudinary.com/sorostica/image/upload/v1751344295/acuarela_tjbwpx.png", link: "/ejemplos/acuarela", color: "rose" },
+      { name: "Signature Azure", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-azure", color: "rose" },
+      { name: "Signature Cobre", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-cobre", color: "rose" },
+      { name: "Signature Black", image: "https://res.cloudinary.com/sorostica/image/upload/v1750986148/azure_efbqda.png", link: "/ejemplos/signature-black", color: "rose" }
+    ]
+  },
+  guestPage: {
+    title: "Gestión de Invitados",
+    description: "Descrubre las dos formas que hemos creado para que compartas tu invitación digital.",
+    heroTitle: "Gestiona tus invitados en 2 formas realmente sencillas",
+    heroSubtitle: "Elige la opción que más se adapte a tu evento y facilita la confirmación de asistencia de tus invitados",
+    heroScroll: "Desliza para ver más",
+    traditional: {
+      title: "Invitación general",
+      description: "Crea tu invitación digital y compártela con tus invitados. Ellos podrán ingresar sus datos y confirmar (o no) su asistencia de manera sencilla desde cualquier dispositivo.",
+      bullets: [
+        "Enlace único para tu evento",
+        "Confirmación de asistencia en segundos",
+        "Sin necesidad de registro para los invitados"
+      ],
+      cardTitle: "Confirmación fácil",
+      cardDescription: "Tus invitados confirman asistencia en segundos"
+    },
+    email: {
+      title: "Invitación personalizada",
+      description: "Agrega los invitados manualmente en el apartado de invitaciones. Se enviará un email personalizado a cada invitado con un enlace único y sus datos precargados para que solo deba confirmar (o no) su asistencia.",
+      bullets: [
+        "Email personalizado para cada invitado",
+        "Datos precargados para mayor comodidad",
+        "Seguimiento de confirmaciones en tiempo real"
+      ],
+      cardTitle: "Invitación personalizada",
+      cardDescription: "Tus invitados reciben un email con sus datos listos"
+    }
+  },
   exampleCard: {
-    button: "View example"
+    button: "Ver ejemplo"
   }
 };
 
-export default i18n;
+export default i18n; 

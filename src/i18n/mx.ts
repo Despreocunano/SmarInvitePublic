@@ -2,8 +2,8 @@ import type { I18n } from './types';
 
 const i18n: I18n = {
   home: {
-    title: "Bienvenido a SmartInvite México",
-    description: "La mejor manera de gestionar tus invitaciones de matrimonio en México.",
+    title: "Bienvenido a SmartInvite Máxico",
+    description: "Invitaciones Digitales para Matrimonios, Bautizos, Cumpleaños y más.",
     hero: {
       title: "Tu celebración merece una invitación única",
       subtitle: "Una experiencia interactiva, original y eco-friendly para tu evento",
@@ -21,7 +21,7 @@ const i18n: I18n = {
       feature1: "Eventos únicos",
       feature2: "Gestión de invitados",
       feature3: "Ubicación interactiva",
-      info: "100% gratis • Sin tarjeta de crédito",
+      info: "Prueba 100% gratis • Sin tarjeta de crédito",
       badge: "INVITACIONES DIGITALES"
     },
     phoneMockup: {
@@ -108,9 +108,9 @@ const i18n: I18n = {
     ],
     cta: {
       title: "Crea tu invitación en menos de 5 minutos",
-      description: "Regístrate ahora, ingresa los datos de tu boda y visualiza tu invitación digital.",
+      description: "Regístrate ahora, ingresa los datos de tu evento y visualiza tu invitación digital.",
       button: "Crear mi invitación",
-      freeText: "100% gratis • Sin tarjeta de crédito",
+      freeText: "Prueba 100% gratis • Sin tarjeta de crédito",
       stats: {
         invitations: {
           number: "10K+",
@@ -151,30 +151,22 @@ const i18n: I18n = {
         {
           step: "01",
           title: "Crea tu cuenta",
-          description: "Regístrate de forma gratuita y accede a todas los diseños disponibles. ¡Solo toma 30 segundos!",
-          color: "from-blue-500 via-blue-600 to-indigo-600",
-          bgColor: "from-blue-50 to-indigo-50"
+          description: "Regístrate de forma gratuita y accede a todos los diseños disponibles. ¡Solo toma 30 segundos!",
         },
         {
           step: "02",
           title: "Elige el diseño y completa tu información",
-          description: "Elige entre más de 10 diseños únicos y personaliza cada detalle de tu invitación.",
-          color: "from-purple-500 via-purple-600 to-violet-600",
-          bgColor: "from-purple-50 to-violet-50"
+          description: "Elige entre más de 20 diseños únicos y personaliza cada detalle de tu invitación.",
         },
         {
           step: "03",
           title: "Visualiza tu invitación digital",
           description: "Revisa cómo se ve tu invitación en tiempo real y ajusta los detalles que necesites.",
-          color: "from-emerald-500 via-emerald-600 to-teal-600",
-          bgColor: "from-emerald-50 to-teal-50"
         },
         {
           step: "04",
           title: "Publícalo y comparte con tus invitados",
-          description: "Activa tu invitación con un clic y compártela con todos tus invitados de forma instantánea.",
-          color: "from-rose-500 via-rose-600 to-pink-600",
-          bgColor: "from-rose-50 to-pink-50"
+          description: "Activa tu invitación con un clic y compártela con todos tus invitados al instante.",
         }
       ]
     },
@@ -190,7 +182,7 @@ const i18n: I18n = {
       login: "Ingresar",
       loginSecondary: "Ya tengo cuenta",
       register: "Crear mi invitación gratis",
-      flagAlt: "México"
+      flagAlt: "Panamá"
     },
     exampleCard: {
       button: "Ver ejemplo"
@@ -267,11 +259,36 @@ const i18n: I18n = {
         }
       ]
     },
+    examplesSection: {
+      title: "Algunos ejemplos de invitaciones",
+      description: "Elige el diseño que más te inspire y visualiza cómo lucirá tu invitación digital antes de decidirte. Cada diseño está pensado para que tu evento sea único, elegante y memorable.",
+      cta: "Ver todos los ejemplos",
+      examples: [
+        {
+          name: "Beso Infinito",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1751245492/beso_hugmpy.png",
+          link: "/ejemplos/beso-infinito",
+          color: "rose"
+        },
+        {
+          name: "Minimalista",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1750228541/minimalista_01_qheez7.png",
+          link: "/ejemplos/minimalista",
+          color: "rose"
+        },
+        {
+          name: "Bosque",
+          image: "https://res.cloudinary.com/sorostica/image/upload/v1750919544/bosque_portada_m1kgac.png",
+          link: "/ejemplos/bosque",
+          color: "rose"
+        }
+      ]
+    }
   },
   howItWorksPage: {
     title: "Descubre Cómo funciona",
     description: "Crea tu invitación digital en 4 pasos, olvidate del papel, de los tiempos de espera, tu invitación en minutos!",
-    heroTitle: "Crea tu invitación digital en <span class='text-rose-400'>4 simples pasos</span>",
+    heroTitle: "Crea tu invitación digital en 4 simples pasos",
     heroSubtitle: "Desde el registro hasta compartir con tus invitados, te guiamos en todo el proceso",
     heroButton: "Comenzar ahora",
     heroScroll: "Desliza para ver más",
@@ -329,7 +346,7 @@ const i18n: I18n = {
   examplesPage: {
     title: "Ejemplos de invitaciones",
     description: "Explora nuestro catálogo de diseños y sorpréndete con tu invitación digital",
-    heroTitle: "Explora nuestros <span class='text-fuchsia-400'>ejemplos de invitaciones</span>",
+    heroTitle: "Explora nuestros ejemplos de invitaciones",
     heroSubtitle: "Inspírate con los distintos estilos y diseños que puedes usar para tu invitación digital.",
     heroScroll: "Desliza para ver más",
     examples: [
@@ -352,7 +369,7 @@ const i18n: I18n = {
   guestPage: {
     title: "Gestión de Invitados",
     description: "Descrubre las dos formas que hemos creado para que compartas tu invitación digital.",
-    heroTitle: "Gestiona tus invitados en <span class='text-emerald-400'>2 formas realmente simples</span>",
+    heroTitle: "Gestiona tus invitados en 2 formas realmente sencillas",
     heroSubtitle: "Elige la opción que más se adapte a tu evento y facilita la confirmación de asistencia de tus invitados",
     heroScroll: "Desliza para ver más",
     traditional: {

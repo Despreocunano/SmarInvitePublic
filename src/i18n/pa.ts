@@ -21,7 +21,7 @@ const i18n: I18n = {
       feature1: "Eventos únicos",
       feature2: "Gestión de invitados",
       feature3: "Ubicación interactiva",
-      info: "100% gratis • Sin tarjeta de crédito",
+      info: "Prueba 100% gratis • Sin tarjeta de crédito",
       badge: "INVITACIONES DIGITALES"
     },
     phoneMockup: {
