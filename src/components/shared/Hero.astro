@@ -129,9 +129,9 @@ const events = [
   </div>
 
   {/* Indicador de scroll mejorado */}
-  <div class="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center">
+  <div class="pointer-events-none absolute bottom-4 lg:bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center lg:z-30">
     <div class="relative">
-      <Mouse class="h-12 w-12 text-slate-600 animate-bounce" />
+      <Mouse class="h-6 w-6 lg:h-10 lg:w-10 text-slate-600 animate-bounce" />
       <div class="absolute inset-0 bg-slate-200/20 rounded-full blur-xl"></div>
     </div>
     <span class="text-xs text-slate-500 mt-2 font-medium tracking-wide">{texts.home.hero.heroScroll ?? (texts.home.hero.button === 'Create my invitation' ? 'Scroll to see more' : 'Desliza para ver más')}</span>
