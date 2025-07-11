@@ -3,7 +3,24 @@ import Layout from '../layouts/Layout.astro';
 
 const title = 'Terms and Conditions';
 const description = 'Read the terms and conditions for using Smart Invite.';
-const texts = {};
+const texts = {
+  home: {
+    header: {
+      menu: {
+        comoFunciona: { label: "How it works", href: "/how-it-works" },
+        ejemplos: { label: "Examples", href: "/examples" },
+        invitados: { label: "Guest Tools", href: "/guests" }
+      },
+      login: "Log in",
+      loginSecondary: "Existing account",
+      register: "Create free invitation",
+      flagAlt: "United States"
+    },
+    footer: {
+      copyright: "© {year} SmartInvite. All rights reserved. A Dreamco LLC product."
+    }
+  }
+};
 ---
 <Layout title={title} description={description} texts={texts}>
   <main class="max-w-3xl mx-auto py-12 px-4">
